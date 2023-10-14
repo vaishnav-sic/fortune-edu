@@ -986,12 +986,12 @@ a:visited {
   color: #fff;
 }
 .banner-one__title {
-  font-size: 140px;
+  font-size: 130px;
   line-height: 120px;
   color: #ffffff;
   font-weight: 700;
   letter-spacing: -.04em;
-  margin: 0;
+  margin-top: -40px;
   margin-bottom: 40px;
   text-transform: uppercase;
   -webkit-animation-duration: 2s;
@@ -1004,9 +1004,8 @@ a:visited {
 .banner-one__tag-line {
   margin: 0;
   font-size: 50px;
-  font-family: "Satisfy";
+  font-family: 'Font Awesome 5 Brands';
   color: white;
-  text-decoration: underline;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: both;
@@ -1015,9 +1014,37 @@ a:visited {
           backface-visibility: visible !important;
   margin-bottom: 55px;
 }
+
+.banner-one__tag-line-one {
+  margin: 0;
+  font-size: 25px;
+  font-family: cursive;
+  color: white;
+  /* text-decoration: underline; */
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-backface-visibility: visible !important;
+          backface-visibility: visible !important;
+  margin-bottom: 50px;
+}
 .banner-one__btn {
-  font-size: 18px;
-  padding: 21.5px 59.5px;
+  /* font-size: 18px; */
+  /* padding: 21.5px 59.5px; */
+  background: orangered;
+    box-shadow: 0px 6px 16px #003b5538;
+    border-radius: 2rem;
+    /* border-radius: 0px 30px 30px 30px; */
+    text-align: center;
+    font: normal normal 600 16px/24px Heebo;
+    letter-spacing: 0px;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 14px 0px;
+    display: inline-block;
+    min-width: 175px;
+    border: 0;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-fill-mode: both;
@@ -1025,10 +1052,55 @@ a:visited {
   -webkit-backface-visibility: visible !important;
           backface-visibility: visible !important;
 }
+.container-1{
+  gap: 8rem;
+}
+.container-1 h2{
+  text-align: center;
+  font-family: 'Font Awesome 5 Brands';
+    font-size: 3rem;
+    color: white;
+}
+
+.head {
+  color: black;
+  text-align: center;
+}
+.head h5{
+  font-size: 25px;
+  font-family: system-ui;
+}
+
+.news-cards p{
+  color: #000;
+}
+.news-cards {
+  background: white;
+  border: ridge;
+  padding: 2rem;
+  border-radius: 1rem;
+  margin-top: 2rem;
+}
+
+.counter-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  margin-top: 5rem;
+}
+.counter{
+  text-align: center;
+  color: white;
+  gap: 10rem;
+}
+
 .banner-one__person {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  /* bottom: 0; */
+  top: 7%;
+    right: 0;
+    height: 560px;
+  width: 440px;
   -webkit-box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.05);
           box-shadow: 0px 0px 40px 0px rgba(255, 255, 255, 0.05);
   -webkit-animation-duration: 3s;
@@ -1041,7 +1113,9 @@ a:visited {
 .banner-one__scratch {
   position: absolute;
   right: -5%;
-  top: 20%;
+  top: 0%;
+  height: 742px;
+  width: 440px;
   -webkit-animation-duration: 3s;
           animation-duration: 3s;
   -webkit-animation-fill-mode: both;
@@ -1131,7 +1205,7 @@ a:visited {
           animation-delay: 1s;
 }
 
-.banner-one__cta {
+/* .banner-one__cta {
   width: 100%;
   max-width: 544px;
   background-color: #2da397;
@@ -1176,12 +1250,12 @@ a:visited {
 }
 .banner-one__cta-icon:hover:before {
   left: 0;
-}
-.banner-one__cta-icon i {
+} */
+/* .banner-one__cta-icon i {
   line-height: 70px;
   color: #2da397;
   font-size: 38px;
-}
+} */
 .banner-one__cta-title {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
