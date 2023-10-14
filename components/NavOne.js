@@ -73,7 +73,7 @@ class NavOne extends Component {
                         <div className="logo-box clearfix">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                    <img src="/assets/images/logo-dark.png" className="main-logo" width="128"
+                                    <img src="/assets/images/Logo.png" className="main-logo" width="128"
                                          alt="Awesome Image" />
                                 </a>
                             </Link>
@@ -89,9 +89,50 @@ class NavOne extends Component {
                         </div>
                         <div className="main-navigation">
                             <ul className=" navigation-box">
-                                <li className="current">
-                                    <Link href="/"><a>Home</a></Link>
+                                
+                                <li>
+                                    <a href="#">SERVICES</a>
                                     <ul className="sub-menu">
+                                        <li><Link href="/admission-guidance"><a>Admission Guidance</a></Link></li>
+                                        <li><Link href="/registration"><a>Registration</a></Link></li>
+                                        <li><Link href="/documentation"><a>Documentation</a></Link></li>
+                                        <li><Link href="/admission-form-filling"><a>Admission Form Filling</a></Link></li>
+                                        <li><Link href="/neet-score-analysis"><a>NEET Score Analysis</a></Link></li>
+                                        <li><Link href="/college Choice Preferences"><a>College Choice Preferences</a></Link></li>
+                                        <li><Link href="/one-to-one-counselling"><a>One to One Counselling</a></Link></li>
+                                        <li><Link href="/admission-notifications-and-alerts"><a>Admission Notifications & Alerts</a></Link></li>
+                                        <li><Link href="/nri-documentation-and-guidance"><a>NRI Documentation & Guidance</a></Link></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="/colleges">COLLEGES</a>
+                                    <ul className="sub-menu">
+                                        <li><Link href="/medical"><a>Medical</a></Link></li>
+                                        <li><Link href="/engineering"><a>Engineering</a></Link></li>
+                                        {/* <li><Link href="/courses"><a>Courses</a></Link></li>
+                                        <li><Link href="/course-details"><a>Courses Details</a></Link></li> */}
+                                    </ul>
+                                </li>
+                                {/* <li>
+                                    <Link href="/teachers"><a>Teachers</a></Link>
+                                    <ul className="sub-menu">
+                                        <li><Link href="/teachers"><a>Teachers</a></Link></li>
+                                        <li><Link href="/teacher-details"><a>Teachers Details</a></Link></li>
+                                        <li><Link href="/become-teacher"><a>Become Teacher</a></Link></li>
+                                    </ul>
+                                </li> */}
+                                <li>
+                                    <Link href="/mock-test"><a>MOCK TEST</a></Link>
+                                     <ul className="sub-menu">
+                                        <li><Link href="/medical"><a>Medical</a></Link></li>
+                                        <li><Link href="/engineering"><a>Engineering</a></Link></li>
+                                       {/* <li><Link href="/news"><a>News Page</a></Link></li>
+                                        <li><Link href="/news-details"><a>News Details</a></Link></li>*/}
+                                    </ul> 
+                                </li>
+                                <li className="current">
+                                    <Link href="/"><a>ABOUT US</a></Link>
+                                    {/* <ul className="sub-menu">
                                         <li><Link href="/"><a>Home 01</a></Link></li>
                                         <li><Link href="/index-2"><a>Home 02</a></Link></li>
                                         <li><Link href="/index-3"><a>Home 03</a></Link></li>
@@ -102,41 +143,10 @@ class NavOne extends Component {
                                                 <li><Link href="/index-3"><a>Header 03</a></Link></li>
                                             </ul>
                                         </li>
-                                    </ul>
+                                    </ul> */}
                                 </li>
                                 <li>
-                                    <a href="#">Pages</a>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/about"><a>About Page</a></Link></li>
-                                        <li><Link href="/gallery"><a>Gallery</a></Link></li>
-                                        <li><Link href="/pricing"><a>Pricing Plans</a></Link></li>
-                                        <li><Link href="/faq"><a>FAQ'S</a></Link></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="/courses">Courses</a>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/courses"><a>Courses</a></Link></li>
-                                        <li><Link href="/course-details"><a>Courses Details</a></Link></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <Link href="/teachers"><a>Teachers</a></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/teachers"><a>Teachers</a></Link></li>
-                                        <li><Link href="/teacher-details"><a>Teachers Details</a></Link></li>
-                                        <li><Link href="/become-teacher"><a>Become Teacher</a></Link></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <Link href="/news"><a>News</a></Link>
-                                    <ul className="sub-menu">
-                                        <li><Link href="/news"><a>News Page</a></Link></li>
-                                        <li><Link href="/news-details"><a>News Details</a></Link></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <Link href="/contact"><a>Contact</a></Link>
+                                    <Link href="/contact"><a>CONTACT US</a></Link>
                                 </li>
                             </ul>
                         </div>
