@@ -13,14 +13,26 @@ import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
 import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
+import Service from "../components/Service";
+import Registration from "../components/Registration";
+import Documentation from "../components/Documentation";
+import AdmissionFillingForm from "../components/AdmissionFillingForm";
+import NeetScoreAnalysis from "../components/NeetScorAnalysis";
+ import CollegeChoicePref from "../components/CollegeChoicePref";
+import AdmissionAlert from "../components/AdmissionAlert";
+import OneToOneCons from "../components/OneToOneCons";
+import Nridoc from "../components/Nridoc";
 
+ 
+  
+ 
 
 
 const HomePage = () => (
 
     <Layout pageTitle="Kipso - React Next Online Education Learning & LMS Template">
-      <Topbar />
-      <NavOne />
+      <Topbar /> 
+       <NavOne />
       <SliderOne />
       <AboutTwo />
       <CourseOne />
@@ -33,6 +45,17 @@ const HomePage = () => (
       <CallToActionFour />
       <SubscribeOne />
       <Footer />
+      <Service/>  
+      <Registration/>
+      <Documentation/>
+      <AdmissionFillingForm/>
+      <NeetScoreAnalysis/>
+      <CollegeChoicePref/>
+      <OneToOneCons/>
+      <AdmissionAlert/>
+      <Nridoc/>
+        
+       
     </Layout>
 
 )
