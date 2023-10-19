@@ -41,7 +41,7 @@ const medicalCollege = () => {
           <div className="block-title mb-0">
             <h2 className="block-title__title">
               Explore our <br />
-              Top Medical Colleges
+              Top Medical Colleges.
             </h2>
           </div>
         </div>

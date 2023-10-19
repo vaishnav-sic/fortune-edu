@@ -32,7 +32,7 @@ const medicalCollege = () => {
       {/* <BlogTwo /> */}
       {/* <CallToActionFour /> */}
       {/* <SubscribeOne /> */}
-      {/* <Footer /> */}
+      <Footer />
     </Layout>
   );
 };

@@ -8,15 +8,15 @@ class NavOne extends Component {
       sticky: false,
     };
   }
-  //   componentDidMount() {
-  //     window.addEventListener("scroll", this.handleScroll);
+  // componentDidMount() {
+  //   window.addEventListener("scroll", this.handleScroll);
 
-  //     //Mobile Menu
-  //     this.mobileMenu();
+  //   //Mobile Menu
+  //   this.mobileMenu();
 
-  //     //Search Toggle
-  //     this.serachButton();
-  //   }
+  //   //Search Toggle
+  //   this.serachButton();
+  // }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
