@@ -73,7 +73,7 @@ class NavOne extends Component {
                         <div className="logo-box clearfix">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                    <img src="/assets/images/Logo.png" className="main-logo" width="128"
+                                    <img src="/assets/images/Logo.png" className="main-logo" width="100px"
                                          alt="Awesome Image" />
                                 </a>
                             </Link>
@@ -132,18 +132,18 @@ class NavOne extends Component {
                                 </li>
                                 <li className="current">
                                     <Link href="/"><a>ABOUT US</a></Link>
-                                    {/* <ul className="sub-menu">
-                                        <li><Link href="/"><a>Home 01</a></Link></li>
+                                    <ul className="sub-menu">
+                                        {/* <li><Link href="/"><a>Home 01</a></Link></li> */}
                                         <li><Link href="/index-2"><a>Home 02</a></Link></li>
-                                        <li><Link href="/index-3"><a>Home 03</a></Link></li>
+                                        {/* <li><Link href="/index-3"><a>Home 03</a></Link></li>
                                         <li><a href="#">Header Versions</a>
                                             <ul className="sub-menu">
                                                 <li><Link href="/"><a>Header 01</a></Link></li>
                                                 <li><Link href="/index-2"><a>Header 02</a></Link></li>
                                                 <li><Link href="/index-3"><a>Header 03</a></Link></li>
                                             </ul>
-                                        </li>
-                                    </ul> */}
+                                        </li> */}
+                                    </ul>
                                 </li>
                                 <li>
                                     <Link href="/contact"><a>CONTACT US</a></Link>
