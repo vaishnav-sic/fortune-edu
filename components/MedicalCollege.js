@@ -146,3 +146,4 @@ const medicalCollege = () => {
   );
 };
 export default medicalCollege;
+/* start  */
