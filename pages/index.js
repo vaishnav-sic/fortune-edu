@@ -13,6 +13,7 @@ import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
 import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
+import NumberAni from "../components/NumberAni";
 
 
 
@@ -33,6 +34,7 @@ const HomePage = () => (
       <CallToActionFour />
       <SubscribeOne />
       <Footer />
+      {/* <NumberAni/> */}
     </Layout>
 
 )
