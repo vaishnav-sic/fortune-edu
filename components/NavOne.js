@@ -63,6 +63,7 @@ class NavOne extends Component {
       searchPopup.classList.remove("active");
     });
   };
+  
 
   render() {
     return (

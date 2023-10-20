@@ -76,6 +76,7 @@ const CountdownKipso = () => {
               </div>
               <form
                 action="#"
+                id="registration"
                 method="POST"
                 className="become-teacher__form-content contact-form-validated"
                 onSubmit={handleFormSubmit}

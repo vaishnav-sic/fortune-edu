@@ -96,9 +96,8 @@ const SliderOne = () => {
                                         learn?</p>
                                         <p className="banner-one__tag-line-one">Medical and EngineeringCareer Counselling
                                            <br/>Trusted By Thousands Of <br/>Successful Doctors and Engineers</p>
-                                   <button className='btn'><a href="#" className="thm-btn banner-one__btn">Registration</a></button> 
-                                </div>
-                                
+                                   <button className='btn'><a href="#registration" className="thm-btn banner-one__btn">Registration</a></button> 
+                                </div>                                
                             </div>
 
                             {/* <div className='container-1'>
