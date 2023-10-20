@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import Layout from "../components/Layout";
 import Topbar from "../components/Topbar";
 import NavOne from "../components/NavOne";
@@ -13,31 +14,28 @@ import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
 import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
-import NumberAni from "../components/NumberAni";
+import MedicalCollege from "../components/MedicalCollege";
 
-
-
-const HomePage = () => (
-
-    <Layout pageTitle="Kipso - React Next Online Education Learning & LMS Template">
+const Registration = () => {
+  return (
+    <Layout pageTitle="Top 10 Medical Colleges">
       <Topbar />
       <NavOne />
-      <SliderOne />
-      <AboutTwo />
-      <CourseOne />
+      {/* <SliderOne /> */}
+      {/* <AboutTwo /> */}
+      {/* <MedicalCollege /> */}
       {/* <VideoTwo /> */}
-      <CountdownKipso />
-      <CourseCatOne />
-      <CallToActionThree />
-      <BrandsTwo />
-      <BlogTwo />
-      <CallToActionFour />
-      <SubscribeOne />
+      {/* <CountdownKipso /> */}
+      {/* <CourseCatOne /> */}
+      {/* <CallToActionThree /> */}
+      {/* <BrandsTwo /> */}
+      {/* <BlogTwo /> */}
+      {/* <CallToActionFour /> */}
+      {/* <SubscribeOne /> */}
       <Footer />
-      {/* <NumberAni/> */}
     </Layout>
+  );
+};
 
-)
-
-export default HomePage;
+export default Registration;
 /* start  */
