@@ -6537,26 +6537,15 @@ html {
   font-size: 53px;
   cursor: pointer;
 }
-/* Registration  */
-.reg-table {
-  max-width: 400px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
-}
 
-h2 {
-  text-align: center;
-  color: hwb(36 0% 0%); /* Orange color */
-  text-transform: uppercase;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
+/* --------------------------services------------------------- */
 
-form {
+#alt-main{
+  background-color: whitesmoke;
+  padding-bottom: 2rem;
+}
+.service-in-content-alt{
+
   display: flex;
   flex-direction: column;
 }
@@ -6599,7 +6588,6 @@ button:hover {
 }
 .field {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 /* CollegeCards2.jsx */

@@ -15,6 +15,15 @@ import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
 import NumberAni from "../components/NumberAni";
 
+import NeetScoreAnalysis from "../components/NeetScorAnalysis"
+import Nridoc from "../components/Nridoc"
+import OneToOneCons from "../components/OneToOneCons"
+import Registration from "../components/Registration"
+import Documentation from "../components/Documentation"
+import AdmissionAlert from "../components/AdmissionAlert"
+import AdmissionFillingForm from "../components/AdmissionFillingForm"
+import Admissionguidance from "../components/Admissionguidance"
+import CollegeChoicePref from "../components/CollegeChoicePref"
 
 
 const HomePage = () => (
@@ -35,6 +44,7 @@ const HomePage = () => (
       <SubscribeOne />
       <Footer />
       {/* <NumberAni/> */}
+       
     </Layout>
 
 )
