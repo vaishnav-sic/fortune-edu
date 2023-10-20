@@ -28,8 +28,8 @@ import CollegeChoicePref from "../components/CollegeChoicePref"
 
 const HomePage = () => (
 
-    <Layout pageTitle="Kipso - React Next Online Education Learning & LMS Template">
-      <Topbar />
+    <Layout pageTitle="Fortune Education Services">
+      {/* <Topbar /> */}
       <NavOne />
       <SliderOne />
       <AboutTwo />
