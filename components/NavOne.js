@@ -65,100 +65,49 @@ class NavOne extends Component {
   };
   
 
-  render() {
-    return (
-      <header className="site-header site-header__header-one ">
-        <nav
-          className={`navbar navbar-expand-lg navbar-light header-navigation stricky ${
-            this.state.sticky ? "stricked-menu stricky-fixed" : ""
-          }`}
-        >
-          <div className="container clearfix">
-            <div className="logo-box clearfix">
-              <Link href="/">
-                <a className="navbar-brand">
-                  <img
-                    src="/assets/images/Logo.png"
-                    className="main-logo"
-                    width="100px"
-                    alt="Awesome Image"
-                  />
-                </a>
-              </Link>
-              <div className="header__social">
-                <a href="#">
-                  <i className="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-facebook-square"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-pinterest-p"></i>
-                </a>
-                <a href="#">
-                  <i className="fab fa-instagram"></i>
-                </a>
-              </div>
-              <button className="menu-toggler">
-                <span className="kipso-icon-menu"></span>
-              </button>
-            </div>
-            <div className="main-navigation">
-              <ul className=" navigation-box">
-                <li>
-                  <a href="#">SERVICES</a>
-                  <ul className="sub-menu">
-                    <li>
-                      <Link href="/admission-guidance">
-                        <a>Admission Guidance</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/registration">
-                        <a>Registration</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/documentation">
-                        <a>Documentation</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/admission-form-filling">
-                        <a>Admission Form Filling</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/neet-score-analysis">
-                        <a>NEET Score Analysis</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/college Choice Preferences">
-                        <a>College Choice Preferences</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/one-to-one-counselling">
-                        <a>One to One Counselling</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/admission-notifications-and-alerts">
-                        <a>Admission Notifications & Alerts</a>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link href="/nri-documentation-and-guidance">
-                        <a>NRI Documentation & Guidance</a>
-                      </Link>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="/colleges">COLLEGES</a>
-                  <ul className="sub-menu">
-                    <li>
+    render() {
+        return (
+            <header className="site-header site-header__header-one ">
+                <nav className={`navbar navbar-expand-lg navbar-light header-navigation stricky ${this.state.sticky ? 'stricked-menu stricky-fixed' : ''}`}>
+                    <div className="container clearfix">
+                        <div className="logo-box clearfix">
+                            <Link href="/">
+                                <a className="navbar-brand">
+                                    <img src="/assets/images/Logo.png" className="main-logo" width="100px"
+                                         alt="Awesome Image" />
+                                </a>
+                            </Link>
+                            <div className="header__social">
+                                <a href="#"><i className="fab fa-twitter"></i></a>
+                                <a href="#"><i className="fab fa-facebook-square"></i></a>
+                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
+                                <a href="#"><i className="fab fa-instagram"></i></a>
+                            </div>
+                            <button className="menu-toggler">
+                                <span className="kipso-icon-menu"></span>
+                            </button>
+                        </div>
+                        <div className="main-navigation">
+                            <ul className=" navigation-box">
+                                
+                                <li>
+                                    <a href="/Service">SERVICES</a>
+                                    {/* <ul className="sub-menu">
+                                        <li><Link href="/admission-guidance"><a>Admission Guidance</a></Link></li>
+                                        <li><Link href="/registration"><a>Registration</a></Link></li>
+                                        <li><Link href="/documentation"><a>Documentation</a></Link></li>
+                                        <li><Link href="/admission-form-filling"><a>Admission Form Filling</a></Link></li>
+                                        <li><Link href="/neet-score-analysis"><a>NEET Score Analysis</a></Link></li>
+                                        <li><Link href="/college Choice Preferences"><a>College Choice Preferences</a></Link></li>
+                                        <li><Link href="/one-to-one-counselling"><a>One to One Counselling</a></Link></li>
+                                        <li><Link href="/admission-notifications-and-alerts"><a>Admission Notifications & Alerts</a></Link></li>
+                                        <li><Link href="/nri-documentation-and-guidance"><a>NRI Documentation & Guidance</a></Link></li>
+                                    </ul> */}
+                                </li>
+                                <li>
+                                    <a href="/colleges">COLLEGES</a>
+                                    <ul className="sub-menu">
+                                    <li>
                       <Link href="/medical-college">
                         <a>Medical</a>
                       </Link>
@@ -168,7 +117,7 @@ class NavOne extends Component {
                         <a>Engineering</a>
                       </Link>
                     </li>
-                    {/* <li><Link href="/courses"><a>Courses</a></Link></li>
+                                        {/* <li><Link href="/courses"><a>Courses</a></Link></li>
                                         <li><Link href="/course-details"><a>Courses Details</a></Link></li> */}
                   </ul>
                 </li>
