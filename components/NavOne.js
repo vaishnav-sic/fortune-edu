@@ -8,15 +8,15 @@ class NavOne extends Component {
       sticky: false,
     };
   }
-  // componentDidMount() {
-  //   window.addEventListener("scroll", this.handleScroll);
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
 
-  //   //Mobile Menu
-  //   this.mobileMenu();
+    //Mobile Menu
+    this.mobileMenu();
 
-  //   //Search Toggle
-  //   this.serachButton();
-  // }
+    //Search Toggle
+    this.serachButton();
+  }
 
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -73,14 +73,14 @@ class NavOne extends Component {
                         <div className="logo-box clearfix">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                    <img src="/assets/images/Logo.png" className="main-logo" width="100px"
+                                    <img src="/assets/images/Fortune-Edu-logo-right.png" className="main-logo" width="200px"
                                          alt="Awesome Image" />
                                 </a>
                             </Link>
                             <div className="header__social">
                                 <a href="#"><i className="fab fa-twitter"></i></a>
                                 <a href="#"><i className="fab fa-facebook-square"></i></a>
-                                <a href="#"><i className="fab fa-pinterest-p"></i></a>
+                                {/* <a href="#"><i className="fab fa-pinterest-p"></i></a> */}
                                 <a href="#"><i className="fab fa-instagram"></i></a>
                             </div>
                             <button className="menu-toggler">

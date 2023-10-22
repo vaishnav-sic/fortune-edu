@@ -67,7 +67,7 @@ const CountdownKipso = () => {
               </div>
             </div>
           </div>
-          <div className="col-lg-6">
+          <div id="registration1" className="col-lg-6">
             <div className="become-teacher__form">
               <div className="become-teacher__form-top">
                 <h2 className="become-teacher__form-title">
@@ -76,7 +76,7 @@ const CountdownKipso = () => {
               </div>
               <form
                 action="#"
-                id="registration"
+                
                 method="POST"
                 className="become-teacher__form-content contact-form-validated"
                 onSubmit={handleFormSubmit}
