@@ -1001,7 +1001,7 @@ a:visited {
   color: #fff;
 }
 .banner-one__title {
-  font-size: 130px;
+  font-size: 12vh;
   line-height: 120px;
   color: #ffffff;
   font-weight: 700;
@@ -1101,7 +1101,7 @@ a:visited {
   padding: 2rem;
   border-radius: 1rem;
   margin-top: 2rem;
-  height: 230px;
+  height: 215px;
   text-align: center;
 }
 
@@ -5150,6 +5150,7 @@ a:visited {
   transition: transform 0.4s ease;
   transition: transform 0.4s ease, -webkit-transform 0.4s ease;
 }
+/* --------------------blog css-------------------- */
 .blog-two__inner {
   padding: 40px;
   padding-top: 20px;
@@ -5172,7 +5173,7 @@ a:visited {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  background-color: #fff;
+  /* background-color: #fff; */
   color: #012237;
   text-transform: uppercase;
   font-size: 12px;
@@ -5187,7 +5188,7 @@ a:visited {
   position: relative;
   margin-bottom: 90px;
 }
-.blog-two__date::before {
+/* .blog-two__date::before {
   content: "";
   position: absolute;
   top: 0;
@@ -5198,7 +5199,7 @@ a:visited {
   border-radius: 50%;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-}
+} */
 .blog-two__date:hover:before {
   left: 0;
 }
@@ -5794,7 +5795,7 @@ a:visited {
   /* letter-spacing: .2em; */
   font-family: "Poppins";
   font-weight: 600;
-  color: white;
+
 }
 .about-two__count span {
   display: block;
@@ -5802,6 +5803,41 @@ a:visited {
   letter-spacing: 0em;
   font-weight: 400;
   font-size: 30px;
+}
+
+@media (max-width: 665px) {
+  .about-two-main_count {
+    gap: 3rem;
+  }
+
+  .news-cards {
+    height: 260px;
+  }
+
+  .head h5 {
+    font-size: 20px;
+  }
+
+}
+@media (max-width: 490px) {
+  .about-two-main_count {
+    flex-wrap: wrap;
+  }
+}
+
+  @media (max-width: 535px) {
+    .news-cards {
+      height: 290px;
+    }
+  
+  /* .Hamburger {
+    display: block;
+  }
+
+  .btn{
+    display: none;
+  } */
+
 }
 
 /*
@@ -6540,12 +6576,11 @@ html {
 
 /* --------------------------services------------------------- */
 
-#alt-main{
+#alt-main {
   background-color: whitesmoke;
   padding-bottom: 2rem;
 }
-.service-in-content-alt{
-
+.service-in-content-alt {
   display: flex;
   flex-direction: column;
 }
@@ -6635,40 +6670,6 @@ button:hover {
   padding: 5px;
   margin-bottom: 8px;
 }
-/* Clg1  */
-/* .college-list {
-  text-align: center;
-}
-
-.top-colleges {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 20px;
-}
-
-.college-card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  max-width: 300px;
-}
-
-.college-card img {
-  max-width: 100%;
-}
-
-.other-colleges {
-  margin-top: 20px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-li {
-  margin: 5px;
-} */
 
 /* CollegeList.css */
 
@@ -6743,64 +6744,188 @@ ul {
 
 li {
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 8px;
 }
 
-/* Clg3  */
-/* CollegeList15.css */
+/* ClgIconList  */
+.top-colleges-list {
+  text-align: center;
+  margin: 20px;
+  padding: auto;
+}
 
-.college-list-15-1 {
-  padding: 20px;
-  background-color: #f5f5f5;
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #001253;
+}
+
+.list-icon {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.list-icon li {
+  margin: 10px 0;
+}
+
+.college-item {
   border: 1px solid #ccc;
   border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 570px;
+  width: 100%;
+  font-size: 15px;
+  margin: 0;
+}
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .college-item {
+    max-width: 100%; /* Allow the div to take the full width on smaller screens */
+  }
+}
+
+.college-logo img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+.college-details {
+  flex: 1;
 }
 
 h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #f16101;
-}
-
-.college-cards-1 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-}
-
-.college-card-1 {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  /* padding: 10px; */
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  /* width: calc(20% - 20px); */
-  margin-bottom: 20px;
-  /* width: 350px;
-  height: 350px; */
-  
-}
-
-.college-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  object-fit: contain;
-}
-
-h3 {
-  font-size: 18px;
-  margin: 10px 0;
-  color: #555;
+  font-size: 20px;
+  margin: 0;
 }
 
 p {
-  color: #000;
+  font-size: 16px;
+  margin: 0;
 }
-.card{
+/* End */
+/* MedicalClgInfo */
+.medicalAdmissions {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-image: url("https://img.freepik.com/free-photo/young-female-doctor-with-thumbs-up-gesture-standing-corridor-hospital_1303-21220.jpg?size=626&ext=jpg"); /* Add your background image URL here */
+  background-size: cover;
+  color: white;
 }
+.e-medicalAdmissions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-image: url("https://cache.careers360.mobi/media/article_images/2022/12/14/btech-admission-2022-jee-main-admission-engineering.jpg"); /* Add your background image URL here */
+  background-size: cover;
+  color: white;
+}
+
+.examButtons {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+.examButton {
+  background-color: #fca712;
+  color: #001253;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.infoContainer {
+  /* background: rgba(0, 0, 0, 0.7); */
+  font-style: italic;
+  color: #d23f3f;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+  .examButtons {
+    flex-direction: column;
+  }
+}
+/* End */
+
+/* ClgSeatTable */
+.arrange-table {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap as needed to control the spacing between boxes */
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+.mbbsColleges {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.collegeTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-size: 16px;
+}
+
+.collegeTable th {
+  background-color: #fca712;
+  color: #001253;
+  padding: 10px;
+}
+
+.collegeTable td,
+.collegeTable th {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .collegeTable {
+    font-size: 14px;
+  }
+}
+/* end */
+
+
+/* ------------------------------------------about2 styling----------------------------------------- */
+
+.about2_main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -6rem;
+  padding-bottom: 4rem;
+  gap: 8rem;
+  flex-wrap: wrap;
+  /* padding: 0 8rem 4rem 8rem; */
+}
+
+/* ------------------------------------------about2 styling end-------------------------------------- */
+
