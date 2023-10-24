@@ -148,26 +148,10 @@ class NavOne extends Component {
                                         <li><Link href="/news-details"><a>News Details</a></Link></li>*/}
                   </ul>
                 </li>
-                <li className="current">
-                  <Link href="/">
+                <li>
+                  <Link href="/about">
                     <a>ABOUT US</a>
                   </Link>
-                  <ul className="sub-menu">
-                    {/* <li><Link href="/"><a>Home 01</a></Link></li> */}
-                    <li>
-                      <Link href="/index-2">
-                        <a>Home 02</a>
-                      </Link>
-                    </li>
-                    {/* <li><Link href="/index-3"><a>Home 03</a></Link></li>
-                                        <li><a href="#">Header Versions</a>
-                                            <ul className="sub-menu">
-                                                <li><Link href="/"><a>Header 01</a></Link></li>
-                                                <li><Link href="/index-2"><a>Header 02</a></Link></li>
-                                                <li><Link href="/index-3"><a>Header 03</a></Link></li>
-                                            </ul>
-                                        </li> */}
-                  </ul>
                 </li>
                 <li>
                   <Link href="/contact">
