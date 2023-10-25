@@ -18,7 +18,6 @@ export default class NumberAni extends Component {
 
   render() {
     return (
-      // <div className="about-two-main_count">
           <div className="about-two__count">
             <div className="about-two__count-text">
               {this.props.name}
@@ -33,7 +32,6 @@ export default class NumberAni extends Component {
               </span>
             </div>
           </div>
-          // </div>
     );
   }
 }

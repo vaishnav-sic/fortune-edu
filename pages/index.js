@@ -14,6 +14,7 @@ import BlogTwo from "../components/BlogTwo";
 import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
 import NumberAni from "../components/NumberAni";
+import AboutUs from "../components/AboutUs";
 
 import NeetScoreAnalysis from "../components/NeetScorAnalysis"
 import Nridoc from "../components/Nridoc"
@@ -35,15 +36,16 @@ const HomePage = () => (
       <AboutTwo />
       <CourseOne />
       {/* <VideoTwo /> */}
-      <CountdownKipso />
-      <CourseCatOne />
-      <CallToActionThree />
-      <BrandsTwo />
-      <BlogTwo />
-      <CallToActionFour />
-      <SubscribeOne />
+      {/* <CountdownKipso />
+      <CourseCatOne /> */}
+      {/* <CallToActionThree /> */}
+      {/* <AboutUs /> */}
+      {/* <BrandsTwo /> */}
+      {/* <BlogTwo /> */}
+      {/* <CallToActionFour />
+      <SubscribeOne /> */}
       <Footer />
-      {/* <NumberAni/> */}
+      {/* <NumberAni num="16784" name = "Students Admitted"/> */}
        
     </Layout>
 
