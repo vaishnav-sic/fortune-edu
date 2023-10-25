@@ -3,14 +3,15 @@ import Layout from "../components/Layout";
 import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
-import Contact from "../components/Contact";
+// import Contact from "../components/Contact";
+import ContactUs from "../components/ContactUs"
 
 const GalleryPage = () => {
     return (
-        <Layout pageTitle="Kipso | Contact">
+        <Layout pageTitle="Fortune | Contact">
             <NavOne />
-            <PageHeader title="Contact" />
-            <Contact />
+            {/* <PageHeader title="Contact" /> */}
+            <ContactUs />
             <Footer />
         </Layout>
     );

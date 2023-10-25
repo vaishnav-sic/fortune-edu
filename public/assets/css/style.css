@@ -1687,6 +1687,7 @@ a:visited {
   padding-top: 120px;
 }
 .contact-info-one__title {
+  text-align: center;
   margin: 0;
   color: #012237;
   font-size: 22px;
@@ -1694,6 +1695,7 @@ a:visited {
   margin-bottom: 55px;
 }
 .contact-info-one__text {
+  text-align: center;
   margin: 0;
   font-size: 16px;
   line-height: 34px;
@@ -1751,42 +1753,6 @@ a:visited {
   [class*="col-lg-"]:nth-child(3)
   .contact-info-one__icon::before {
   border-color: #7c4bc0;
-}
-
-.contact-info-one__single {
-  border-style: solid;
-  border-width: 2px;
-  border-color: #f1f1f1;
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  -webkit-transition: -webkit-box-shadow 0.4s ease;
-  transition: -webkit-box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
-  padding-bottom: 48px;
-}
-.contact-info-one__single:hover {
-  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
-}
-.contact-info-one__single:hover .contact-info-one__icon:before {
-  left: 0;
 }
 
 .contact-one {
@@ -3047,7 +3013,7 @@ a:visited {
   font-weight: bold;
   line-height: 27px;
   padding: 0 17px;
-  position: absolute;
+ position: absolute;
   left: 50px;
   top: -13.5px;
   -webkit-transition: all 0.4s ease;
@@ -6873,8 +6839,528 @@ p {
 .arrange-table {
   display: flex;
   flex-wrap: wrap;
+}
+/* 
+////////////////////////////////////// Contact Us /////////////////////////// 
+*/
+
+.part1{
+  background-color: #FCA712 ;
+  display: flex;
+}
+
+.contact-info-one__title__main{
+
+color: black;
+font-size: xx-large;
+
+}
+
+.contact-info-one__title__main1{
+
+  color: black;
+  font-size: x-large;
+  
+  
+  }
+
+
+  
+.contact-info-one__single {
+  border-style: solid;
+  border-width: 2px;
+  border-color: #f1f1f1;
+  background-color:white  ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.4s ease;
+  transition: -webkit-box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+  padding-top: 48px;
+/}
+.contact-info-one__single:hover {
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
+}
+.contact-info-one__single:hover .contact-info-one__icon:before {
+  left: 0;
+}
+
+
+
+.map__main{
+background-color:#1888c9;
+width: 100%;
+padding-left: 100px;
+
+
+}
+
+.google-map__contact {
+  width: calc();
+  height: 560px;
+  border: none;
+  outline: none;
+}
+
+.Branch__Main{
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.Branch__Main__In{
+  flex-wrap: wrap;
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Branch__Main__In__Left{
+width: 400px;
+height: 500px;
+box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+
+}
+.picture1{
+  object-fit:cover ;
+  margin-top: -2rem;
+  height: 250px;
+  width: 400px;
+}
+
+.Branch__Main__In__Right{
+  width: 800px;
+  height: 500px;
+  border-radius: 2rem;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651); 
+
+}
+  .google-map1{
+    height: 100%;
+    width: 100%;
+  }
+.row{
+  padding-top: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.container_Contact {
+  border-style: solid;
+  text-align: center;
+  border-width: 2px;
+  border-color: #f1f1f1;
+  background-color:white  ;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.4s ease;
+  transition: -webkit-box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease;
+  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+  padding-top: 48px;
+  padding-bottom: 48px;
+}
+
+.contact-info-one__text_main {
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #81868a;
+  margin-top: -15px;
+  margin-bottom: -10px;
+  padding-top: 2rem;
+}
+.contact-info-one__text_Branch {
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  line-height: 34px;
+  font-weight: 500;
+  color: #81868a;
+  margin-top: -15px;
+  margin-bottom: -10px;
+}
+
+.course-one__Direction {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  background-color: #f16101;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  line-height: 27px;
+  padding: 0 17px;
+  left: 50px;
+  top: -13.5px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+.course-one__Direction:hover {
+  color: #fff;
+  background-color: #012237;
+}
+
+
+/* 
+.col-lg-4{
+  box-shadow: 0 2px 30px rgba(12, 11, 11, 0.651);
+
+}   ////////////// CONTACT US END///////////////// */
+
+/* CollegeCards2.jsx */
+
+ 
+
+/* global style.css */
+
+ 
+
+.medicalCollegesTable {
+  /* width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif; */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+ 
+
+.medicalCollegesTable th,
+.medicalCollegesTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+ 
+
+.medicalCollegesTable th {
+  background-color: #f2f2f2;
+}
+
+ 
+
+.imageContainer {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+
+ 
+
+.imageContainer img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+ 
+
+/* formField  */
+.form-field {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 8px;
+}
+
+ 
+
+/* CollegeList.css */
+
+ 
+
+.college-list {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ 
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+ 
+
+.top-colleges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 20px;
+}
+
+ 
+
+.college-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 350px;
+  height: 350px;
+}
+
+ 
+
+.college-card img {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+ 
+
+h3 {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #000;
+}
+
+ 
+
+p {
+  color: #000;
+}
+
+ 
+
+.other-colleges {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ 
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+ 
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ 
+
+li {
+  margin-bottom: 5px;
+  font-size: 8px;
+}
+
+ 
+
+/* ClgIconList  */
+.top-colleges-list {
+  text-align: center;
+  margin: 20px;
+  padding: auto;
+}
+
+ 
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #001253;
+}
+
+ 
+
+.list-icon {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+ 
+
+.list-icon li {
+  margin: 10px 0;
+}
+
+ 
+
+.college-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  max-width: 570px;
+  width: 100%;
+  font-size: 15px;
+  margin: 0;
+}
+
+ 
+
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+  .college-item {
+    max-width: 100%; /* Allow the div to take the full width on smaller screens */
+  }
+}
+
+ 
+
+.college-logo img {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+ 
+
+.college-details {
+  flex: 1;
+}
+
+ 
+
+h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+ 
+
+p {
+  font-size: 16px;
+  margin: 0;
+}
+/* End */
+/* MedicalClgInfo */
+.medicalAdmissions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-image: url("https://img.freepik.com/free-photo/young-female-doctor-with-thumbs-up-gesture-standing-corridor-hospital_1303-21220.jpg?size=626&ext=jpg"); /* Add your background image URL here */
+  background-size: cover;
+  color: white;
+}
+.e-medicalAdmissions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-image: url("https://cache.careers360.mobi/media/article_images/2022/12/14/btech-admission-2022-jee-main-admission-engineering.jpg"); /* Add your background image URL here */
+  background-size: cover;
+  color: white;
+}
+
+ 
+
+.examButtons {
+  display: flex;
+  gap: 10px;
+  margin: 20px;
+}
+
+ 
+
+.examButton {
+  background-color: #fca712;
+  color: #001253;
+  font-weight: 500;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+ 
+
+.infoContainer {
+  /* background: rgba(0, 0, 0, 0.7); */
+  font-style: italic;
+  color: #d23f3f;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+ 
+
+@media (max-width: 600px) {
+  .examButtons {
+    flex-direction: column;
+  }
+}
+/* End */
+
+ 
+
+/* ClgSeatTable */
+.arrange-table {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 20px; /* Adjust the gap as needed to control the spacing between boxes */
+
+ 
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -6887,6 +7373,8 @@ p {
   margin: 20px;
 }
 
+ 
+
 .collegeTable {
   width: 100%;
   border-collapse: collapse;
@@ -6894,17 +7382,23 @@ p {
   font-size: 16px;
 }
 
+ 
+
 .collegeTable th {
   background-color: #fca712;
   color: #001253;
   padding: 10px;
 }
 
+ 
+
 .collegeTable td,
 .collegeTable th {
   border: 1px solid #ccc;
   padding: 10px;
 }
+
+ 
 
 @media (max-width: 600px) {
   .collegeTable {
@@ -6913,8 +7407,13 @@ p {
 }
 /* end */
 
+ 
+
+ 
 
 /* ------------------------------------------about2 styling----------------------------------------- */
+
+ 
 
 .about2_main{
   display: flex;
@@ -6926,6 +7425,8 @@ p {
   flex-wrap: wrap;
   /* padding: 0 8rem 4rem 8rem; */
 }
+
+ 
 
 /* ------------------------------------------about2 styling end-------------------------------------- */
 

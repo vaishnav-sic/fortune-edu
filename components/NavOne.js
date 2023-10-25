@@ -117,7 +117,7 @@ class NavOne extends Component {
                                     </ul> */}
                 </li>
                 <li>
-                  <a href="/">COUNSELING</a>
+                  <a href="/">COUNSELLING</a>
                   <ul className="sub-menu">
                     <li>
                       <Link href="/medical">
@@ -142,10 +142,10 @@ class NavOne extends Component {
                                     </ul>
                                 </li> */}
                 <li>
-                  <Link href="/mock-test">
+                  <Link href="/mockTest">
                     <a>MOCK TEST</a>
                   </Link>
-                  <ul className="sub-menu">
+                  {/* <ul className="sub-menu">
                     <li>
                       <Link href="/medical">
                         <a>Medical</a>
@@ -156,9 +156,9 @@ class NavOne extends Component {
                         <a>Engineering</a>
                       </Link>
                     </li>
-                    {/* <li><Link href="/news"><a>News Page</a></Link></li>
-                                        <li><Link href="/news-details"><a>News Details</a></Link></li>*/}
-                  </ul>
+                    <li><Link href="/news"><a>News Page</a></Link></li>
+                                        <li><Link href="/news-details"><a>News Details</a></Link></li>
+                  </ul> */}
                 </li>
                 <li>
                   <Link href="/about">
