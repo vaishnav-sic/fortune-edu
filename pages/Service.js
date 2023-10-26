@@ -24,7 +24,7 @@ import SpecialAssureAdmissionGuidance from '../components/SpecialAssureAdmission
 
 const Service = () => {
     return (
-        <Layout pageTitle="Kipso | Gallery">
+        <Layout pageTitle="Fortune | Service">
             <NavOne />
             <PageHeader title="Service" />
             <SpecialAssureAdmissionGuidance/>
