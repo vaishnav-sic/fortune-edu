@@ -5769,7 +5769,6 @@ a:visited {
   /* letter-spacing: .2em; */
   font-family: "Poppins";
   font-weight: 600;
-
 }
 .about-two__count span {
   display: block;
@@ -5791,7 +5790,6 @@ a:visited {
   .head h5 {
     font-size: 20px;
   }
-
 }
 @media (max-width: 490px) {
   .about-two-main_count {
@@ -5799,11 +5797,11 @@ a:visited {
   }
 }
 
-  @media (max-width: 535px) {
-    .news-cards {
-      height: 290px;
-    }
-  
+@media (max-width: 535px) {
+  .news-cards {
+    height: 290px;
+  }
+
   /* .Hamburger {
     display: block;
   }
@@ -5811,7 +5809,6 @@ a:visited {
   .btn{
     display: none;
   } */
-
 }
 
 /*
@@ -6582,6 +6579,7 @@ select {
 
 button {
   /* width: 100%; */
+  /* width: 100%; */
   padding: 10px;
   margin-top: 10px;
   background-color: #ff9800; /* Orange color */
@@ -7224,6 +7222,7 @@ li {
  
 
 /* ClgIconList  */
+
 .top-colleges-list {
   text-align: center;
   margin: 20px;
@@ -7435,7 +7434,7 @@ p {
 
  
 
-.about2_main{
+.about2_main {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7670,5 +7669,9 @@ svg{
 
 }
 /* -------------------------------------------services component style end ---------------------- */
-
  
+ /* -------------------------------------------Counselling Start----------------------------------  */
+ a:hover {
+  cursor: pointer;
+}
+ /*-------------------------------------------------- End------------------------------------------  */
