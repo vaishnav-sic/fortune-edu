@@ -20,16 +20,10 @@ const CollegeChoicePref = () =>{
             </div>
             <div className="service-in-content-left">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <h4> "Choosing the Right College: Your Path to Success 🌟 </h4>
+In a world brimming with countless colleges and universities, it's easy to get lost and fall prey to unrecognized or fraudulent institutions. Such a misstep can lead to financial loss and derail your career journey.
+To safeguard your future, our team of experts, with years of experience, is here to guide you. We not only assist you in identifying the ideal college or university for your aspirations but also provide the necessary training and support to secure your admission.
+Let us simplify the complex process of aligning your college preferences with your dreams. Your journey to success begins here!"
               </p>
             </div>
 

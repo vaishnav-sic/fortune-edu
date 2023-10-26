@@ -19,16 +19,11 @@ const AdmissionAlert = () => {
             </div>
             <div className="service-in-content-left">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <h4> "Stay Informed and Worry-Free with Our Support! 📱</h4>
+You’ll receive timely notifications and SMS alerts, ensuring you never miss an important deadline.
+Our system provides immediate updates on any changes in the admission process, so you're always in the know. Expect instant updates on results, seat matrix, allotment lists, and crucial notices to keep you informed.
+We'll also send you constant reminders about admission process deadlines, keeping you on track.
+Rest assured, our dedicated team is available around the clock, ensuring your child's safety and well-being. We provide parents with up-to-date information to ensure a smooth experience for students away from home."
               </p>
             </div>
 
