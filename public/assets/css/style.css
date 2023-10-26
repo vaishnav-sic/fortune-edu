@@ -6947,10 +6947,10 @@ box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
 
 }
 .picture1{
-  object-fit:cover ;
-  margin-top: -2rem;
-  height: 250px;
-  width: 400px;
+  object-fit: cover;
+  margin-top: -4rem;
+  height: 237px;
+   width: 248px;
 }
 
 .Branch__Main__In__Right{
@@ -7040,6 +7040,18 @@ box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
 .course-one__Direction:hover {
   color: #fff;
   background-color: #012237;
+}
+
+.cta-two__single_mock {
+  padding-left: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding-top: 116px;
+  padding-bottom: 116px;
 }
 
 

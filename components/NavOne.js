@@ -142,7 +142,7 @@ class NavOne extends Component {
                                     </ul>
                                 </li> */}
                 <li>
-                  <Link href="/mockTest">
+                  <Link href="/MockTest">
                     <a>MOCK TEST</a>
                   </Link>
                   {/* <ul className="sub-menu">
