@@ -20,16 +20,9 @@ const AdmissionFillingForm = () =>{
             </div>
             <div className="service-in-content-left">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <h4> "Your Path to College Success Unveiled! 🎓 </h4>
+Explore College Cut-Offs and Vital Admission Requirements effortlessly. Experience a seamless journey through admission form filling with our expert guidance by your side, addressing all your queries. Stay Informed with Timely Updates on Deadlines, Changes, Seat Matrix, Allotment Lists,
+ Important Notices, and Reminders. Your College Admissions Made Easier!
               </p>
             </div>
 

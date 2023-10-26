@@ -13,16 +13,9 @@ const oneToOneCons = () => {
           <div className="service-in-content">
             <div className="service-in-content-left">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <h4> "Charting Your Path to a Fulfilling Career: Fortune’s Expert Guidance 🚀</h4>
+In the world of education, choosing the right course is a crucial decision that should align with your interests and aspirations. For parents, we understand the multitude of questions that can arise. Where should your child study? Which courses and universities have the best ratings? What about placement records? Fortune has the answers to all these queries and more.
+Our approach includes personal, one-on-one sessions with our education experts. Together, we'll craft a customized roadmap that covers future planning, necessary steps, preparations, and a treasure trove of useful tips and methods. Your journey to a fulfilling career begins with Fortune Education Services!"
               </p>
             </div>
             <div className="service-in-content-right">

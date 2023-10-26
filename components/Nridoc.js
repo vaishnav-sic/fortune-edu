@@ -10,16 +10,8 @@ const Nridoc = () => {
         <div className="service-in-content">
           <div className="service-in-content-left">
             <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+            When it's time to apply, we'll be by your side, simplifying the complex form-filling process, and assisting you in arranging your college preferences to align with your aspirations and needs.
+Additionally, we not only help you explore these exciting opportunities but also equip students with vital insights into medical entrance exams and how to excel in them, ensuring you're well-prepared for your future.
             </p>
           </div>
           <div className="service-in-content-right">
