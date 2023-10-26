@@ -7341,12 +7341,12 @@ p {
  
 
 .infoContainer {
-  /* background: rgba(0, 0, 0, 0.7); */
+  background: rgba(0, 0, 0, 0);
   font-style: italic;
-  color: #d23f3f;
+  color: #012237;
   padding: 20px;
   border-radius: 10px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
