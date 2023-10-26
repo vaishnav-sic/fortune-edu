@@ -977,8 +977,8 @@ a:visited {
 
 .banner-one .container {
   position: relative;
-  padding-top: 200px;
-  padding-bottom: 200px;
+  /* padding-top: 200px; */
+  padding-bottom: 100px;
 }
 .banner-one__slide {
   background-position: center center;
@@ -1047,25 +1047,33 @@ a:visited {
 .banner-one__btn {
   /* font-size: 18px; */
   /* padding: 21.5px 59.5px; */
-  background: orangered;
+  background: #F16101;
   box-shadow: 0px 6px 16px #003b5538;
-  border-radius: 2rem;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  font-weight: lighter;
+  color: #fff;
+  /* padding: 21.5px 58px; */
   /* border-radius: 0px 30px 30px 30px; */
   text-align: center;
-  font: normal normal 600 16px/24px Heebo;
+  /* font: normal normal 600 16px/24px Heebo; */
   letter-spacing: 0px;
-  color: #fff;
+  
   text-transform: capitalize;
   padding: 14px 0px;
   display: inline-block;
-  min-width: 175px;
+  min-width: 190px;
   border: 0;
   -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+  animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
+}
+.banner-one__btn:hover {
+  background: #012237;
+  color: #ffffff;
 }
 .container-1 {
   padding: 10px 5rem 9rem 5rem;
@@ -1137,8 +1145,8 @@ a:visited {
   position: absolute;
   right: -5%;
   top: 0%;
-  height: 742px;
-  width: 440px;
+  height: 680px;
+  width: 540px;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;
@@ -2899,9 +2907,9 @@ a:visited {
 }
 .become-teacher__form-btn {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: lighter;
   color: #fff;
-  padding: 21.5px 58px;
+  /* padding: 21.5px 58px; */
 }
 .become-teacher__form-btn:hover {
   background-color: #012237;
@@ -6573,7 +6581,7 @@ select {
 }
 
 button {
-  width: 100%;
+  /* width: 100%; */
   padding: 10px;
   margin-top: 10px;
   background-color: #ff9800; /* Orange color */
@@ -6584,9 +6592,9 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+/* button:hover {
   background-color: #ff7800; /* Darker shade of orange on hover */
-}
+} */
 .field {
   display: flex;
   align-items: center;
@@ -6957,7 +6965,7 @@ box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
     width: 100%;
   }
 .row{
-  padding-top: 2rem;
+  padding-top: 6rem;
   justify-content: center;
   align-items: center;
 }
