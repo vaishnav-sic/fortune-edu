@@ -13,16 +13,11 @@ const Admissionguidance = () => {
           <div className="service-in-content">
             <div className="service-in-content-left">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was
-                popularised in the 1960s with the release of Letraset sheets
-                containing Lorem Ipsum passages, and more recently with desktop
-                publishing software like Aldus PageMaker including versions of
-                Lorem Ipsum.
+              <h4>"Streamlined College Admission Assistance for Your Peace of Mind! 🎓</h4><br/>
+                At different colleges and universities, the admission procedures can vary widely.
+                 That's why we offer a comprehensive step-by-step admission guidance to ensure a smooth and efficient process. No more time wasted in document confusion and endless back-and-forth!
+                Our services include providing detailed information on a college-by-college basis, covering vital aspects like fee structure, location, ranking, facilities, and more. We'll be your trusty guide in assembling a compelling application package, including a well-crafted statement of purpose, convincing recommendation letters, undergraduate transcripts, and any additional requirements specific to your chosen course and institution.
+                Furthermore, we take the burden of monitoring your application status off your shoulders. We proactively follow up with the universities you've applied to, ensuring a positive and timely response. Your journey to college success starts with us!" 
               </p>
             </div>
             <div className="service-in-content-right">

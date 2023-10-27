@@ -117,7 +117,7 @@ class NavOne extends Component {
                                     </ul> */}
                 </li>
                 <li>
-                  <a href="/">COUNSELLING</a>
+                  <a >COUNSELLING</a>
                   <ul className="sub-menu">
                     <li>
                       <Link href="/medical">
@@ -142,7 +142,7 @@ class NavOne extends Component {
                                     </ul>
                                 </li> */}
                 <li>
-                  <Link href="/mockTest">
+                  <Link href="/MockTest">
                     <a>MOCK TEST</a>
                   </Link>
                   {/* <ul className="sub-menu">

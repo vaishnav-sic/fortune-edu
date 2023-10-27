@@ -8,7 +8,7 @@ import ContactUs from "../components/ContactUs"
 
 const GalleryPage = () => {
     return (
-        <Layout pageTitle="Fortune | Contact">
+        <Layout pageTitle="Fortune Education | Contact">
             <NavOne />
             {/* <PageHeader title="Contact" /> */}
             <ContactUs />

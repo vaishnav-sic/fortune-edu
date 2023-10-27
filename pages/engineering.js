@@ -125,8 +125,8 @@ const medicalCollege = () => {
   ];
 
   return (
-    <Layout pageTitle="Top 10 Engineering Colleges">
-      <Topbar />
+    <Layout pageTitle="Fortune | Engineering Colleges">
+      {/* <Topbar /> */}
       <NavOne />
       {/* <SliderOne /> */}
       {/* <AboutTwo /> */}

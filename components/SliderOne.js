@@ -47,7 +47,7 @@ const SliderOne = () => {
                      to medical & engineering{" "}
                   </p>
                   <p className="banner-one__tag-line-one">
-                     Many Choice for Admission in Various Colleges!
+                    We Provide Many Choice for Admission in Various Colleges!
                   </p>
                   <button className="btn">
                     <a

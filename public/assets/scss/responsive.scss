@@ -978,3 +978,11 @@
         margin-top: 20px;
     }
 }
+
+// ........................... Mock Test ...............
+@media(max-width: 5p42x){
+    .row no-gutters{
+        flex-direction: column;
+
+    }
+}

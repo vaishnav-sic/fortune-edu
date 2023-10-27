@@ -17,12 +17,12 @@ const AboutPage = () => {
             <NavOne />
             <PageHeader title="About Us" />
             <AboutOne />
+            <AboutUs />
             <TeamOne />
             {/*<VideoOne /> */}
-            <AboutUs />
-            {/* <BrandsTwo />
-            <TestimonialOne />
-            <CallToActionOne /> */}
+             {/* <BrandsTwo /> */}
+            {/*<TestimonialOne />*/}
+            <CallToActionOne /> 
             <Footer />
         </Layout>
     );

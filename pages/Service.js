@@ -5,6 +5,7 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
+ 
 
 
 import NeetScoreAnalysis from "../components/NeetScorAnalysis"
@@ -16,14 +17,19 @@ import AdmissionAlert from "../components/AdmissionAlert"
 import AdmissionFillingForm from "../components/AdmissionFillingForm"
 import Admissionguidance from "../components/Admissionguidance"
 import CollegeChoicePref from "../components/CollegeChoicePref"
-
+import InstituteLevelManagement from '../components/InstituteLevelManagement';
+import AdmissionInMaharashtraStateAndCenterQuota from '../components/AdmissionInMaharashtraStateAndCenterQuota';
+import SpecialAssureAdmissionGuidance from '../components/SpecialAssureAdmissionGuidance';
 
 
 const Service = () => {
     return (
-        <Layout pageTitle="Kipso | Gallery">
+        <Layout pageTitle="Fortune | Service">
             <NavOne />
             <PageHeader title="Service" />
+            <SpecialAssureAdmissionGuidance/>
+            <InstituteLevelManagement/>
+            <AdmissionInMaharashtraStateAndCenterQuota/>
             <Admissionguidance/>
             <Registration/>
             <Documentation/>

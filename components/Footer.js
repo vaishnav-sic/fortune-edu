@@ -75,7 +75,8 @@ const Footer = () => {
                     </div>
                     <div className="site-footer__bottom">
                         <div className="container">
-                            <p className="site-footer__copy">&copy; Copyright 2020 by <a href="#">Layerdrops.com</a></p>
+                            <p className="site-footer__copy">&copy; Copyright 2023 <a href="#">SIC द्वारे ❤ प्रेमपूर्वक विकसित 
+</a></p>
                             <div className="site-footer__social">
 
                                 <div onClick={scrollTop} className="scroll-to-target site-footer__scroll-top"><i
