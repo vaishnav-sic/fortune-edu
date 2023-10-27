@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TeamOne = () => {
     return (
         <section className="team-one team-one__become-teacher">
@@ -86,5 +85,4 @@ const TeamOne = () => {
         </section>
     );
 };
-
 export default TeamOne;

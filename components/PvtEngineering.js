@@ -1,5 +1,4 @@
 import React from "react";
-
 const PvtEngineering = ({ colleges }) => {
   return (
     <div className="top-colleges-list">
@@ -20,5 +19,4 @@ const PvtEngineering = ({ colleges }) => {
     </div>
   );
 };
-
 export default PvtEngineering;

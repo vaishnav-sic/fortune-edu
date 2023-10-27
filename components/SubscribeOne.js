@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SubscribeOne = () => {
     return (
         <section className="mailchimp-one">
@@ -18,7 +17,7 @@ const SubscribeOne = () => {
                         <div className="my-auto">
                             <form action="#" className="mailchimp-one__form mc-form">
                                 <input type="text" id="mc-email" placeholder="Enter your email" />
-                                    <button type="submit" className="thm-btn">Subscribe</button>
+                                <button type="submit" className="thm-btn">Subscribe</button>
                             </form>
                             <div className="mc-form__response"></div>
                         </div>

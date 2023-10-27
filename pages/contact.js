@@ -5,7 +5,6 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 // import Contact from "../components/Contact";
 import ContactUs from "../components/ContactUs"
-
 const GalleryPage = () => {
     return (
         <Layout pageTitle="Fortune Education | Contact">
@@ -16,5 +15,4 @@ const GalleryPage = () => {
         </Layout>
     );
 };
-
 export default GalleryPage;

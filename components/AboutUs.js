@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-
 class CallToActionThree extends Component {
     render() {
         return (
@@ -44,5 +43,4 @@ class CallToActionThree extends Component {
         );
     }
 }
-
 export default CallToActionThree;

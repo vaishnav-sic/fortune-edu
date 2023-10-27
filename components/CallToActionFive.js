@@ -1,5 +1,4 @@
 import React from 'react';
-
 const CallToActionFive = () => {
     return (
         <section className="cta-five">
@@ -21,5 +20,4 @@ const CallToActionFive = () => {
         </section>
     );
 };
-
 export default CallToActionFive;

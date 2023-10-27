@@ -1,37 +1,32 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-
 const BrandsTwo = () => {
-
     const params = {
-        slidesPerView : 5,
+        slidesPerView: 5,
         loop: true,
         speed: 1000,
-        spaceBetween : 30,
+        spaceBetween: 30,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false
         },
-
         // Responsive breakpoints
         breakpoints: {
-            1024:{
-                slidesPerView : 5
+            1024: {
+                slidesPerView: 5
             },
-            768:{
-                slidesPerView : 4
+            768: {
+                slidesPerView: 4
             },
-            640:{
-                slidesPerView : 3
-
+            640: {
+                slidesPerView: 3
             },
-            320:{
-                slidesPerView : 2
+            320: {
+                slidesPerView: 2
             }
         }
     }
-
     return (
         <section className="brand-two ">
             <div className="container">
@@ -76,5 +71,4 @@ const BrandsTwo = () => {
         </section>
     );
 };
-
 export default BrandsTwo;

@@ -1,7 +1,5 @@
 import React from 'react';
-
 const SliderThree = () => {
-
     return (
         <section className="slider-three">
             <img src="/assets/images/slider-3-icon-1-1.png" className="slider-three__icon-1" alt="" />
@@ -22,9 +20,9 @@ const SliderThree = () => {
                                 lorem ipsum on the Internet.</p>
                             <form action="#" className="slider-three__search">
                                 <input type="text" placeholder="Search courses" />
-                                    <button type="submit"><i
-                                        className="kipso-icon-magnifying-glass"></i>
-                                    </button>
+                                <button type="submit"><i
+                                    className="kipso-icon-magnifying-glass"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
@@ -33,5 +31,4 @@ const SliderThree = () => {
         </section>
     );
 };
-
 export default SliderThree;

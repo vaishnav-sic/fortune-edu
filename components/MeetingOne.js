@@ -1,5 +1,4 @@
 import React from 'react';
-
 const MeetingOne = () => {
     return (
         <section className="meeting-one">
@@ -43,5 +42,4 @@ const MeetingOne = () => {
         </section>
     );
 };
-
 export default MeetingOne;

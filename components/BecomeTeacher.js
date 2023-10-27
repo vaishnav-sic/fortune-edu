@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BecomeTeacher = () => {
     return (
         <section className="become-teacher">
@@ -37,8 +36,8 @@ const BecomeTeacher = () => {
                                 </h2>
                             </div>
                             <form action="#"
-                                  className="become-teacher__form-content contact-form-validated"
-                                  noValidate="novalidate">
+                                className="become-teacher__form-content contact-form-validated"
+                                noValidate="novalidate">
                                 <input type="text" placeholder="Your Name" name="name" />
                                 <input type="text" placeholder="Email Address" name="email" />
                                 <input type="text" placeholder="Phone Number" name="phone" />
@@ -55,5 +54,4 @@ const BecomeTeacher = () => {
         </section>
     );
 };
-
 export default BecomeTeacher;

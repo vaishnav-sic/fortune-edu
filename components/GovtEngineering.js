@@ -1,5 +1,4 @@
 import React from "react";
-
 const EGClgIconList = ({ colleges }) => {
   return (
     <div className="top-colleges-list">
@@ -20,5 +19,4 @@ const EGClgIconList = ({ colleges }) => {
     </div>
   );
 };
-
 export default EGClgIconList;

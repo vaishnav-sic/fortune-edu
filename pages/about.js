@@ -10,7 +10,6 @@ import BrandsTwo from "../components/BrandsTwo";
 import TestimonialOne from "../components/TestimonialOne";
 import CallToActionOne from "../components/CallToActionOne";
 import AboutUs from "../components/AboutUs";
-
 const AboutPage = () => {
     return (
         <Layout pageTitle="Fortune Education | About Us">
@@ -20,12 +19,11 @@ const AboutPage = () => {
             <AboutUs />
             <TeamOne />
             {/*<VideoOne /> */}
-             {/* <BrandsTwo /> */}
+            {/* <BrandsTwo /> */}
             {/*<TestimonialOne />*/}
-            <CallToActionOne /> 
+            <CallToActionOne />
             <Footer />
         </Layout>
     );
 };
-
 export default AboutPage;

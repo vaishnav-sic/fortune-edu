@@ -1,45 +1,37 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Link from 'next/link';
-
 class NavTwo extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
-          sticky: false
+            sticky: false
         };
     }
-    componentDidMount(){
+    componentDidMount() {
         window.addEventListener('scroll', this.handleScroll);
-
         //Mobile Menu
         this.mobileMenu();
     }
-
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll);
     }
-
     handleScroll = () => {
-
-      if (window.scrollY > 70) {
-        this.setState({
-            sticky: true
-        });
-      } else if (window.scrollY < 70) {
-        this.setState({
-            sticky: false
-        });
-      }
-
+        if (window.scrollY > 70) {
+            this.setState({
+                sticky: true
+            });
+        } else if (window.scrollY < 70) {
+            this.setState({
+                sticky: false
+            });
+        }
     }
-
     mobileMenu = () => {
         //Mobile Menu Toggle
         let mainNavToggler = document.querySelector(".menu-toggler");
         let mainNav = document.querySelector(".main-navigation");
-
         mainNavToggler.addEventListener("click", function () {
-            mainNav.style.display = ( (mainNav.style.display != "block" ? "block" : "none" ) );
+            mainNav.style.display = ((mainNav.style.display != "block" ? "block" : "none"));
         });
     }
     render() {
@@ -50,8 +42,8 @@ class NavTwo extends Component {
                         <div className="logo-box clearfix">
                             <Link href="/">
                                 <a className="navbar-brand">
-                                <img src="assets/images/logo-dark.png" className="main-logo" width="128"
-                                     alt="Awesome Image" />
+                                    <img src="assets/images/logo-dark.png" className="main-logo" width="128"
+                                        alt="Awesome Image" />
                                 </a>
                             </Link>
                             <button className="menu-toggler" data-target=".main-navigation">

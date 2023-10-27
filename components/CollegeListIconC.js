@@ -1,5 +1,4 @@
 import React from "react";
-
 const CollegeListIconC = ({ colleges }) => {
   return (
     <div className="top-colleges-list">
@@ -20,5 +19,4 @@ const CollegeListIconC = ({ colleges }) => {
     </div>
   );
 };
-
 export default CollegeListIconC;

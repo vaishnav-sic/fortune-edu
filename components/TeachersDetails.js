@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TeachersDetails = () => {
     return (
         <section className="team-details">
@@ -24,7 +23,6 @@ const TeachersDetails = () => {
                                     <img src="/assets/images/certificate-1-2.png" alt="" />
                                 </li>
                             </ul>
-
                             <div className="progress-one__wrap">
                                 <div className="progress-one__single">
                                     <div className="progress-one__top">
@@ -33,7 +31,7 @@ const TeachersDetails = () => {
                                         </h3>
                                     </div>
                                     <div className="progress-one__bar">
-                                        <span style={{width: `98%`}} className="wow slideInLeft"></span>
+                                        <span style={{ width: `98%` }} className="wow slideInLeft"></span>
                                     </div>
                                 </div>
                                 <div className="progress-one__single">
@@ -43,7 +41,7 @@ const TeachersDetails = () => {
                                         </h3>
                                     </div>
                                     <div className="progress-one__bar">
-                                        <span style={{width: `64%`}} className="wow slideInLeft"></span>
+                                        <span style={{ width: `64%` }} className="wow slideInLeft"></span>
                                     </div>
                                 </div>
                                 <div className="progress-one__single">
@@ -52,7 +50,7 @@ const TeachersDetails = () => {
                                         <h3 className="progress-one__percent"><span className="counter">34</span>%</h3>
                                     </div>
                                     <div className="progress-one__bar">
-                                        <span style={{width: `34%`}} className="wow slideInLeft"></span>
+                                        <span style={{ width: `34%` }} className="wow slideInLeft"></span>
                                     </div>
                                 </div>
                             </div>
@@ -80,5 +78,4 @@ const TeachersDetails = () => {
         </section>
     );
 };
-
 export default TeachersDetails;

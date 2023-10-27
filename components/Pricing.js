@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Pricing = () => {
     return (
         <section className="pricing-one pricing-page ">
@@ -65,5 +64,4 @@ const Pricing = () => {
         </section>
     );
 };
-
 export default Pricing;

@@ -1,6 +1,5 @@
 import React, { useState, Component } from "react";
 import Countdown from "react-countdown";
-
 const CountdownKipso = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -11,7 +10,6 @@ const CountdownKipso = () => {
     cityLiveIn: "",
     consultationCity: "City",
   });
-
   const [formErrors, setFormErrors] = useState({
     firstName: "",
     lastName: "",
@@ -19,15 +17,12 @@ const CountdownKipso = () => {
     email: "",
   });
   //Rushikesh
-
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
   const handleFormSubmit = (e) => {
     e.preventDefault();
-
     const errors = {};
     if (!formData.firstName) {
       errors.firstName = "First Name is required";
@@ -76,7 +71,6 @@ const CountdownKipso = () => {
               </div>
               <form
                 action="#"
-                
                 method="POST"
                 className="become-teacher__form-content contact-form-validated"
                 onSubmit={handleFormSubmit}
@@ -92,7 +86,6 @@ const CountdownKipso = () => {
                 {formErrors.firstName && (
                   <span className="error-message">{formErrors.firstName}</span>
                 )}
-
                 <input
                   className="form-field"
                   type="text"
@@ -104,7 +97,6 @@ const CountdownKipso = () => {
                 {formErrors.lastName && (
                   <span className="error-message">{formErrors.lastName}</span>
                 )}
-
                 <input
                   className="form-field"
                   type="text"
@@ -116,7 +108,6 @@ const CountdownKipso = () => {
                 {formErrors.mobile && (
                   <span className="error-message">{formErrors.mobile}</span>
                 )}
-
                 <input
                   className="form-field"
                   type="text"
@@ -128,7 +119,6 @@ const CountdownKipso = () => {
                 {formErrors.email && (
                   <span className="error-message">{formErrors.email}</span>
                 )}
-
                 <select
                   className="form-field"
                   name="courseInterest"
@@ -138,7 +128,6 @@ const CountdownKipso = () => {
                   <option value="Medical">Medical</option>
                   <option value="Engineering">Engineering</option>
                 </select>
-
                 <input
                   className="form-field"
                   type="text"
@@ -147,7 +136,6 @@ const CountdownKipso = () => {
                   value={formData.cityLiveIn}
                   onChange={handleInputChange}
                 />
-    
                 <select
                   className="form-field"
                   name="consultationCity"
@@ -160,7 +148,6 @@ const CountdownKipso = () => {
                   <option value="Manchar">Manchar</option>
                   <option value="Karad">Karad</option>
                 </select>
-
                 <button
                   type="submit"
                   className="thm-btn become-teacher__form-btn"

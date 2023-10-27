@@ -1,5 +1,4 @@
 import React from 'react';
-
 const TeamTab = () => {
     return (
         <section className="team-tab">
@@ -40,7 +39,7 @@ const TeamTab = () => {
                                                     </h3>
                                                 </div>
                                                 <div className="progress-one__bar">
-                                                    <span style={{width: `98%`}} className="wow slideInLeft"></span>
+                                                    <span style={{ width: `98%` }} className="wow slideInLeft"></span>
                                                 </div>
                                             </div>
                                             <div className="progress-one__single">
@@ -51,7 +50,7 @@ const TeamTab = () => {
                                                     </h3>
                                                 </div>
                                                 <div className="progress-one__bar">
-                                                    <span style={{width: `64%`}} className="wow slideInLeft"></span>
+                                                    <span style={{ width: `64%` }} className="wow slideInLeft"></span>
                                                 </div>
                                             </div>
                                             <div className="progress-one__single">
@@ -62,11 +61,10 @@ const TeamTab = () => {
                                                     </h3>
                                                 </div>
                                                 <div className="progress-one__bar">
-                                                    <span style={{width: `34%`}} className="wow slideInLeft"></span>
+                                                    <span style={{ width: `34%` }} className="wow slideInLeft"></span>
                                                 </div>
                                             </div>
                                         </div>
-
                                         <a href="#" className="thm-btn team-tab__btn">Learn More</a>
                                     </div>
                                 </div>
@@ -111,7 +109,7 @@ const TeamTab = () => {
                                                     </h3>
                                                 </div>
                                                 <div className="progress-one__bar">
-                                                    <span style={{width: `98%`}} className="wow slideInLeft"></span>
+                                                    <span style={{ width: `98%` }} className="wow slideInLeft"></span>
                                                 </div>
                                             </div>
                                             <div className="progress-one__single">
@@ -122,7 +120,7 @@ const TeamTab = () => {
                                                     </h3>
                                                 </div>
                                                 <div className="progress-one__bar">
-                                                    <span style={{width: `64%`}} className="wow slideInLeft"></span>
+                                                    <span style={{ width: `64%` }} className="wow slideInLeft"></span>
                                                 </div>
                                             </div>
                                             <div className="progress-one__single">
@@ -133,7 +131,7 @@ const TeamTab = () => {
                                                     </h3>
                                                 </div>
                                                 <div className="progress-one__bar">
-                                                    <span style={{width: `34%`}} className="wow slideInLeft"></span>
+                                                    <span style={{ width: `34%` }} className="wow slideInLeft"></span>
                                                 </div>
                                             </div>
                                         </div>
@@ -162,5 +160,4 @@ const TeamTab = () => {
         </section>
     )
 }
-
 export default TeamTab;

@@ -1,5 +1,4 @@
 import React from "react";
-
 const ClgSeatTable = () => {
   return (
     <div className="arrange-table">
@@ -180,5 +179,4 @@ const ClgSeatTable = () => {
     </div>
   );
 };
-
 export default ClgSeatTable;

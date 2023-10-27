@@ -17,7 +17,6 @@ import SubscribeOne from "../components/SubscribeOne";
 import GovtEngineering from "../components/GovtEngineering";
 import PvtEngineering from "../components/PvtEngineering";
 import EngineeringInfo from "../components/EngineeringInfo";
-
 const medicalCollege = () => {
   const colleges1 = [
     {
@@ -123,7 +122,6 @@ const medicalCollege = () => {
       logo: "/assets/images/logo/logo1-1.jpeg",
     },
   ];
-
   return (
     <Layout pageTitle="Fortune | Engineering Colleges">
       {/* <Topbar /> */}
@@ -132,7 +130,6 @@ const medicalCollege = () => {
       {/* <AboutTwo /> */}
       {/* <MedicalCollege /> */}
       <EngineeringInfo />
-
       <GovtEngineering colleges={colleges1} />
       <PvtEngineering colleges={colleges2} />
       {/* <VideoTwo /> */}
@@ -147,5 +144,4 @@ const medicalCollege = () => {
     </Layout>
   );
 };
-
 export default medicalCollege;

@@ -4,7 +4,6 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import News from "../components/News";
-
 const NewsPage = () => {
     return (
         <Layout pageTitle="Kipso | News">
@@ -15,5 +14,4 @@ const NewsPage = () => {
         </Layout>
     );
 };
-
 export default NewsPage;

@@ -15,7 +15,6 @@ import BlogTwo from "../components/BlogTwo";
 import CallToActionFour from "../components/CallToActionFour";
 import SubscribeOne from "../components/SubscribeOne";
 import MedicalCollege from "../components/MedicalCollege";
-
 const Registration = () => {
   return (
     <Layout pageTitle="Top 10 Medical Colleges">
@@ -36,6 +35,5 @@ const Registration = () => {
     </Layout>
   );
 };
-
 export default Registration;
 /* start  */

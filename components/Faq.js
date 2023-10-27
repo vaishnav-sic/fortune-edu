@@ -1,5 +1,4 @@
 import React from 'react';
-
 const Faq = () => {
     return (
         <section className="faq-one">
@@ -65,7 +64,7 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6" style={{paddingBottom: `0px`, borderBottom: `0px none`}}>
+                    <div className="col-lg-6" style={{ paddingBottom: `0px`, borderBottom: `0px none` }}>
                         <div className="faq-one__single">
                             <div className="faq-one__icon">
                                 <span>?</span>
@@ -80,7 +79,7 @@ const Faq = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-6" style={{paddingBottom: `0px`, borderBottom: `0px none`}}>
+                    <div className="col-lg-6" style={{ paddingBottom: `0px`, borderBottom: `0px none` }}>
                         <div className="faq-one__single">
                             <div className="faq-one__icon">
                                 <span>?</span>
@@ -100,5 +99,4 @@ const Faq = () => {
         </section>
     );
 };
-
 export default Faq;

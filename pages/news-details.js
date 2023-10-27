@@ -4,7 +4,6 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import NewsDetails from "../components/NewsDetails";
-
 const GalleryPage = () => {
     return (
         <Layout pageTitle="Kipso | News Details">
@@ -15,5 +14,4 @@ const GalleryPage = () => {
         </Layout>
     );
 };
-
 export default GalleryPage;

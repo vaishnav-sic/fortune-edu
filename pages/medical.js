@@ -21,7 +21,6 @@ import MedicalInfo from "../components/MedicalInfo";
 import CollegeListIconA from "../components/CollegeListIconA";
 import CollegeListIconB from "../components/CollegeListIconB";
 import CollegeListIconC from "../components/CollegeListIconC";
-
 const medicalCollege = () => {
   const colleges1 = [
     {
@@ -179,7 +178,6 @@ const medicalCollege = () => {
       logo: "/assets/images/logo/logo1-1.jpeg",
     },
   ];
-
   return (
     <Layout pageTitle="Fortune | Medical Colleges">
       {/* <Topbar /> */}
@@ -189,7 +187,6 @@ const medicalCollege = () => {
       {/* <MedicalCollege /> */}
       <MedicalInfo />
       <ClgSeatTable />
-
       <CollegeListIconA colleges={colleges1} />
       <CollegeListIconB colleges={colleges2} />
       <CollegeListIconC colleges={colleges3} />
@@ -205,5 +202,4 @@ const medicalCollege = () => {
     </Layout>
   );
 };
-
 export default medicalCollege;

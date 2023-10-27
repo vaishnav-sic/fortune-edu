@@ -1,5 +1,4 @@
 import React from 'react';
-
 const CallToActionFour = () => {
     return (
         <section className="cta-four">
@@ -13,12 +12,11 @@ const CallToActionFour = () => {
                 <p className="cta-four__text">Lorem ipsum gravida nibh vel velit auctor aliquetnean
                     sollicitudin, lorem quis
                     bibendum auci elit <br /> consequat is simply free text available in the psutis sem nibh id
-                        eis sed odio sit
-                        amet.
+                    eis sed odio sit
+                    amet.
                 </p>
             </div>
         </section>
     );
 };
-
 export default CallToActionFour;

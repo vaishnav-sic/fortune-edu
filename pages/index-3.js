@@ -12,8 +12,6 @@ import TestimonialOne from "../components/TestimonialOne";
 import VideoThree from "../components/VideoThree";
 import BrandsTwo from "../components/BrandsTwo";
 import CallToActionFive from "../components/CallToActionFive";
-
-
 const HomePageThree = () => {
     return (
         <Layout pageTitle="Kipso | Home 3">
@@ -32,5 +30,4 @@ const HomePageThree = () => {
         </Layout>
     );
 };
-
 export default HomePageThree;

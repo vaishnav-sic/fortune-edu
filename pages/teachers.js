@@ -5,7 +5,6 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Teachers from "../components/Teachers";
 import CallToActionTwo from "../components/CallToActionTwo";
-
 const TeachersPage = () => {
     return (
         <Layout pageTitle="Kipso | Teachers">
@@ -17,5 +16,4 @@ const TeachersPage = () => {
         </Layout>
     );
 };
-
 export default TeachersPage;

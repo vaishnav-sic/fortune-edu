@@ -1,13 +1,9 @@
-
 import React from 'react';
 import Layout from "../components/Layout";
 import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
- 
-
-
 import NeetScoreAnalysis from "../components/NeetScorAnalysis"
 import Nridoc from "../components/Nridoc"
 import OneToOneCons from "../components/OneToOneCons"
@@ -20,28 +16,25 @@ import CollegeChoicePref from "../components/CollegeChoicePref"
 import InstituteLevelManagement from '../components/InstituteLevelManagement';
 import AdmissionInMaharashtraStateAndCenterQuota from '../components/AdmissionInMaharashtraStateAndCenterQuota';
 import SpecialAssureAdmissionGuidance from '../components/SpecialAssureAdmissionGuidance';
-
-
 const Service = () => {
     return (
         <Layout pageTitle="Fortune | Service">
             <NavOne />
             <PageHeader title="Service" />
-            <SpecialAssureAdmissionGuidance/>
-            <InstituteLevelManagement/>
-            <AdmissionInMaharashtraStateAndCenterQuota/>
-            <Admissionguidance/>
-            <Registration/>
-            <Documentation/>
-            <AdmissionFillingForm/>
-            <NeetScoreAnalysis/>
-            <CollegeChoicePref/>
-            <OneToOneCons/>
-            <AdmissionAlert/>
-            <Nridoc/>
+            <SpecialAssureAdmissionGuidance />
+            <InstituteLevelManagement />
+            <AdmissionInMaharashtraStateAndCenterQuota />
+            <Admissionguidance />
+            <Registration />
+            <Documentation />
+            <AdmissionFillingForm />
+            <NeetScoreAnalysis />
+            <CollegeChoicePref />
+            <OneToOneCons />
+            <AdmissionAlert />
+            <Nridoc />
             <Footer />
         </Layout>
     );
 };
-
 export default Service;

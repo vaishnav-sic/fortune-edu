@@ -1,29 +1,24 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-
 const SliderTwo = () => {
-
     const [swiper, setSwiper] = useState(null);
-
     const goNext = () => {
         if (swiper !== null) {
-          swiper.slideNext();
+            swiper.slideNext();
         }
     };
-
     const goPrev = () => {
         if (swiper !== null) {
-          swiper.slidePrev();
+            swiper.slidePrev();
         }
     };
-
     return (
         <div className="banner-wrapper">
             <section className="banner-two banner-carousel__one no-dots">
                 <Swiper getSwiper={setSwiper}>
                     <div className="banner-two__slide banner-two__slide-one"
-                         style={{backgroundImage: `url(assets/images/slider-2-1.jpg)`}}>
+                        style={{ backgroundImage: `url(assets/images/slider-2-1.jpg)` }}>
                         <div className="container">
                             <div className="row no-gutters">
                                 <div className="col-xl-12">
@@ -37,7 +32,7 @@ const SliderTwo = () => {
                         </div>
                     </div>
                     <div className="banner-two__slide banner-two__slide-two"
-                         style={{backgroundImage: `url(assets/images/slider-2-2.jpg)`}}>
+                        style={{ backgroundImage: `url(assets/images/slider-2-2.jpg)` }}>
                         <div className="container">
                             <div className="row no-gutters">
                                 <div className="col-xl-12">
@@ -59,5 +54,4 @@ const SliderTwo = () => {
         </div>
     );
 };
-
 export default SliderTwo;
