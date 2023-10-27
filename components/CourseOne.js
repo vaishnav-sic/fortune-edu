@@ -46,52 +46,55 @@ const BlogTwo = () => {
                 <div className="blog-two__carousel">
                     <Swiper {...params}>
                     <div className="item">
-                        <div className="blog-two__single" style={{backgroundImage: `url(assets/images/blog-2-1.jpg)`}}>
+                        <div className="blog-two__single">
                             <div className="blog-two__inner">
-                                <a href="news-details.html" className="blog-two__date">
+                                <div className="blog-two__date">
                                     <span>25</span>
                                     Latest
-                                </a>
-                                <div className="blog-two__meta">
+                                </div>
+                                {/* <div className="blog-two__meta">
                                     <a href="#">by Admin</a>
                                     <a href="#">3 Comments</a>
-                                </div>
+                                </div> */}
                                 <h3 className="blog-two__title">
-                                    <a href="news-details.html">Summer high school journalism camp</a>
+                                <p>All India AYUSH Round 2 Registration is available till 05 December 2022 up to 3 PM and Choice Filling Deadline is 05 December 2023 till 11.55 PM</p>
+                                    {/* <a href="news-details.html">Summer high school journalism camp</a> */}
                                 </h3>
                             </div>
                         </div>
                     </div>
                     <div className="item">
-                        <div className="blog-two__single" style={{backgroundImage: `url(assets/images/blog-2-2.jpg)`}}>
+                        <div className="blog-two__single">
                             <div className="blog-two__inner">
-                                <a href="news-details.html" className="blog-two__date">
+                                <div className="blog-two__date">
                                     <span>25</span>
                                     Important
-                                </a>
-                                <div className="blog-two__meta">
+                                </div>
+                                {/* <div className="blog-two__meta">
                                     <a href="#">by Admin</a>
                                     <a href="#">3 Comments</a>
-                                </div>
+                                </div> */}
                                 <h3 className="blog-two__title">
-                                    <a href="news-details.html">Get a tips to develop a quality education</a>
+                                <p>Mop up round 1 registration has started and deadline for form filling is 03 December 2023 till 11.55 pm, new registration facility is only available for Karnataka students. Document Verification...</p>
+                                    {/* <a href="news-details.html">Get a tips to develop a quality education</a> */}
                                 </h3>
                             </div>
                         </div>
                     </div>
                     <div className="item">
-                        <div className="blog-two__single" style={{backgroundImage: `url(assets/images/blog-2-3.jpg)`}}>
+                        <div className="blog-two__single">
                             <div className="blog-two__inner">
-                                <a href="news-details.html" className="blog-two__date">
+                                <div className="blog-two__date">
                                     <span>25</span>
-                                    Jul
-                                </a>
-                                <div className="blog-two__meta">
+                                    Updated
+                                </div>
+                                {/* <div className="blog-two__meta">
                                     <a href="#">by Admin</a>
                                     <a href="#">3 Comments</a>
-                                </div>
+                                </div> */}
                                 <h3 className="blog-two__title">
-                                    <a href="news-details.html">Learn variety of programs and courses</a>
+                                <p>All India Mop Up Round 1 Final result will be declared on 07 December 2023 and College Reporting is between 08 to 12 December 2022</p>
+                                    {/* <a href="news-details.html">Learn variety of programs and courses</a> */}
                                 </h3>
                             </div>
                         </div>

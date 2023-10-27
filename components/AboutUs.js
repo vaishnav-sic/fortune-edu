@@ -29,7 +29,6 @@ class CallToActionThree extends Component {
                                         <p className="cta-three__single-text">Live
                                             Learning</p>
                                     </div>
-
                                     <div className="cta-three__single">
                                         <i className="kipso-icon-human-resources"></i>
                                         <p className="cta-three__single-text">Expert

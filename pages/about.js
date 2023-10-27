@@ -13,16 +13,16 @@ import AboutUs from "../components/AboutUs";
 
 const AboutPage = () => {
     return (
-        <Layout pageTitle="Fortune Education | About">
+        <Layout pageTitle="Fortune Education | About Us">
             <NavOne />
-            <PageHeader title="About" />
+            <PageHeader title="About Us" />
             <AboutOne />
-            <TeamOne />
-            <VideoOne />
             <AboutUs />
-            <BrandsTwo />
-            <TestimonialOne />
-            <CallToActionOne />
+            <TeamOne />
+            {/*<VideoOne /> */}
+             {/* <BrandsTwo /> */}
+            {/*<TestimonialOne />*/}
+            <CallToActionOne /> 
             <Footer />
         </Layout>
     );
