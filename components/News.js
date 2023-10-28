@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const News = () => {
     return (
         <section className="blog-one blog-page">
@@ -10,18 +9,18 @@ const News = () => {
                         <div className="blog-one__single">
                             <div className="blog-one__image">
                                 <img src="/assets/images/blog-1-1.jpg" alt="" />
-                                    <Link href="/news-details"><a className="blog-one__plus"><i
-                                        className="kipso-icon-plus-symbol"></i>
-                                    </a></Link>
+                                <Link href="/news-details"><a className="blog-one__plus"><i
+                                    className="kipso-icon-plus-symbol"></i>
+                                </a></Link>
                             </div>
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">
                                     <Link href="/news-details"><a>Summer high school journalism camp</a></Link>
@@ -44,11 +43,11 @@ const News = () => {
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">
                                     <Link href="/news-details"><a>Get a tips to develop a quality education</a></Link>
@@ -71,11 +70,11 @@ const News = () => {
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">
                                     <Link href="/news-details"><a>Learn variety of programs and courses</a></Link>
@@ -98,11 +97,11 @@ const News = () => {
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">
                                     <Link href="/news-details"><a>English lectures in french language courses</a></Link>
@@ -125,11 +124,11 @@ const News = () => {
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">
                                     <Link href="/news-details"><a>Subject that fits your busy life styles</a></Link>
@@ -152,11 +151,11 @@ const News = () => {
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">
                                     <Link href="/news-details"><a>Are you ready to become a best student</a></Link>
@@ -181,5 +180,4 @@ const News = () => {
         </section>
     );
 };
-
 export default News;

@@ -11,7 +11,6 @@ import Pricing from "../components/Pricing";
 import MeetingOne from "../components/MeetingOne";
 import CallToActionTwo from "../components/CallToActionTwo";
 import BlogThree from "../components/BlogThree";
-
 const HomePageTwo = () => {
     return (
         <Layout pageTitle="Kipso | Home 2">
@@ -29,5 +28,4 @@ const HomePageTwo = () => {
         </Layout>
     );
 };
-
 export default HomePageTwo;

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const Courses = () => {
     return (
         <section className="course-one course-page">
@@ -10,7 +9,7 @@ const Courses = () => {
                         <div className="course-one__single">
                             <div className="course-one__image">
                                 <img src="/assets/images/course-1-1.jpg" alt="" />
-                                    <i className="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                             </div>
                             <div className="course-one__content">
                                 <a href="#" className="course-one__category">development</a>
@@ -44,13 +43,13 @@ const Courses = () => {
                         <div className="course-one__single">
                             <div className="course-one__image">
                                 <img src="/assets/images/course-1-2.jpg" alt="" />
-                                    <i className="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                             </div>
                             <div className="course-one__content">
                                 <a href="#" className="course-one__category">It &amp; Software</a>
                                 <div className="course-one__admin">
                                     <img src="/assets/images/team-1-2.jpg" alt="" />
-                                        by <Link href="/teacher-details"><a>Cora Diaz</a></Link>
+                                    by <Link href="/teacher-details"><a>Cora Diaz</a></Link>
                                 </div>
                                 <h2 className="course-one__title"><Link href="/course-details"><a>Improve editing skills</a></Link></h2>
                                 <div className="course-one__stars">
@@ -77,13 +76,13 @@ const Courses = () => {
                         <div className="course-one__single">
                             <div className="course-one__image">
                                 <img src="/assets/images/course-1-3.jpg" alt="" />
-                                    <i className="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                             </div>
                             <div className="course-one__content">
                                 <a href="#" className="course-one__category">marketing</a>
                                 <div className="course-one__admin">
                                     <img src="/assets/images/team-1-3.jpg" alt="" />
-                                        by <Link href="/teacher-details"><a>Ruth Becker</a></Link>
+                                    by <Link href="/teacher-details"><a>Ruth Becker</a></Link>
                                 </div>
                                 <h2 className="course-one__title">
                                     <Link href="/course-details"><a>Marketing strategies</a></Link>
@@ -112,14 +111,13 @@ const Courses = () => {
                         <div className="course-one__single">
                             <div className="course-one__image">
                                 <img src="/assets/images/course-1-4.jpg" alt="" />
-                                    <i className="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                             </div>
                             <div className="course-one__content">
                                 <a href="#" className="course-one__category">Photography</a>
                                 <div className="course-one__admin">
                                     <img src="/assets/images/team-1-4.jpg" alt="" />
-                                        by <Link href="/teacher-details"><a>Ernest Rodriquez</a></Link>
-
+                                    by <Link href="/teacher-details"><a>Ernest Rodriquez</a></Link>
                                 </div>
                                 <h2 className="course-one__title">
                                     <Link href="/course-details"><a>Basics of photography</a></Link>
@@ -148,16 +146,16 @@ const Courses = () => {
                         <div className="course-one__single">
                             <div className="course-one__image">
                                 <img src="/assets/images/course-1-5.jpg" alt="" />
-                                    <i className="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                             </div>
                             <div className="course-one__content">
                                 <a href="#" className="course-one__category">marketing</a>
                                 <div className="course-one__admin">
                                     <img src="/assets/images/team-1-5.jpg" alt="" />
-                                        by <Link href="/teacher-details"><a>Isabella Stanley</a></Link>
+                                    by <Link href="/teacher-details"><a>Isabella Stanley</a></Link>
                                 </div>
                                 <h2 className="course-one__title">
-                                   <Link href="/course-details"><a>Affiliate bootcamp</a></Link>
+                                    <Link href="/course-details"><a>Affiliate bootcamp</a></Link>
                                 </h2>
                                 <div className="course-one__stars">
                                     <span className="course-one__stars-wrap">
@@ -183,13 +181,13 @@ const Courses = () => {
                         <div className="course-one__single">
                             <div className="course-one__image">
                                 <img src="/assets/images/course-1-6.jpg" alt="" />
-                                    <i className="far fa-heart"></i>
+                                <i className="far fa-heart"></i>
                             </div>
                             <div className="course-one__content">
                                 <a href="#" className="course-one__category">Health &amp; Fitness</a>
                                 <div className="course-one__admin">
                                     <img src="/assets/images/team-1-6.jpg" alt="" />
-                                        by <Link href="/teacher-details"><a>Katherine Collins</a></Link>
+                                    by <Link href="/teacher-details"><a>Katherine Collins</a></Link>
                                 </div>
                                 <h2 className="course-one__title">
                                     <Link href="/course-details"><a>Healthy workout tips</a></Link>
@@ -223,10 +221,8 @@ const Courses = () => {
                     <a href="#">4</a>
                     <a href="#"><i className="fa fa-angle-double-right"></i></a>
                 </div>
-
             </div>
         </section>
     );
 };
-
 export default Courses;

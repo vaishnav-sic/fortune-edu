@@ -5,8 +5,6 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import BecomeTeacher from "../components/BecomeTeacher";
 import TeamOne from "../components/TeamOne";
-
-
 const GalleryPage = () => {
     return (
         <Layout pageTitle="Kipso | Become Teacher">
@@ -18,5 +16,4 @@ const GalleryPage = () => {
         </Layout>
     );
 };
-
 export default GalleryPage;

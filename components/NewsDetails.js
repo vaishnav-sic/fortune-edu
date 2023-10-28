@@ -1,5 +1,4 @@
 import React from 'react';
-
 const NewsDetails = () => {
     return (
         <section className="blog-details">
@@ -9,19 +8,17 @@ const NewsDetails = () => {
                         <div className="blog-one__single">
                             <div className="blog-one__image">
                                 <img src="/assets/images/blog-d-1-1.jpg" alt="" />
-
                             </div>
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
+                                        data-original-title="Posted On Jan 19"><i className="fa fa-calendar-alt"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="No Comments"><i className="fa fa-comments"></i></a>
+                                        data-original-title="No Comments"><i className="fa fa-comments"></i></a>
                                     <a data-toggle="tooltip" data-placement="top" title="" href="#"
-                                       data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
+                                        data-original-title="Posted By Admin"><i className="fa fa-user"></i></a>
                                 </div>
                                 <h2 className="blog-one__title">Are you ready to become a best student
-
                                 </h2>
                                 <p className="blog-one__text">Aelltes port lacus quis enim var sed efficitur turpis
                                     gilla sed sit
@@ -163,7 +160,7 @@ const NewsDetails = () => {
                                     <div className="sidebar__post__single">
                                         <div className="sidebar__post-image">
                                             <div className="inner-block"><img src="/assets/images/lp-1-1.jpg"
-                                                                              alt="Awesome Image" /></div>
+                                                alt="Awesome Image" /></div>
                                         </div>
                                         <div className="sidebar__post-content">
                                             <h4 className="sidebar__post-title"><a href="#">Pre launch mobile app
@@ -173,7 +170,7 @@ const NewsDetails = () => {
                                     <div className="sidebar__post__single">
                                         <div className="sidebar__post-image">
                                             <div className="inner-block"><img src="/assets/images/lp-1-2.jpg"
-                                                                              alt="Awesome Image" /></div>
+                                                alt="Awesome Image" /></div>
                                         </div>
                                         <div className="sidebar__post-content">
                                             <h4 className="sidebar__post-title"><a href="#">Social currency per-
@@ -183,7 +180,7 @@ const NewsDetails = () => {
                                     <div className="sidebar__post__single">
                                         <div className="sidebar__post-image">
                                             <div className="inner-block"><img src="/assets/images/lp-1-3.jpg"
-                                                                              alt="Awesome Image" /></div>
+                                                alt="Awesome Image" /></div>
                                         </div>
                                         <div className="sidebar__post-content">
                                             <h4 className="sidebar__post-title"><a href="#">Prioritize these items
@@ -222,5 +219,4 @@ const NewsDetails = () => {
         </section>
     );
 };
-
 export default NewsDetails;

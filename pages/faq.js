@@ -4,7 +4,6 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Faq from "../components/Faq";
-
 const FaqPage = () => {
     return (
         <Layout pageTitle="Kipso | FAQ">
@@ -15,5 +14,4 @@ const FaqPage = () => {
         </Layout>
     );
 };
-
 export default FaqPage;

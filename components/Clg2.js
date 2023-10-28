@@ -1,19 +1,12 @@
 import React from 'react';
-
 const CollegeList = ({ colleges }) => {
   const top3Colleges = colleges.slice(0, 3); // Get the top 3 colleges
   const otherColleges = colleges.slice(3); // Get the remaining colleges
-
-  
-
-// Pass the 'colleges' array as a prop to the CollegeList component
-{/* <CollegeList colleges={colleges} /> */}
-
-
+  // Pass the 'colleges' array as a prop to the CollegeList component
+  {/* <CollegeList colleges={colleges} /> */ }
   return (
     <div className="college-list">
       <h2>Top 10 Semi-Government Medical Colleges in Maharashtra</h2>
-
       <div className="top-colleges">
         {top3Colleges.map((college, index) => (
           <div className="college-card" key={index}>
@@ -23,7 +16,6 @@ const CollegeList = ({ colleges }) => {
           </div>
         ))}
       </div>
-
       <div className="other-colleges">
         <h3>Other Colleges</h3>
         <ul>
@@ -37,5 +29,4 @@ const CollegeList = ({ colleges }) => {
     </div>
   );
 };
-
 export default CollegeList;

@@ -1,5 +1,4 @@
-import React, {Component} from 'react';
-
+import React, { Component } from 'react';
 class Topbar extends Component {
     render() {
         return (
@@ -18,5 +17,4 @@ class Topbar extends Component {
         );
     }
 }
-
 export default Topbar;

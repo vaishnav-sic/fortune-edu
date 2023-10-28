@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BlogThree = () => {
     return (
         <section className="blog-one  blog-one__home-two">
@@ -13,9 +12,9 @@ const BlogThree = () => {
                         <div className="blog-one__single">
                             <div className="blog-one__image">
                                 <img src="/assets/images/blog-1-1.jpg" alt="" />
-                                    <a className="blog-one__plus" href="news-details.html"><i
-                                        className="kipso-icon-plus-symbol"></i>
-                                    </a>
+                                <a className="blog-one__plus" href="news-details.html"><i
+                                    className="kipso-icon-plus-symbol"></i>
+                                </a>
                             </div>
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
@@ -40,9 +39,9 @@ const BlogThree = () => {
                         <div className="blog-one__single">
                             <div className="blog-one__image">
                                 <img src="/assets/images/blog-1-2.jpg" alt="" />
-                                    <a className="blog-one__plus" href="news-details.html"><i
-                                        className="kipso-icon-plus-symbol"></i>
-                                    </a>
+                                <a className="blog-one__plus" href="news-details.html"><i
+                                    className="kipso-icon-plus-symbol"></i>
+                                </a>
                             </div>
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
@@ -68,9 +67,9 @@ const BlogThree = () => {
                         <div className="blog-one__single">
                             <div className="blog-one__image">
                                 <img src="/assets/images/blog-1-3.jpg" alt="" />
-                                    <a className="blog-one__plus" href="news-details.html"><i
-                                        className="kipso-icon-plus-symbol"></i>
-                                    </a>
+                                <a className="blog-one__plus" href="news-details.html"><i
+                                    className="kipso-icon-plus-symbol"></i>
+                                </a>
                             </div>
                             <div className="blog-one__content text-center">
                                 <div className="blog-one__meta">
@@ -97,5 +96,4 @@ const BlogThree = () => {
         </section>
     );
 };
-
 export default BlogThree;

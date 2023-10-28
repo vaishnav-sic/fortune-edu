@@ -1,28 +1,23 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import ModalVideo from 'react-modal-video';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
-
 class VideoThree extends Component {
-    constructor(){
+    constructor() {
         super()
         this.state = {
             isOpen: false,
             startCounter: false
         }
     }
-
     openModal = () => {
-        this.setState({isOpen: true})
+        this.setState({ isOpen: true })
     }
-
     onVisibilityChange = isVisible => {
         if (isVisible) {
-            this.setState({startCounter: true});
+            this.setState({ startCounter: true });
         }
     }
-
-
     render() {
         return (
             <section className="video-three">
@@ -63,7 +58,7 @@ class VideoThree extends Component {
                                     we help our <br />
                                     students</h2>
                                 <div className="video-three__btn-box">
-                                    <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='aitb---aDYM' onClose={() => this.setState({isOpen: false})} />
+                                    <ModalVideo channel='youtube' isOpen={this.state.isOpen} videoId='aitb---aDYM' onClose={() => this.setState({ isOpen: false })} />
                                     <div onClick={this.openModal} className="video-three__popup"><i className="fas fa-play"></i>
                                     </div>
                                 </div>
@@ -75,5 +70,4 @@ class VideoThree extends Component {
         );
     }
 }
-
 export default VideoThree;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Link from "next/link";
-
 class NavOne extends Component {
   constructor() {
     super();
@@ -10,18 +9,14 @@ class NavOne extends Component {
   }
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
-
     //Mobile Menu
     this.mobileMenu();
-
     //Search Toggle
     this.serachButton();
   }
-
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
   }
-
   handleScroll = () => {
     if (window.scrollY > 70) {
       this.setState({
@@ -33,44 +28,36 @@ class NavOne extends Component {
       });
     }
   };
-
   mobileMenu = () => {
     //Mobile Menu Toggle
     let mainNavToggler = document.querySelector(".menu-toggler");
     let mainNav = document.querySelector(".main-navigation");
-
     mainNavToggler.addEventListener("click", function () {
       mainNav.style.display =
         mainNav.style.display != "block" ? "block" : "none";
     });
   };
-
   serachButton = () => {
     let searchToggle = document.querySelector(".search-toggle");
     let searchPopup = document.querySelector(".search-popup");
     let searchClose = document.querySelector(".cancel");
     let searchOverlay = document.querySelector(".search-overlay");
-
     searchToggle.addEventListener("click", function () {
       searchPopup.classList.add("active");
     });
-
     searchClose.addEventListener("click", function () {
       searchPopup.classList.remove("active");
     });
-
     searchOverlay.addEventListener("click", function () {
       searchPopup.classList.remove("active");
     });
   };
-
   render() {
     return (
       <header className="site-header site-header__header-one ">
         <nav
-          className={`navbar navbar-expand-lg navbar-light header-navigation stricky ${
-            this.state.sticky ? "stricked-menu stricky-fixed" : ""
-          }`}
+          className={`navbar navbar-expand-lg navbar-light header-navigation stricky ${this.state.sticky ? "stricked-menu stricky-fixed" : ""
+            }`}
         >
           <div className="container clearfix">
             <div className="logo-box clearfix">
@@ -199,6 +186,5 @@ class NavOne extends Component {
     );
   }
 }
-
 export default NavOne;
 /* start  */

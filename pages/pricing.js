@@ -5,7 +5,6 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Pricing from "../components/Pricing";
 import CallToActionOne from "../components/CallToActionOne";
-
 const PricingPage = () => {
     return (
         <Layout pageTitle="Kipso | Pricing">
@@ -17,5 +16,4 @@ const PricingPage = () => {
         </Layout>
     );
 };
-
 export default PricingPage;

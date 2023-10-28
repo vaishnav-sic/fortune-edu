@@ -4,15 +4,13 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import MockDetails from "../components/MockDetails";
-
 const MockTest = () => {
     return (
         <Layout pageTitle="Fortune Education | Mock Test">
             <NavOne />
             <MockDetails />
             <Footer />
-            </Layout>
+        </Layout>
     );
 };
-
 export default MockTest;

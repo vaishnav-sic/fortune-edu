@@ -2,7 +2,6 @@ import React from "react";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import Link from "next/link";
-
 const medicalCollege = () => {
   const params = {
     slidesPerView: 3,
@@ -17,7 +16,6 @@ const medicalCollege = () => {
       el: ".swiper-pagination",
       clickable: true,
     },
-
     // Responsive breakpoints
     breakpoints: {
       1024: {
@@ -47,7 +45,6 @@ const medicalCollege = () => {
         </div>
         <div className="course-one__top-title__curve"></div>
       </section>
-
       <section className="course-one course-one__teacher-details home-one">
         <div className="container">
           <div className="course-one__carousel">

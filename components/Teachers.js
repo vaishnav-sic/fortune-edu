@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-
 const Teachers = () => {
     return (
         <section className="team-one team-page">
@@ -155,5 +154,4 @@ const Teachers = () => {
         </section>
     );
 };
-
 export default Teachers;

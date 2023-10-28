@@ -1,37 +1,32 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-
 const CourseCatOne = () => {
-
     const params = {
-        slidesPerView : 6,
+        slidesPerView: 6,
         loop: true,
         speed: 1000,
-        spaceBetween : 30,
+        spaceBetween: 30,
         autoplay: {
             delay: 3000,
             disableOnInteraction: false
         },
-
         // Responsive breakpoints
         breakpoints: {
-            1024:{
-                slidesPerView : 6
+            1024: {
+                slidesPerView: 6
             },
-            768:{
-                slidesPerView : 4
+            768: {
+                slidesPerView: 4
             },
-            640:{
-                slidesPerView : 3
-
+            640: {
+                slidesPerView: 3
             },
-            320:{
-                slidesPerView : 2
+            320: {
+                slidesPerView: 2
             }
         }
     }
-
     return (
         <section className="thm-gray-bg course-category-one">
             <div className="container-fluid text-center">
@@ -123,7 +118,6 @@ const CourseCatOne = () => {
                         </div>
                     </Swiper>
                 </div>
-
                 <a href="#" className="thm-btn">View All Categories</a>
             </div>
         </section>

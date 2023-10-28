@@ -4,7 +4,6 @@ import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import Courses from "../components/Courses";
-
 const CoursesPage = () => {
     return (
         <Layout pageTitle="Kipso | Courses">
@@ -15,5 +14,4 @@ const CoursesPage = () => {
         </Layout>
     );
 };
-
 export default CoursesPage;
