@@ -14,9 +14,7 @@ class CallToActionThree extends Component {
                                     <h2 className="block-title__title">Benefits of learning
                                         with kipso</h2>
                                 </div>
-                                <p className="cta-three__text">There cursus massa at urnaaculis estie. Sed aliquamellus
-                                    vitae ultrs
-                                    condmentum leo massa mollis estiegittis miristum nulla sed medy fringilla vitae.</p>
+                                <p className="cta-three__text">Our mission is to facilitate your journey in achieving your goal of making a positive impact on the lives of others. Leveraging years of practical experience, we offer insightful and pragmatic solutions. <br></br> We possess comprehensive knowledge spanning across all educational domains, empowering us to guide students towards selecting the most suitable path. Our unwavering commitment is to stand by your side until you successfully secure admission to your dream college and realize your aspirations.</p>
                                 <div className="cta-three__single-wrap">
                                     <div className="cta-three__single">
                                         <i className="kipso-icon-strategy"></i>

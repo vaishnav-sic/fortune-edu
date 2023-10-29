@@ -8,6 +8,7 @@ const MockTest = () => {
     return (
         <Layout pageTitle="Fortune Education | Mock Test">
             <NavOne />
+            <PageHeader title="Mock Test" />
             <MockDetails />
             <Footer />
         </Layout>
