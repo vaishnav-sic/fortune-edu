@@ -49,17 +49,17 @@ const CountdownKipso = () => {
         <div className="row">
           <div className="col-lg-6">
             <div className="countdown-one__content">
-              <h2 className="countdown-one__title">Register now </h2>
+              <h2 className="countdown-one__title">Book Consultation! </h2>
               <p className="countdown-one__tag-line">
-                get premium online courses for free!
+                Expert in Hassle-free admission
               </p>
-              <p className="countdown-one__text">
+              {/* <p className="countdown-one__text">
                 Lorem ipsum gravida nibh vel velit auctor aliquetnean
                 sollicitudin.
               </p>
               <div className="countdown-one__list list-unstyled">
                 <Countdown date={Date.now() + 5000000000} />
-              </div>
+              </div> */}
             </div>
           </div>
           <div id="registration1" className="col-lg-6">

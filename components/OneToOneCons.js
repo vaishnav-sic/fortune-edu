@@ -21,7 +21,7 @@ const oneToOneCons = () => {
                   <img src="assets/images/p-img1.jpg" alt=""></img>
                 </div>
               </div>
-            </div>ssss
+            </div>
           </div>
         </div>
       </div>

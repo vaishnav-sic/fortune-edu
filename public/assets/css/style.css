@@ -6182,7 +6182,7 @@ a:visited {
   margin-top: -87px;
 }
 .countdown-one__content {
-  padding-top: 100px;
+  padding-top: 10px;
 }
 .countdown-one__title {
   margin: 0;
@@ -6718,6 +6718,8 @@ p {
   width: 400px;
   height: 500px;
   box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .picture1 {
   object-fit: cover;
@@ -6730,6 +6732,8 @@ p {
   height: 500px;
   border-radius: 2rem;
   box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  border-radius: 1rem;
+  overflow: hidden;
 }
 .google-map1 {
   height: 100%;
@@ -6739,6 +6743,8 @@ p {
   padding-top: 6rem;
   justify-content: center;
   align-items: center;
+  /* padding-top: 20rem; */
+  
 }
 .container_Contact {
   border-style: solid;

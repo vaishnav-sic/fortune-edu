@@ -11,24 +11,19 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__contact">
-                                    <h2 className="footer-widget__title">Courses</h2>
+                                    <h2 className="footer-widget__title">Experts</h2>
                                     <ul className="list-unstyled footer-widget__course-list">
                                         <li>
                                             <h2>
-                                                <a href="course-details.html">
-                                                    Introduction Web Design
-                                                </a>
+                                                    CEO
                                             </h2>
-                                            <p>Mike Hardson</p>
+                                            <p>Dhairyasheel More</p>
                                         </li>
                                         <li>
                                             <h2>
-                                                <a href="course-details.html">
-                                                    {" "}
-                                                    Learning MBA Management{" "}
-                                                </a>
+                                                  CTO
                                             </h2>
-                                            <p>Jessica Brown</p>
+                                            <p>Asif Patel</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -68,7 +63,10 @@ const Footer = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-xl-3 col-lg-6 col-sm-12">
+
+{/* ------------------------------------------------------comented code as per changes -------------------------- */}
+
+                            {/* <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__gallery">
                                     <h2 className="footer-widget__title">Gallery</h2>
                                     <ul className="list-unstyled footer-widget__gallery-list">
@@ -104,7 +102,10 @@ const Footer = () => {
                                         </li>
                                     </ul>
                                 </div>
-                            </div>
+                            </div> */}
+
+
+{/* ---------------------------------------------------------------------------------------------- */}
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__about">
                                     <h2 className="footer-widget__title">About</h2>
