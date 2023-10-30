@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'next/router';
 import CountUp from 'react-countup';
 import VisibilitySensor from 'react-visibility-sensor';
 class AboutOne extends Component {
@@ -13,6 +14,8 @@ class AboutOne extends Component {
             this.setState({ startCounter: true });
         }
     }
+
+
     render() {
         return (
             <section className="about-one ">
@@ -52,10 +55,10 @@ class AboutOne extends Component {
                         slightly <br /> believable.
                         Lorem
                         Ipsn gravida nibh vel velit auctor aliquetn auci elit cons.</p>
-                    <a href="#" className="thm-btn about-one__btn">Start Learning Now</a>
+                    <a href="/index#registration2" className="thm-btn about-one__btn">Start Learning Now</a>
                 </div>
             </section>
         );
     }
 }
-export default AboutOne;
+export default withRouter(AboutOne);

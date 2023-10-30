@@ -44,123 +44,125 @@ const CountdownKipso = () => {
     }
   };
   return (
-    <section className="countdown-one">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-6">
-            <div className="countdown-one__content">
-              <h2 className="countdown-one__title">Book Consultation! </h2>
-              <p className="countdown-one__tag-line">
-                Expert in Hassle-free admission
-              </p>
-              {/* <p className="countdown-one__text">
+    <div id="registration1">
+      <section className="countdown-one">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="countdown-one__content">
+                <h2 className="countdown-one__title">Book Consultation! </h2>
+                <p className="countdown-one__tag-line">
+                  Expert in Hassle-free admission
+                </p>
+                {/* <p className="countdown-one__text">
                 Lorem ipsum gravida nibh vel velit auctor aliquetnean
                 sollicitudin.
               </p>
               <div className="countdown-one__list list-unstyled">
                 <Countdown date={Date.now() + 5000000000} />
               </div> */}
-            </div>
-          </div>
-          <div id="registration1" className="col-lg-6">
-            <div className="become-teacher__form">
-              <div className="become-teacher__form-top">
-                <h2 className="become-teacher__form-title">
-                  Book Consultation
-                </h2>
               </div>
-              <form
-                action="#"
-                method="POST"
-                className="become-teacher__form-content contact-form-validated"
-                onSubmit={handleFormSubmit}
-              >
-                <input
-                  className="form-field"
-                  type="text"
-                  placeholder="First Name"
-                  name="firstName"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                />
-                {formErrors.firstName && (
-                  <span className="error-message">{formErrors.firstName}</span>
-                )}
-                <input
-                  className="form-field"
-                  type="text"
-                  placeholder="Last Name"
-                  name="lastName"
-                  value={formData.lastName}
-                  onChange={handleInputChange}
-                />
-                {formErrors.lastName && (
-                  <span className="error-message">{formErrors.lastName}</span>
-                )}
-                <input
-                  className="form-field"
-                  type="text"
-                  placeholder="Mobile"
-                  name="mobile"
-                  value={formData.mobile}
-                  onChange={handleInputChange}
-                />
-                {formErrors.mobile && (
-                  <span className="error-message">{formErrors.mobile}</span>
-                )}
-                <input
-                  className="form-field"
-                  type="text"
-                  placeholder="Email-Id"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-                {formErrors.email && (
-                  <span className="error-message">{formErrors.email}</span>
-                )}
-                <select
-                  className="form-field"
-                  name="courseInterest"
-                  value={formData.courseInterest}
-                  onChange={handleInputChange}
+            </div>
+            <div className="col-lg-6">
+              <div className="become-teacher__form">
+                <div className="become-teacher__form-top">
+                  <h2 className="become-teacher__form-title">
+                    Book Consultation
+                  </h2>
+                </div>
+                <form
+                  action="#"
+                  method="POST"
+                  className="become-teacher__form-content contact-form-validated"
+                  onSubmit={handleFormSubmit}
                 >
-                  <option value="Medical">Medical</option>
-                  <option value="Engineering">Engineering</option>
-                </select>
-                <input
-                  className="form-field"
-                  type="text"
-                  placeholder="City you Live in"
-                  name="cityLiveIn"
-                  value={formData.cityLiveIn}
-                  onChange={handleInputChange}
-                />
-                <select
-                  className="form-field"
-                  name="consultationCity"
-                  value={formData.consultationCity}
-                  onChange={handleInputChange}
-                >
-                  <option value="Pune">Pune</option>
-                  <option value="Mumbai">Mumbai</option>
-                  <option value="Baramati">Baramati</option>
-                  <option value="Manchar">Manchar</option>
-                  <option value="Karad">Karad</option>
-                </select>
-                <button
-                  type="submit"
-                  className="thm-btn become-teacher__form-btn"
-                >
-                  Apply For It
-                </button>
-              </form>
-              <div className="result text-center"></div>
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="First Name"
+                    name="firstName"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.firstName && (
+                    <span className="error-message">{formErrors.firstName}</span>
+                  )}
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="Last Name"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.lastName && (
+                    <span className="error-message">{formErrors.lastName}</span>
+                  )}
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="Mobile"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.mobile && (
+                    <span className="error-message">{formErrors.mobile}</span>
+                  )}
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="Email-Id"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.email && (
+                    <span className="error-message">{formErrors.email}</span>
+                  )}
+                  <select
+                    className="form-field"
+                    name="courseInterest"
+                    value={formData.courseInterest}
+                    onChange={handleInputChange}
+                  >
+                    <option value="Medical">Medical</option>
+                    <option value="Engineering">Engineering</option>
+                  </select>
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="City you Live in"
+                    name="cityLiveIn"
+                    value={formData.cityLiveIn}
+                    onChange={handleInputChange}
+                  />
+                  <select
+                    className="form-field"
+                    name="consultationCity"
+                    value={formData.consultationCity}
+                    onChange={handleInputChange}
+                  >
+                    <option value="Pune">Pune</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Baramati">Baramati</option>
+                    <option value="Manchar">Manchar</option>
+                    <option value="Karad">Karad</option>
+                  </select>
+                  <button
+                    type="submit"
+                    className="thm-btn become-teacher__form-btn"
+                  >
+                    Apply For It
+                  </button>
+                </form>
+                <div className="result text-center"></div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 export default CountdownKipso;
