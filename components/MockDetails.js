@@ -12,10 +12,12 @@ const MockDetails = () => {
                                     <span><i className="kipso-icon-professor"></i></span>
                                 </div>
                                 <div className="cta-two__content">
-                                    <h2 className="cta-two__title">MEDICAL</h2>
-                                    <p className="cta-two__text">There are many variations of passages of lore available
-                                        but <br /> the
-                                        majority have suffered alteration in some form.</p>
+                                    <h2 className="cta-two__title">Assess your medical knowledge</h2>
+                                    <p className="cta-two__text"><br/>with precision – Take a mock test to gauge
+                                    <br/>your preparedness for the medical field.
+                                    </p>
+
+                                    
                                     <a href="#" className="thm-btn cta-two__btn">Run Mock Test</a>
                                 </div>
                             </div>
@@ -26,10 +28,11 @@ const MockDetails = () => {
                                     <span><i className="kipso-icon-knowledge"></i></span>
                                 </div>
                                 <div className="cta-two__content">
-                                    <h2 className="cta-two__title">ENGINEERING</h2>
-                                    <p className="cta-two__text">There are many variations of passages of lore available
-                                        but <br /> the
-                                        majority have suffered alteration in some form.</p>
+                                    <h2 className="cta-two__title">Evaluate your engineering prowess</h2>
+                                    <p className="cta-two__text">
+                                    <br/>Opt for a mock test to measure your
+                                    <br/>readiness for the engineering field
+                                    </p>
                                     <a href="#" className="thm-btn cta-two__btn">Run Mock Test</a>
                                 </div>
                             </div>
