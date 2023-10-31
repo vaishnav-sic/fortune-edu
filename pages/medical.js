@@ -31,151 +31,151 @@ const medicalCollege = () => {
     {
       name: "Seth GS Medical College - [GSMC], Mumbai",
       ranking: 2,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-2.jpeg",
     },
     {
       name: "Byramjee Jeejeebhoy Government Medical College - [BJMC], Pune",
       ranking: 3,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-3.jpeg",
     },
     {
       name: "Lokmanya Tilak Municipal Medical College-[LTMMC], Mumbai",
       ranking: 4,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-4.jpeg",
     },
     {
       name: "Government Medical College and Hospital, Aurangabad",
       ranking: 5,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-5.jpeg",
     },
     {
       name: "Vilasrao Deshmukh Government Medical College, Latur",
       ranking: 6,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-6.jpeg",
     },
     {
       name: "Topiwala National Medical College - [TNMC], Mumbai",
       ranking: 7,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-7.jpeg",
     },
     {
       name: "Government Medical College - [GMC], Nagpur",
       ranking: 8,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-8.jpeg",
     },
     {
       name: "Dr Vaishampayan Memorial Government Medical College, Solapur",
       ranking: 9,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-9.jpeg",
     },
     {
       name: "Government Medical College - [GMC], Miraj",
       ranking: 10,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo1-10.jpeg",
     },
   ];
   const colleges2 = [
     {
       name: "Smt. Kashibai Navale Medical College and General Hospital, Pune",
       ranking: 1,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-1.jpeg",
     },
     {
       name: "K.J Somaiya Medical College, Mumbai",
       ranking: 2,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-2.jpeg",
     },
     {
       name: "Dr. VasantRao Pawar Medical College Hospital and Research Center, Nasik",
       ranking: 3,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-3.jpeg",
     },
     {
       name: "Terna Medical College, Navi Mumbai",
       ranking: 4,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-4.jpeg",
     },
     {
       name: "Maharashtra Institute of Medical Science and Research, Latur",
       ranking: 5,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-5.jpeg",
     },
     {
       name: "Ashwini Rural Medical College, Hospital and Research Centre, Kumbhari, Solapur",
       ranking: 6,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-6.jpeg",
     },
     {
       name: "Dr. Ulhas Patil Medical College and Hospital, Jalgaon",
       ranking: 7,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-7.jpeg",
     },
     {
       name: "Dr. Vithalrao Vikhe Patil Foundation's Medical College and Hospital, Ahmednagar",
       ranking: 8,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-8.jpeg",
     },
     {
       name: "B.K.L Walawalkar Rural Medical College, Ratnagiri",
       ranking: 9,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-9.jpeg",
     },
     {
       name: "Prakash Institute of Medical Science and Research, Sangli",
       ranking: 10,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo2-10.jpeg",
     },
   ];
   const colleges3 = [
     {
       name: "Krishna Institute of Medical Sciences, Karad",
       ranking: 1,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-1.jpeg",
     },
     {
       name: "Bharati Vidyapeeth Medical College, Pune",
       ranking: 2,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-2.jpeg",
     },
     {
       name: "Mahatma Gandhi Mission Medical College, Navi Mumbai",
       ranking: 3,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-3.jpeg",
     },
     {
       name: "Rural Medical College & Pravara Institute of Medical Sciences, Loni",
       ranking: 4,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-4.jpeg",
     },
     {
       name: "Bharati Vidyapeeth Medical College & Hospital, Sangli",
       ranking: 5,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-5.jpeg",
     },
     {
       name: "Jawaharlal Nehru Medical College, Wardha",
       ranking: 6,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-6.jpeg",
     },
     {
       name: "D.Y. Patil Medical College, Navi Mumbai",
       ranking: 7,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-7.jpeg",
     },
     {
       name: "D.Y. Patil Medical College, Pune",
       ranking: 8,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-8.jpeg",
     },
     {
       name: "MGM Medical College, Aurangabad",
       ranking: 9,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-9.jpeg",
     },
     {
       name: "D.Y. Patil Medical College, Kolhapur",
       ranking: 10,
-      logo: "/assets/images/logo/logo1-1.jpeg",
+      logo: "/assets/images/logo/logo3-10.jpeg",
     },
   ];
   return (

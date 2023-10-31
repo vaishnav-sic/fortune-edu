@@ -38,7 +38,7 @@ const BlogTwo = () => {
                     <h2 className="block-title__title">Our latest news <br />
                         & articles</h2>
                 </div>
-                <div className="blog-two__carousel">
+                <div id="registration2" className="blog-two__carousel">
                     <Swiper {...params}>
                         <div className="item">
                             <div className="blog-two__single">
