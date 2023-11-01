@@ -30,10 +30,10 @@ const HomePage = () => (
     <NavOne />
     <SliderOne />
     <AboutTwo />
+    {/* <CourseCatOne /> */}
     <CourseOne />
     {/* <VideoTwo /> */}
     <CountdownKipso />
-    {/* <CourseCatOne /> */}
     {/* <CallToActionThree /> */}
     {/* <AboutUs /> */}
     {/* <BrandsTwo /> */}

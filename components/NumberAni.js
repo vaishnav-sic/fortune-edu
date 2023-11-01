@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
+
 export default class NumberAni extends Component {
   constructor(props) {
     super();
@@ -17,7 +18,7 @@ export default class NumberAni extends Component {
     return (
       <div className="about-two__count">
         <div className="about-two__count-text">
-          {this.props.name}
+          <p>{this.props.name}</p>
           <span className="counter">
             <VisibilitySensor
               onChange={this.onVisibilityChange}
