@@ -7,20 +7,20 @@ const InstituteLevelManagement = () => {
       <div className="service-Main">
         <div className="service-in">
           <div className="service-in-heading" id="alt-long">
-            <h3 className="Ser-head">
+            <h3 className="Ser-head" data-aos="fade-in" data-aos-duration="800">
               Institute Level or Management Quota Admission
             </h3>
           </div>
           <div className="service-in-content">
             <div className="service-in-content-left">
-              <li>
+              <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>
                   Money alone won't secure you a seat, as Institute Level
                   Admissions now consider merit and rank.
                 </p>
               </li>
-              <li>
+              <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>
                   For these specific seats, a distinct admission process is in
@@ -28,14 +28,14 @@ const InstituteLevelManagement = () => {
                   different option form to secure admission.
                 </p>
               </li>
-              <li>
+              <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>
                   While the fees for these seats are on the higher side, we'll
                   keep you well-informed about all the details.
                 </p>
               </li>
-              <li>
+              <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>
                   We'll ensure you're up-to-date on seat availability at the
@@ -43,7 +43,7 @@ const InstituteLevelManagement = () => {
                   opportunities.
                 </p>
               </li>
-              <li>
+              <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>
                   We're here to support you through every step, right up to your
@@ -51,7 +51,7 @@ const InstituteLevelManagement = () => {
                   Maharashtra.
                 </p>
               </li>
-              <li>
+              <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>
                   Initial rounds are conducted at the state level, with most
@@ -59,9 +59,13 @@ const InstituteLevelManagement = () => {
                   separate admission process implemented by the college. Count
                   on us for regular updates."
                 </p>
-               </li>
+              </li>
             </div>
-            <div className="service-in-content-right">
+            <div
+              className="service-in-content-right"
+              data-aos="fade-left"
+              data-aos-duration="800"
+            >
               <div className="servinice-in-content-right-in">
                 <div className="servinice-in-content-right-in-in">
                   <img src="assets/images/p-img1.jpg"></img>
