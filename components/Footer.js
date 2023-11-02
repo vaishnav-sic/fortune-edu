@@ -109,9 +109,9 @@ const Footer = () => {
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__about">
                                     <h2 className="footer-widget__title">About</h2>
-                                    <p className="footer-widget__text">
-                                        Lorem ipsum dolor sit ametcon, sectetur adipiscing elit.
-                                        Phasellus vehic sagittis euismod.
+                                    <p className="footer-widget__text">20+ Years of Excellence: Your Trusted Source
+                                    for Assured Medical and Engineering Admissions
+                                    Recommended by thousands of doctors and engineers
                                     </p>
                                     <div className="footer-widget__btn-block">
                                         <a href="#" className="thm-btn">

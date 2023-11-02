@@ -64,7 +64,7 @@ class NavOne extends Component {
               <Link href="/">
                 <a className="navbar-brand">
                   <img
-                    src="/assets/images/Fortune-Edu-logo-right.png"
+                    src="/assets/images/logo/FES logo.svg"
                     className="main-logo"
                     width="200px"
                     alt="Awesome Image"

@@ -1107,8 +1107,8 @@ a:visited {
   position: absolute;
   right: -5%;
   top: 0%;
-  height: 680px;
-  width: 540px;
+  height: 560px;
+  width: 480px;
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-fill-mode: both;
@@ -6567,11 +6567,19 @@ h1 {
   width: 100%;
   font-size: 15px;
   margin: 0;
+  background-color: whitesmoke;
+}
+.college-card img{
+  mix-blend-mode: multiply;
+  margin-left: 400px;
+  margin-top: 200px;
+  height: 300px;
 }
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
   .college-item {
     max-width: 100%; /* Allow the div to take the full width on smaller screens */
+    color: #FCA712;
   }
 }
 .college-logo img {
@@ -6750,6 +6758,11 @@ p {
   justify-content: center;
   align-items: center;
   /* padding-top: 20rem; */
+}
+.row-footer {
+  padding-top: 1rem;
+  justify-content: center;
+  align-items: center;
 }
 .container_Contact {
   border-style: solid;
@@ -6971,7 +6984,14 @@ h1 {
   width: 100%;
   font-size: 15px;
   margin: 0;
+  transition: transform 0.2s; /* Add a smooth transition effect */
+
+  /* Apply zoom on hover */
+  &:hover {
+    transform: scale(1.1); /* You can adjust the scale factor as needed */
+  }
 }
+
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
   .college-item {
@@ -6983,6 +7003,8 @@ h1 {
   max-height: 100px;
   border-radius: 5px;
   margin-right: 20px;
+  mix-blend-mode: multiply;
+  
 }
 .college-details {
   flex: 1;
@@ -6990,6 +7012,7 @@ h1 {
 h2 {
   font-size: 20px;
   margin: 0;
+  color: #001253;
 }
 .blog-two__title p {
   font-size: 16px;
@@ -7005,10 +7028,13 @@ h2 {
   align-items: center;
   text-align: center;
   padding: 20px;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRja2C5wZ484pkFtyi5NjmxOZd1DY1sZ_j0PmTDZual1T3kfICQrvmpw9Ys8hBApbIYHwg&usqp=CAU'); /* Add your background image URL here */
+  background-image: url('/assets/images/doc-admission.jpg'); /* Add your background image URL here */
   background-size: cover;
   color: white;
+  background-color: rgba(0, 0, 0, 0.1); /* 0.5 is the opacity level (adjust as needed) */
 }
+
+
 .e-medicalAdmissions {
   display: flex;
   flex-direction: column;
@@ -7075,10 +7101,15 @@ h2 {
   color: #001253;
   padding: 10px;
 }
+.collegeTable td{
+  background-color: #001253;
+}
+
 .collegeTable td,
 .collegeTable th {
   border: 1px solid #ccc;
   padding: 10px;
+  color: white;
 }
 @media (max-width: 600px) {
   .collegeTable {
