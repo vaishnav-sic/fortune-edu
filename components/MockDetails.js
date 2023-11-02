@@ -16,8 +16,7 @@ const MockDetails = () => {
                                     <p className="cta-two__text"><br/>with precision – Take a mock test to gauge
                                     <br/>your preparedness for the medical field.
                                     </p>
-
-                                    
+                                   
                                     <a href="#" className="thm-btn cta-two__btn">Run Mock Test</a>
                                 </div>
                             </div>

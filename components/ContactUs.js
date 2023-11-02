@@ -7,7 +7,7 @@ const ContactUs = () => {
                 <div className='Branch__Main__In' >
                     <div className='Branch__Main__In__Left'>
                         <div className="container_Contact_main">
-                            <h2 className="contact-info-one__title__main">MAIN BRANCH </h2>
+                            <h2 className="contact-info-one__title__main">HEAD OFFICE </h2>
                             <h2 className="contact-info-one__title__main1">PUNE </h2>
                             <p className="contact-info-one__text_main"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
                                 <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM

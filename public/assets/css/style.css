@@ -1649,7 +1649,7 @@ a:visited {
 .contact-info-one__title {
   text-align: center;
   margin: 0;
-  color: #012237;
+  color: white;
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 55px;
@@ -2947,7 +2947,7 @@ a:visited {
   border-width: 2px;
   border-color: #f1f1f1;
   border-top: 0;
-  background-color: #fff;
+  background-color: #0a2a37;
 }
 .course-one__admin {
   display: -webkit-box;
@@ -2998,7 +2998,7 @@ a:visited {
 .course-one__title {
   font-size: 24px;
   font-weight: 600;
-  color: #012237;
+  color: #013731;
   margin: 0;
   margin-bottom: 5px;
 }
@@ -6760,7 +6760,6 @@ p {
   /* padding-top: 20rem; */
 }
 .container_Contact {
-  background-color: #0a2a37;
   border-style: solid;
   text-align: center;
   border-width: 2px;
