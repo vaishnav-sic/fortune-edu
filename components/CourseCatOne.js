@@ -31,8 +31,7 @@ const CourseCatOne = () => {
         <section className="thm-gray-bg course-category-one">
             <div className="container-fluid text-center">
                 <div className="block-title text-center">
-                    <h2 className="block-title__title">Browse online <br />
-                        course categories</h2>
+                    <h2 className="block-title__title">Have A Problem? We Has The Solution.</h2>
                 </div>
                 <div className="course-category-one__carousel">
                     <Swiper {...params}>

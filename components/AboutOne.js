@@ -22,16 +22,16 @@ class AboutOne extends Component {
                 <img src="assets/images/circle-stripe.png" className="about-one__circle" alt="" />
                 <div className="container text-center">
                     <div className="block-title text-center">
-                        <h2 className="block-title__title">Let’s do study with <br />
-                            expert teachers</h2>
+                        <h2 className="block-title__title">Let’s Secure Your Admission With <br />
+                           Our Expert Guidance</h2>
                     </div>
                     <div className="about-one__img">
                         <div className="row">
                             <div className="col-lg-6">
-                                <img src="assets/images/about-2-1.jpg" alt="" />
+                                <img src="assets/images/Doctor.jpg" alt="Medical students" />
                             </div>
                             <div className="col-lg-6">
-                                <img src="assets/images/about-2-2.jpg" alt="" />
+                                <img src="assets/images/engineers.jpg" alt="Enginieering students" />
                             </div>
                         </div>
                         <div className="about-one__review">
