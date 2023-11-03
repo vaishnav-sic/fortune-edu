@@ -55,7 +55,7 @@ class AboutOne extends Component {
                         slightly <br /> believable.
                         Lorem
                         Ipsn gravida nibh vel velit auctor aliquetn auci elit cons.</p>
-                    <a href="/index#registration2" className="thm-btn about-one__btn">Start Learning Now</a>
+                    <a href="/index#registration1" className="thm-btn about-one__btn">Start Learning Now</a>
                 </div>
             </section>
         );
