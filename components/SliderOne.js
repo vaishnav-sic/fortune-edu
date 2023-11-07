@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import NumberAni from "./NumberAni";
 const SliderOne = () => {
   const [swiper, setSwiper] = useState(null);
