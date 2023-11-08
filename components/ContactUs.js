@@ -1,5 +1,5 @@
 import React from 'react';
-import IMG from "../public/assets/images/Fortune-Edu-logo.png"
+import IMG from "../public/assets/images/FES logo.svg";
 const ContactUs = () => {
     return (
         <div>
@@ -9,13 +9,13 @@ const ContactUs = () => {
                         <div className="container_Contact_main">
                             <h2 className="contact-info-one__title__main">HEAD OFFICE </h2>
                             <h2 className="contact-info-one__title__main1">PUNE </h2>
-                            <p className="contact-info-one__text_main"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                <br /><i class='fas fa-phone-square-alt'></i> 00123456789
+                            <p className="contact-info-one__text_main"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                             </p>
                         </div>
                         <div className="contact-info-one__single">
-                            <img class="picture1" src={IMG} alt="collage group photo" />
+                            <img className="picture1" src={IMG} alt="collage group photo" />
                         </div>
                     </div>
                     <div className='Branch__Main__In__Right'>
@@ -32,9 +32,9 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MUMBAI (CITY) </h2>
-                                <p className="contact-info-one__text_Branch"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i class='fas fa-phone-square-alt'></i> 00123456789
+                                <p className="contact-info-one__text_Branch"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                                     <br /><a href="#" className="course-one__Direction">direction</a>
                                 </p>
                             </div>
@@ -44,9 +44,9 @@ const ContactUs = () => {
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <h2 className="contact-info-one__title">BARAMATI </h2>
-                                <p className="contact-info-one__text"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i class='fas fa-phone-square-alt'></i> 00123456789
+                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                                     <br /><a href="https://www.google.com/maps?authuser=0" className="course-one__Direction">direction</a>
                                 </p>
                             </div>
@@ -58,9 +58,9 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MANCHAR </h2>
-                                <p className="contact-info-one__text"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i class='fas fa-phone-square-alt'></i> 00123456789
+                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                                     <br /><a href="#" className="course-one__Direction">direction</a>
                                 </p>
                             </div>
@@ -72,9 +72,9 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">KARAD </h2>
-                                <p className="contact-info-one__text"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i class='fas fa-phone-square-alt'></i> 00123456789
+                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                                     <br /><a href="#" className="course-one__Direction">direction</a>
                                 </p>
                             </div>
@@ -84,9 +84,9 @@ const ContactUs = () => {
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <h2 className="contact-info-one__title">MUMBAI (KALYAN) </h2>
-                                <p className="contact-info-one__text"><i class="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i class="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i class='fas fa-phone-square-alt'></i> 00123456789
+                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                                     <br /><a href="#" className="course-one__Direction">direction</a>
                                 </p>
                             </div>
