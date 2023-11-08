@@ -126,7 +126,7 @@ const CountdownKipso = () => {
                     // value={formData.courseInterest}
                     onChange={handleInputChange}
                   >
-                    <option value="Select a Course" disabled selected>Course Interested In</option>
+                    <option defaultValue="Select a Course" disabled >Course Interested In</option>
                     <option value="Medical">Medical</option>
                     <option value="Engineering">Engineering</option>
                   </select>
@@ -144,7 +144,7 @@ const CountdownKipso = () => {
                     // value={formData.consultationCity}
                     onChange={handleInputChange}
                   >
-                    <option value="" disabled selected>Select a City</option>
+                    <option value="" disabled >Select a City</option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
                     <option value="Baramati">Baramati</option>
