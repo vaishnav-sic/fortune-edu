@@ -6,7 +6,7 @@ const CallToActionOne = () => {
                 <h2 className="cta-one__title">Experts in hassle-free admissions! <br />
                     Turning Dreams into Reality</h2>
                 <div className="cta-one__btn-block">
-                    <a href="#" className="thm-btn cta-one__btn">Connect Now</a>
+                    <a href="#" className="thm-btn cta-one__btn">Book Consultation</a>
                 </div>
             </div>
         </section>

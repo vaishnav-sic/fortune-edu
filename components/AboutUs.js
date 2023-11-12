@@ -37,7 +37,7 @@ class CallToActionThree extends Component {
                                             Consultancy</p>
                                     </div>
                                 </div>
-                                <a href="#" className="thm-btn">Learn More</a>
+                                <a href="#" className="thm-btn">Book Consultation</a>
                             </div>
                         </div>
                     </div>

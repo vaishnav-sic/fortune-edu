@@ -5,13 +5,13 @@ class Topbar extends Component {
             <div className="topbar-one">
                 <div className="container">
                     <div className="topbar-one__left">
-                        <a href="#">info@fortuneeduservices.com</a>
-                        <a href="#">444 888 0000</a>
+                        {/* <a href="#">dhairyasheelmore@fortuneeduservices.com</a> */}
+                        <a href="#">Website under construction. Coming soon by November 30th</a>
                     </div>
-                    <div className="topbar-one__right">
+                    {/* <div className="topbar-one__right">
                         <a href="#">Login</a>
                         <a href="#">Register</a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         );

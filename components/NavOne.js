@@ -12,7 +12,7 @@ class NavOne extends Component {
     //Mobile Menu
     this.mobileMenu();
     //Search Toggle
-    this.serachButton();
+    //this.serachButton();
   }
   componentWillUnmount() {
     window.removeEventListener("scroll", this.handleScroll);
@@ -37,21 +37,21 @@ class NavOne extends Component {
         mainNav.style.display != "block" ? "block" : "none";
     });
   };
-  serachButton = () => {
-    let searchToggle = document.querySelector(".search-toggle");
-    let searchPopup = document.querySelector(".search-popup");
-    let searchClose = document.querySelector(".cancel");
-    let searchOverlay = document.querySelector(".search-overlay");
-    searchToggle.addEventListener("click", function () {
-      searchPopup.classList.add("active");
-    });
-    searchClose.addEventListener("click", function () {
-      searchPopup.classList.remove("active");
-    });
-    searchOverlay.addEventListener("click", function () {
-      searchPopup.classList.remove("active");
-    });
-  };
+  // serachButton = () => {
+  //   let searchToggle = document.querySelector(".search-toggle");
+  //   let searchPopup = document.querySelector(".search-popup");
+  //   let searchClose = document.querySelector(".cancel");
+  //   let searchOverlay = document.querySelector(".search-overlay");
+  //   searchToggle.addEventListener("click", function () {
+  //     searchPopup.classList.add("active");
+  //   });
+  //   searchClose.addEventListener("click", function () {
+  //     searchPopup.classList.remove("active");
+  //   });
+  //   searchOverlay.addEventListener("click", function () {
+  //     searchPopup.classList.remove("active");
+  //   });
+  // };
   render() {
     return (
       <header className="site-header site-header__header-one ">
@@ -64,7 +64,7 @@ class NavOne extends Component {
               <Link href="/">
                 <a className="navbar-brand">
                   <img
-                    src="/assets/images/logo/FES logo.svg"
+                    src="/assets/images/logo/FES_main.svg"
                     className="main-logo"
                     width="200px"
                     alt="Awesome Image"
@@ -159,14 +159,14 @@ class NavOne extends Component {
                 </li>
               </ul>
             </div>
-            <div className="right-side-box">
+            {/* <div className="right-side-box">
               <a
                 className="header__search-btn search-popup__toggler search-toggle"
                 href="#"
               >
                 <i className="kipso-icon-magnifying-glass"></i>
               </a>
-            </div>
+            </div> */}
           </div>
         </nav>
         <div className="site-header__decor">

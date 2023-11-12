@@ -11,9 +11,9 @@ const Layout = (props) => {
                 <link rel="apple-touch-icon" sizes="180x180"
                     href="/assets/images/favicons/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32"
-                    href="/assets/images/favicons/Fortune-Edu-logo-symbol.png" />
+                    href="/assets/images/favicons/FES_symbol.png" />
                 <link rel="icon" type="image/png" sizes="16x16"
-                    href="/assets/images/favicons/Fortune-Edu-logo-symbol.png" />
+                    href="/assets/images/favicons/FES_symbol.png" />
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800%7CSatisfy&display=swap" rel="stylesheet" />
                 <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css" />
                 <link rel="stylesheet" href="/assets/css/animate.min.css" />

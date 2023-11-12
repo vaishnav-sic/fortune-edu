@@ -1,5 +1,5 @@
 import React from 'react';
-import IMG from "../public/assets/images/FES logo.svg";
+import IMG from "../public/assets/images/logo/FES_logo.svg";
 const ContactUs = () => {
     return (
         <div>
@@ -9,8 +9,8 @@ const ContactUs = () => {
                         <div className="container_Contact_main">
                             <h2 className="contact-info-one__title__main">HEAD OFFICE </h2>
                             <h2 className="contact-info-one__title__main1">PUNE </h2>
-                            <p className="contact-info-one__text_main"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                            <p className="contact-info-one__text_main"><i className="fa fa-address-book"></i> A 601, Omkar Nandan, Navale Bridge, Pune.
+                                <br /><i className="fa fa-envelope"></i> dhairyasheelmore@fortuneeduservices.com
                                 <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                             </p>
                         </div>
@@ -31,8 +31,22 @@ const ContactUs = () => {
                             <div className="course-one__content">
                                 <div className="Branch_Details">
                                 </div>
-                                <h2 className="contact-info-one__title">MUMBAI (CITY) </h2>
+                                <h2 className="contact-info-one__title">MUMBAI</h2>
                                 <p className="contact-info-one__text_Branch"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
+                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
+                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
+                                    <br /><a href="#" className="course-one__Direction">direction</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-4">
+                        <div className="course-one__single">
+                            <div className="course-one__content">
+                                <div className="Branch_Details">
+                                </div>
+                                <h2 className="contact-info-one__title">KARAD </h2>
+                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
                                     <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
                                     <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                                     <br /><a href="#" className="course-one__Direction">direction</a>
@@ -66,21 +80,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4">
-                        <div className="course-one__single">
-                            <div className="course-one__content">
-                                <div className="Branch_Details">
-                                </div>
-                                <h2 className="contact-info-one__title">KARAD </h2>
-                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
-                                    <br /><a href="#" className="course-one__Direction">direction</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-4">
+                    {/* <div className="col-lg-4">
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <h2 className="contact-info-one__title">MUMBAI (KALYAN) </h2>
@@ -91,7 +91,7 @@ const ContactUs = () => {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

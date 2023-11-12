@@ -15,13 +15,13 @@ const Footer = () => {
                                     <ul className="list-unstyled footer-widget__course-list">
                                         <li>
                                             <h2>
-                                                    CEO
+                                                  Director
                                             </h2>
                                             <p>Dhairyasheel More</p>
                                         </li>
                                         <li>
                                             <h2>
-                                                  CTO
+                                                  Manager
                                             </h2>
                                             <p>Asif Patel</p>
                                         </li>
@@ -129,7 +129,7 @@ const Footer = () => {
                 <div className="site-footer__bottom">
                     <div className="container">
                         <p className="site-footer__copy">
-                            &copy; Copyright 2023{" "}
+                            &copy; सर्वहक्कस्वाधीन  2023{" "}
                             <a href="#">SIC द्वारे ❤ प्रेमपूर्वक विकसित</a>
                         </p>
                         <div className="site-footer__social">
