@@ -37,7 +37,7 @@ const SliderOne = () => {
                   admissions
                 </h3>
                 <p className="banner-one__tag-line">
-                  to medical & engineering{" "}
+                  in medical & engineering{" "}
                 </p>
                 <p className="banner-one__tag-line-one">
                   We Provide Many Choice for Admission in Various Colleges!
