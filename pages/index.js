@@ -26,7 +26,7 @@ import Admissionguidance from "../components/Admissionguidance";
 import CollegeChoicePref from "../components/CollegeChoicePref";
 const HomePage = () => (
   <Layout pageTitle="Fortune Education Services">
-    {/* <Topbar /> */}
+    <Topbar />
     <NavOne />
     <SliderOne />
     <AboutTwo />

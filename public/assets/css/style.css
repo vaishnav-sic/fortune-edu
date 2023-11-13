@@ -4205,7 +4205,7 @@ a:visited {
   background-size: cover;
   background-attachment: fixed;
   position: relative;
-  background-image: url(../images/serviceWallpaper.png);
+  background-image: url(../images/Cover.jpg);
 }
 .inner-banner::before {
   content: "";

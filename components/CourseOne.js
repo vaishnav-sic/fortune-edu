@@ -44,15 +44,15 @@ const BlogTwo = () => {
                             <div className="blog-two__single">
                                 <div className="blog-two__inner">
                                     <div className="blog-two__date">
-                                        <span>25</span>
-                                        Latest
+                                        <span>Latest</span>
+                                        Updates
                                     </div>
                                     {/* <div className="blog-two__meta">
                                     <a href="#">by Admin</a>
                                     <a href="#">3 Comments</a>
                                 </div> */}
                                     <h3 className="blog-two__title">
-                                        <p>All India AYUSH Round 2 Registration is available till 05 December 2022 up to 3 PM and Choice Filling Deadline is 05 December 2023 till 11.55 PM</p>
+                                        <p>You'll get all latest news and updates related to Medical & Engineering Admissions.</p>
                                         {/* <a href="news-details.html">Summer high school journalism camp</a> */}
                                     </h3>
                                 </div>
@@ -62,15 +62,15 @@ const BlogTwo = () => {
                             <div className="blog-two__single">
                                 <div className="blog-two__inner">
                                     <div className="blog-two__date">
-                                        <span>25</span>
-                                        Important
+                                    <span>Latest</span>
+                                        Updates
                                     </div>
                                     {/* <div className="blog-two__meta">
                                     <a href="#">by Admin</a>
                                     <a href="#">3 Comments</a>
                                 </div> */}
                                     <h3 className="blog-two__title">
-                                        <p>Mop up round 1 registration has started and deadline for form filling is 03 December 2023 till 11.55 pm, new registration facility is only available for Karnataka students. Document Verification...</p>
+                                    <p>You'll get all latest news and updates related to Medical & Engineering Admissions.</p>
                                         {/* <a href="news-details.html">Get a tips to develop a quality education</a> */}
                                     </h3>
                                 </div>
@@ -80,15 +80,15 @@ const BlogTwo = () => {
                             <div className="blog-two__single">
                                 <div className="blog-two__inner">
                                     <div className="blog-two__date">
-                                        <span>25</span>
-                                        Updated
+                                    <span>Latest</span>
+                                        Updates
                                     </div>
                                     {/* <div className="blog-two__meta">
                                     <a href="#">by Admin</a>
                                     <a href="#">3 Comments</a>
                                 </div> */}
                                     <h3 className="blog-two__title">
-                                        <p>All India Mop Up Round 1 Final result will be declared on 07 December 2023 and College Reporting is between 08 to 12 December 2022</p>
+                                    <p>You'll get all latest news and updates related to Medical & Engineering Admissions.</p>
                                         {/* <a href="news-details.html">Learn variety of programs and courses</a> */}
                                     </h3>
                                 </div>

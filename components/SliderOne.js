@@ -24,7 +24,7 @@ const SliderOne = () => {
             <div className="banner-one__bubble-2"></div>
             <div className="banner-one__bubble-3"></div>
             <img
-              src="/assets/images/doctor.png"
+              src="/assets/images/HP_Doctor.png"
               alt=""
               className="banner-one__scratch"
             />
@@ -37,7 +37,7 @@ const SliderOne = () => {
                   admissions
                 </h3>
                 <p className="banner-one__tag-line">
-                  to medical & engineering{" "}
+                  in medical & engineering{" "}
                 </p>
                 <p className="banner-one__tag-line-one">
                   We Provide Many Choice for Admission in Various Colleges!
