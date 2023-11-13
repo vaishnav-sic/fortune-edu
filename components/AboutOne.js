@@ -55,7 +55,7 @@ class AboutOne extends Component {
                     <br/>Drawing from our extensive personal experience, we assert confidently
                     <br/>that no one is better equipped to navigate this system than us.
                     </p>
-                    <a href="#" className="thm-btn about-one__btn">Book Consultation</a>
+                    <a href="/index#registration1" className="thm-btn about-one__btn">Book Consultation</a>
                 </div>
             </section>
         );

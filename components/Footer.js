@@ -118,7 +118,7 @@ const Footer = () => {
                                             Contact
                                         </a>
                                         <a href="#" className="thm-btn">
-                                            Purchase
+                                            Register
                                         </a>
                                     </div>
                                 </div>
