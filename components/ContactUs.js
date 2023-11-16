@@ -26,7 +26,7 @@ const ContactUs = () => {
             </div>
             <div className="container_Contact">
                 <div className="row">
-                    <div className="col-lg-4">
+                    <div className="col-lg-3">
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <div className="Branch_Details">
@@ -40,7 +40,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-3">
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <div className="Branch_Details">
@@ -54,7 +54,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-3">
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <h2 className="contact-info-one__title">BARAMATI </h2>
@@ -66,7 +66,7 @@ const ContactUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4">
+                    <div className="col-lg-3">
                         <div className="course-one__single">
                             <div className="course-one__content">
                                 <div className="Branch_Details">
