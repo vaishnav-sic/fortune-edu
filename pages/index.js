@@ -24,7 +24,13 @@ import AdmissionAlert from "../components/AdmissionAlert";
 import AdmissionFillingForm from "../components/AdmissionFillingForm";
 import Admissionguidance from "../components/Admissionguidance";
 import CollegeChoicePref from "../components/CollegeChoicePref";
+import { app, db } from '../firebaseConfig';
+import { collection, addDoc } from 'firebase/firestore';
+import { useEffect } from "react";
 const HomePage = () => (
+  useEffect(() => {
+     collection(db, 'notes');
+  },[]),
   <Layout pageTitle="Fortune Education Services">
     <Topbar />
     <NavOne />
