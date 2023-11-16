@@ -36,7 +36,7 @@ const HomePage = () => (
     <NavOne />
     <SliderOne />
     <AboutTwo />
-    {/* <CourseCatOne /> */}
+    <CourseCatOne />
     <CourseOne />
     {/* <VideoTwo /> */}
     <CountdownKipso />

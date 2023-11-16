@@ -1,11 +1,24 @@
 import React from "react";
+import { app, db } from "../firebaseConfig";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { useEffect, useState } from "react";
 const Footer = () => {
-    function scrollTop() {
-        window.scrollTo(0, 0);
-    }
-    return (
-        <div>
-            <footer className="site-footer">
+  function scrollTop() {
+    window.scrollTo(0, 0);
+  }
+  const [Data, setData] = useState();
+  useEffect(async () => {
+    const querySnapshot = await getDocs(collection(db, "NewsUpdates"));
+    const dataArray = [];
+    querySnapshot?.forEach((doc) => {
+      dataArray.push({ id: doc.id, ...doc.data() });
+    });
+    setData(dataArray);
+  }, []);
+  return (
+    <div>
+      {console.log(Data)}
+      <footer className="site-footer">
                 <div className="site-footer__upper">
                     <div className="container">
                         <div className="row">

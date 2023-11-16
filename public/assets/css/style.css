@@ -5593,7 +5593,7 @@ a:visited {
 }
 .about-two-main_count {
   display: flex;
-  gap: 6rem;
+  gap: 8rem;
   margin-left: 80px;
 }
 .about-two__count {
@@ -7155,14 +7155,140 @@ h2 {
 }
 /* end */
 
-/* --------------------------------------------CourceCatOne title styling---------------------------------------- */
+/* --------------------------------------------CourceCatOne title styling(problem-solution)---------------------------------------- */
 .block-title__title {
   margin: 0;
   color: #012237;
-  font-size: 30px;
+  font-size: 50px;
   font-weight: bold;
   margin-bottom: -15px;
   margin-top: -15px;
+}
+.problem-solution {
+  display: flex;
+  gap: 23rem;
+  margin-left: 18rem;
+}
+.title {
+  font-size: 30px;
+  color: black;
+}
+.problem-solution_main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80vh;
+  margin-left: 9rem;
+  margin-top: 3rem;
+}
+.problem-solution_main-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 80vh;
+  margin-left: 40rem;
+  margin-top: -32rem;
+}
+.problem-solution_shapes {
+    background: #FCA712;
+    box-shadow: 0px 6px 16px #003b5538;
+    border-radius: 26px 26px 0px 26px;
+    text-align: center;
+    letter-spacing: 0px;
+    color: #fff;
+    text-transform: capitalize;
+    padding: 14px 0px;
+    display: inline-block;
+    min-width: 175px;
+    border: 0;
+}
+.problem-solution_shapes-1 {
+  background: #001253;
+  box-shadow: 0px 6px 16px #003b5538;
+  border-radius: 26px 26px 26px 0px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 14px 0px;
+  display: inline-block;
+  min-width: 175px;
+  border: 0;
+}
+.shapes-content p {
+  font-size: 20px;
+  color: white;
+}
+.problem-solution_shapes{
+  background: #FCA712;
+  box-shadow: 0px 6px 16px #003b5538;
+  border-radius: 26px 26px 0px 26px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 14px 0px;
+  display: inline-block;
+  min-width: 175px;
+  border: 0;
+}
+.problem-solution_shapes-1 {
+  background: #001253;
+  box-shadow: 0px 6px 16px #003b5538;
+  border-radius: 26px 26px 0px 26px;
+  text-align: center;
+  letter-spacing: 0px;
+  color: #fff;
+  text-transform: capitalize;
+  padding: 14px 0px;
+  display: inline-block;
+  min-width: 175px;
+  border: 0;
+}
+
+.problem-solution_shapes:hover{
+  transform: translateY(-5px); /* Adjust the distance you want the shape to move on hover */
+  background: #001253; /* Change to the desired hover color */
+}
+.problem-solution_shapes-1:hover {
+  transform: translateY(-5px); /* Adjust the distance you want the shape to move on hover */
+  background: #FCA712; /* Change to the desired hover color */
+}
+@media screen and (max-width: 768px) {
+  .block-title__title {
+    font-size: 40px;
+  }
+
+  .problem-solution {
+    gap: 10rem;
+    margin-left: 5rem;
+  }
+
+  .title {
+    font-size: 24px;
+    margin-left: 2rem;
+  }
+
+  .problem-solution_main,
+  .problem-solution_main-1 {
+    width: auto;
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  .problem-solution_main-1 {
+    margin-left: 2rem;
+    margin-top: 1rem;
+  }
+
+  .problem-solution_shapes,
+  .problem-solution_shapes-1 {
+    min-width: 120px;
+  }
+
+  .shapes-content p {
+    font-size: 16px;
+  }
 }
 /* ---------------------------------------end---------------------------------- */
 /* ------------------------------------------aboutOne img styling------------------------------------*/
@@ -7182,8 +7308,12 @@ h2 {
   padding-bottom: 3rem;
   gap: 8rem;
   flex-wrap: wrap;
-  /* padding: 0 8rem 4rem 8rem; */
 }
+/* @media screen and (max-width: 420px) {
+  .about2_main {
+    gap: 4rem;
+  }
+} */
 /* ------------------------------------------about2 styling end-------------------------------------- */
 /* -------------------------------------------services style start0---------------------------------- */
 #alt-main {

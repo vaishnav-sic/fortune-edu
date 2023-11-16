@@ -8,8 +8,8 @@ const CourseCatOne = () => {
         speed: 1000,
         spaceBetween: 30,
         autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
+        delay: 3000,
+        disableOnInteraction: false
         },
         // Responsive breakpoints
         breakpoints: {
@@ -33,91 +33,67 @@ const CourseCatOne = () => {
                 <div className="block-title text-center">
                     <h2 className="block-title__title">Have A Problem? We Has The Solution.</h2>
                 </div>
-                <div className="course-category-one__carousel">
-                    <Swiper {...params}>
-                        <div className="item">
-                            <div className="course-category-one__single color-1">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-desktop"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">IT & Software</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-2">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-web-programming"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Development</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-3">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-music-player"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Music</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-4">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-camera"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Photography</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-5">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-targeting"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Marketing</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-6">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-health"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Health & Fitness</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-1">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-desktop"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">IT & Software</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-2">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-web-programming"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Development</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-3">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-music-player"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Music</a></h3>
-                            </div>
-                        </div>
-                        <div className="item">
-                            <div className="course-category-one__single color-4">
-                                <div className="course-category-one__icon">
-                                    <i className="kipso-icon-camera"></i>
-                                </div>
-                                <h3 className="course-category-one__title"><a href="#">Photography</a></h3>
-                            </div>
-                        </div>
-                    </Swiper>
+
+                <div className="problem-solution">
+                    <h3 className='title'>Problems</h3>
+                    <h3 className='title'>Solutions</h3>
                 </div>
-                <a href="#" className="thm-btn">View All Categories</a>
+                <div className="main-container"> 
+                        <div className="problem-solution_main">
+                            <div className="problem-solution_shapes">
+                                <div className="shapes-content">
+                                    <p>No clarity in form<br/> filling and documentation.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes">
+                                <div className="shapes-content">
+                                    <p>Too many deadlines<br/> to keep track of.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes">
+                                <div className="shapes-content">
+                                     <p>Decisions affected by <br/>uninformed friends and relatives.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes">
+                                <div className="shapes-content">
+                                    <p>Difficulty in choosing colleges<br/> and order of preference.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes">
+                                <div className="shapes-content">
+                                    <p>Danger of being defrauded <br/>in the name of donation.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="problem-solution_main-1">
+                            <div className="problem-solution_shapes-1">
+                                <div className="shapes-content">
+                                    <p>Thorough, stress-free <br />guidance in form filling.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes-1">
+                                <div className="shapes-content">
+                                    <p>WhatsApp and SMS<br/> alerts for critical dates.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes-1">
+                                <div className="shapes-content">
+                                    <p>Data-based parent and <br />student guidance by professionals.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes-1">
+                                <div className="shapes-content">
+                                    <p>Optimised college selection<br/> based onaptitude and goals.</p>
+                                </div>
+                            </div>
+                            <div className="problem-solution_shapes-1">
+                                <div className="shapes-content">
+                                    <p>Transparent admission <br/> process through official channels.</p>
+                                </div>
+                            </div>
+                    </div>
+                </div>
             </div>
         </section>
     );
