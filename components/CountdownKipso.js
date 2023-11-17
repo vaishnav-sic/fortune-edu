@@ -1,5 +1,8 @@
-import React, { useState, Component } from "react";
+import React, { useState, useEffect } from "react";
 import Countdown from "react-countdown";
+import { db } from '../firebaseConfig';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
+
 const CountdownKipso = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -9,40 +12,78 @@ const CountdownKipso = () => {
     courseInterest: "Course",
     cityLiveIn: "",
     consultationCity: "City",
+    coopenCode: "", // new field for CoopenCode
   });
-  const [formErrors, setFormErrors] = useState({
-    firstName: "",
-    lastName: "",
-    mobile: "",
-    email: "",
-  });
-  //Rushikesh
+
+  const [formErrors, setFormErrors] = useState({});
+  const [countdownDate, setCountdownDate] = useState(Date.now() + 5000000000);
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  const handleFormSubmit = (e) => {
+
+  const handleFormSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
+    console.log(formData);
+
     if (!formData.firstName) {
-      errors.firstName = "First Name is required";
+      errors.firstName = 'First Name is required';
     }
     if (!formData.lastName) {
-      errors.lastName = "Last Name is required";
+      errors.lastName = 'Last Name is required';
     }
     if (!formData.mobile || formData.mobile.length !== 10) {
-      errors.mobile = "Mobile number must be 10 digits";
+      errors.mobile = 'Mobile number must be 10 digits';
     }
-    if (!formData.email || !formData.email.includes("@gmail.com")) {
-      errors.email = "Please enter a valid Gmail address";
+    if (!formData.email || !formData.email.includes('@gmail.com')) {
+      errors.email = 'Please enter a valid Gmail address';
     }
+    if (formData.coopenCode && formData.coopenCode.length !== 7) {
+      errors.coopenCode = 'CoopenCode must be 7 digits';
+    }
+
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
     } else {
       setFormErrors({});
-      console.log(formData);
+      try {
+        // Add the form data to the 'StudentInfo' collection
+        const docRef = await addDoc(collection(db, 'StudentInfo'), formData);
+        console.log('Document written with ID: ', docRef.id);
+
+        // Fetch and log data from 'StudentInfo' collection
+        fetchDataFromFirestore('StudentInfo');
+
+        // Fetch and log data from 'consultations' collection
+        fetchDataFromFirestore('consultations');
+      } catch (error) {
+        console.error('Error adding document: ', error);
+      }
     }
   };
+
+  const fetchDataFromFirestore = async (collectionName) => {
+    try {
+      const querySnapshot = await getDocs(collection(db, collectionName));
+      querySnapshot.forEach((doc) => {
+        console.log(doc.data());
+      });
+      console.log('Success: Data fetched successfully (Status Code: 200)');
+    } catch (error) {
+      console.error('Error fetching data from Firestore: ', error);
+      console.log('Error: Failed to fetch data (Status Code: 500)');
+    }
+  };
+
+  useEffect(() => {
+    setCountdownDate(Date.now() + 5000);
+
+    fetchDataFromFirestore('StudentInfo');
+    fetchDataFromFirestore('consultations');
+  }, []);
+
   return (
     <div id="registration1">
       <section className="countdown-one">
@@ -54,13 +95,6 @@ const CountdownKipso = () => {
                 <p className="countdown-one__tag-line">
                   Expert in Hassle-free admission
                 </p>
-                {/* <p className="countdown-one__text">
-                Lorem ipsum gravida nibh vel velit auctor aliquetnean
-                sollicitudin.
-              </p>
-              <div className="countdown-one__list list-unstyled">
-                <Countdown date={Date.now() + 5000000000} />
-              </div> */}
               </div>
             </div>
             <div className="col-lg-6">
@@ -123,7 +157,6 @@ const CountdownKipso = () => {
                   <select
                     className="form-field"
                     name="courseInterest"
-                    // value={formData.courseInterest}
                     onChange={handleInputChange}
                   >
                     <option defaultValue="Select a Course" disabled >Course Interested In</option>
@@ -141,7 +174,6 @@ const CountdownKipso = () => {
                   <select
                     className="form-field"
                     name="consultationCity"
-                    // value={formData.consultationCity}
                     onChange={handleInputChange}
                   >
                     <option value="" disabled >Select a City</option>
@@ -151,6 +183,17 @@ const CountdownKipso = () => {
                     <option value="Manchar">Manchar</option>
                     <option value="Karad">Karad</option>
                   </select>
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="CoopenCode"
+                    name="coopenCode"
+                    value={formData.coopenCode}
+                    onChange={handleInputChange}
+                  />
+                  {formErrors.coopenCode && (
+                    <span className="error-message">{formErrors.coopenCode}</span>
+                  )}
                   <button
                     type="submit"
                     className="thm-btn become-teacher__form-btn"
@@ -167,5 +210,5 @@ const CountdownKipso = () => {
     </div>
   );
 };
+
 export default CountdownKipso;
-// start
