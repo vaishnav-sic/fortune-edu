@@ -6890,11 +6890,14 @@ p {
 }
 .rows{
 background: #001253;
+/* width: 100%; */
 }
 .thm-base-bgs {
   background-color: #f16101;
+  width: 100%;
+
 }
-.thm-base-bgs-2 {
+.thm-base-bgs-22 {
   background-color: #2da397;
   
 }
@@ -6978,6 +6981,12 @@ background: #001253;
   margin-top: 35px;
 }
 
+@media (min-width: 992px)
+.col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    /* max-width: 50%; */
+}
 
 
 

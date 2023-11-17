@@ -5,8 +5,8 @@ const MockDetails = () => {
         <div>
         <div className="cta-two">
           <div className="container-fluid">
-            <div className="rows no-gutters">
-              <div className="col-lg-6 thm-base-bgs">
+            <div className="rows no-gutter">
+              <div className="col-lg-66 thm-base-bgs">
                 <div className="cta-two__single_mock">
                   <div className="cta-two__icon">
                     <span>
@@ -18,19 +18,19 @@ const MockDetails = () => {
                       Assess your medical knowledge
                     </h2>
                     <p className="cta-two__text">
-                      <br />
+                      
                       with precision – Take a mock test to gauge
-                      <br />
+                      
                       your preparedness for the medical field.
                     </p>
   
                     <a href="#" className="thm-btn cta-two__btn">
-                      Run Mock Test
+                      Take Mock Test
                     </a>
                   </div>
                 </div>
               </div>
-              <div className="col-lg-6 thm-base-bgs-2">
+              <div className="col-lg-66 thm-base-bgs-22">
                 <div className="cta-two__single_mock">
                   <div className="cta-two__icon">
                     <span>
@@ -42,13 +42,12 @@ const MockDetails = () => {
                       Evaluate your engineering prowess
                     </h2>
                     <p className="cta-two__text">
-                      <br />
+                      
                       Opt for a mock test to measure your
-                      <br />
                       readiness for the engineering field
                     </p>
                     <a href="#" className="thm-btn cta-two__btn">
-                      Run Mock Test
+                      Take Mock Test
                     </a>
                   </div>
                 </div>
