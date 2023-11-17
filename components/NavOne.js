@@ -71,18 +71,18 @@ class NavOne extends Component {
                   />
                 </a>
               </Link>
-              <div className="header__social">
+              {/* <div className="header__social">
                 <a href="#">
                   <i className="fab fa-twitter"></i>
                 </a>
                 <a href="#">
                   <i className="fab fa-facebook-square"></i>
                 </a>
-                {/* <a href="#"><i className="fab fa-pinterest-p"></i></a> */}
+                <a href="#"><i className="fab fa-pinterest-p"></i></a>
                 <a href="#">
                   <i className="fab fa-instagram"></i>
                 </a>
-              </div>
+              </div> */}
               <button className="menu-toggler">
                 <span className="kipso-icon-menu"></span>
               </button>
@@ -90,7 +90,7 @@ class NavOne extends Component {
             <div className="main-navigation">
               <ul className=" navigation-box">
                 <li>
-                  <a href="/Service">SERVICES</a>
+                  <a href="/service">SERVICES</a>
                   {/* <ul className="sub-menu">
                                         <li><Link href="/admission-guidance"><a>Admission Guidance</a></Link></li>
                                         <li><Link href="/registration"><a>Registration</a></Link></li>
@@ -129,7 +129,7 @@ class NavOne extends Component {
                                     </ul>
                                 </li> */}
                 <li>
-                  <Link href="/MockTest">
+                  <Link href="/mocktest">
                     <a>MOCK TEST</a>
                   </Link>
                   {/* <ul className="sub-menu">
