@@ -9,8 +9,6 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
-    "aos": "^2.3.4",
-    "firebase": "^10.6.0",
     "next": "9.3.2",
     "node-sass": "^4.14.1",
     "react": "16.13.1",
@@ -19,15 +17,13 @@
     "react-dom": "16.13.1",
     "react-id-swiper": "^3.0.0",
     "react-modal-video": "^1.2.3",
+    "react-slick": "^0.29.0",
     "react-visibility-sensor": "^5.1.1",
+    "slick-carousel": "^1.8.1",
     "swiper": "^5.3.6"
   },
   "devDependencies": {
     "sass": "^1.69.5",
     "url-loader": "^4.0.0"
-  },
-  "main": "index.js",
-  "repository": "https://github.com/vaishnav-sic/fortune-edu.git",
-  "author": "vaishnav-sic <vaishnavwirkar2011@gmail.com>",
-  "license": "MIT"
+  }
 }
