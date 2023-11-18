@@ -10,7 +10,7 @@ const MockDetails = () => {
                 <div className="cta-two__single_mock">
                   <div className="cta-two__icon">
                     <span>
-                      <i className="kipso-icon-professor"></i>
+                      <i className="kipso-icon-health"></i>
                     </span>
                   </div>
                   <div className="cta-two__content">
@@ -34,7 +34,7 @@ const MockDetails = () => {
                 <div className="cta-two__single_mock">
                   <div className="cta-two__icon">
                     <span>
-                      <i className="kipso-icon-knowledge"></i>
+                      <i className="kipso-icon-training"></i>
                     </span>
                   </div>
                   <div className="cta-two__content">
