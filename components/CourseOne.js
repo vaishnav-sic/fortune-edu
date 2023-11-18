@@ -14,7 +14,6 @@ const BlogTwo = () => {
         const dataArray = querySnapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
         setData(dataArray);
       } catch (error) {
-        console.error('Error fetching data:', error);
       }
     };
 

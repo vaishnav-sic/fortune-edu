@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import Topbar from "../components/Topbar";
 import NavOne from "../components/NavOne";
+import MainPage from "../components/MainPage";
 import SliderOne from "../components/SliderOne";
 import Footer from "../components/Footer";
 import AboutTwo from "../components/AboutTwo";
@@ -34,10 +35,11 @@ const HomePage = () => (
   <Layout pageTitle="Fortune Education Services">
     <Topbar />
     <NavOne />
+    {/* <MainPage /> */}
     <SliderOne />
+    <CourseOne />
     <AboutTwo />
     <CourseCatOne />
-    <CourseOne />
     {/* <VideoTwo /> */}
     <CountdownKipso />
     {/* <CallToActionThree /> */}

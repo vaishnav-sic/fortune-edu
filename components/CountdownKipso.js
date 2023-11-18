@@ -26,7 +26,6 @@ const CountdownKipso = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
-    console.log(formData);
 
     if (!formData.firstName) {
       errors.firstName = 'First Name is required';
@@ -51,7 +50,6 @@ const CountdownKipso = () => {
       try {
         // Add the form data to the 'StudentInfo' collection
         const docRef = await addDoc(collection(db, 'StudentInfo'), formData);
-        console.log('Document written with ID: ', docRef.id);
 
         // Fetch and log data from 'StudentInfo' collection
         fetchDataFromFirestore('StudentInfo');
@@ -59,7 +57,6 @@ const CountdownKipso = () => {
         // Fetch and log data from 'consultations' collection
         fetchDataFromFirestore('consultations');
       } catch (error) {
-        console.error('Error adding document: ', error);
       }
     }
   };
@@ -68,12 +65,8 @@ const CountdownKipso = () => {
     try {
       const querySnapshot = await getDocs(collection(db, collectionName));
       querySnapshot.forEach((doc) => {
-        console.log(doc.data());
       });
-      console.log('Success: Data fetched successfully (Status Code: 200)');
     } catch (error) {
-      console.error('Error fetching data from Firestore: ', error);
-      console.log('Error: Failed to fetch data (Status Code: 500)');
     }
   };
 

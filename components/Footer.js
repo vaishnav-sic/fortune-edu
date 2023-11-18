@@ -1,42 +1,22 @@
 import React from "react";
-import { app, db } from "../firebaseConfig";
-import { collection, addDoc, getDocs } from "firebase/firestore";
-import { useEffect, useState } from "react";
 const Footer = () => {
   function scrollTop() {
     window.scrollTo(0, 0);
   }
-  const [Data, setData] = useState();
-  useEffect(async () => {
-    const querySnapshot = await getDocs(collection(db, "NewsUpdates"));
-    const dataArray = [];
-    querySnapshot?.forEach((doc) => {
-      dataArray.push({ id: doc.id, ...doc.data() });
-    });
-    setData(dataArray);
-  }, []);
   return (
     <div>
-      {console.log(Data)}
       <footer className="site-footer">
                 <div className="site-footer__upper">
                     <div className="container">
                         <div className="row">
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__contact">
-                                    <h2 className="footer-widget__title">Experts</h2>
+                                    <h2 className="footer-widget__title">Experts in hassle-free Admissions!</h2>
                                     <ul className="list-unstyled footer-widget__course-list">
                                         <li>
                                             <h2>
-                                                  Director
+                                               Elite Squad of Specialists
                                             </h2>
-                                            <p>Dhairyasheel More</p>
-                                        </li>
-                                        <li>
-                                            <h2>
-                                                  Manager
-                                            </h2>
-                                            <p>Asif Patel</p>
                                         </li>
                                     </ul>
                                 </div>
@@ -47,30 +27,28 @@ const Footer = () => {
                                     <div className="footer-widget__link-wrap">
                                         <ul className="list-unstyled footer-widget__link-list">
                                             <li>
-                                                <a href="#">About</a>
+                                                <a href="/service">Services</a>
                                             </li>
                                             <li>
-                                                <a href="#">Overview</a>
+                                                <a href="/medical">Medical</a>
                                             </li>
                                             <li>
-                                                <a href="#">Teachers</a>
+                                                <a href="/engineering">Engineering</a>
                                             </li>
                                             <li>
-                                                <a href="#">Join Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Our News</a>
+                                                <a href="/mocktest">Mock Test</a>
                                             </li>
                                         </ul>
                                         <ul className="list-unstyled footer-widget__link-list">
                                             <li>
-                                                <a href="#">Help </a>
+                                                <br />
+                                                <a href="/about">About Us </a>
                                             </li>
                                             <li>
-                                                <a href="#">Contact</a>
+                                                <a href="/contact">Contact Us</a>
                                             </li>
                                             <li>
-                                                <a href="#">Register Now</a>
+                                                <a href="index#registration1">Book Consultation</a>
                                             </li>
                                         </ul>
                                     </div>
@@ -127,10 +105,10 @@ const Footer = () => {
                                     Recommended by thousands of doctors and engineers
                                     </p>
                                     <div className="footer-widget__btn-block">
-                                        <a href="#" className="thm-btn">
+                                        <a href="/contact" className="thm-btn">
                                             Contact
                                         </a>
-                                        <a href="#" className="thm-btn">
+                                        <a href="index#registration1" className="thm-btn">
                                             Register
                                         </a>
                                     </div>

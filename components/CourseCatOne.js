@@ -31,7 +31,7 @@ const CourseCatOne = () => {
         <section className="thm-gray-bg course-category-one">
             <div className="container-fluid text-center">
                 <div className="block-title text-center">
-                    <h2 className="block-title__title">Have A Problem? We Has The Solution.</h2>
+                    <h2 className="block-title__title">Challenges Ahead? We're here to Help!</h2>
                 </div>
 
                 <div className="problem-solution">
@@ -42,54 +42,54 @@ const CourseCatOne = () => {
                         <div className="problem-solution_main">
                             <div className="problem-solution_shapes">
                                 <div className="shapes-content">
-                                    <p>No clarity in form<br/> filling and documentation.</p>
+                                    <p>Confusion/Struggle in form<br/> filling and documentation.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes">
                                 <div className="shapes-content">
-                                    <p>Too many deadlines<br/> to keep track of.</p>
+                                     <p>Choices influenced by <br/> misinformed friends and family.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes">
                                 <div className="shapes-content">
-                                     <p>Decisions affected by <br/>uninformed friends and relatives.</p>
+                                    <p>Challenges in selecting a college<br/> and prioritizing preferences.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes">
                                 <div className="shapes-content">
-                                    <p>Difficulty in choosing colleges<br/> and order of preference.</p>
+                                    <p>Confused by numerous <br/> deadlines to manage.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes">
                                 <div className="shapes-content">
-                                    <p>Danger of being defrauded <br/>in the name of donation.</p>
+                                    <p>Risk of falling victim to fraud <br/> under the name of donations</p>
                                 </div>
                             </div>
                         </div>
                         <div className="problem-solution_main-1">
                             <div className="problem-solution_shapes-1">
                                 <div className="shapes-content">
-                                    <p>Thorough, stress-free <br />guidance in form filling.</p>
+                                    <p>Stress-free & hassle-free <br/> support in completing forms.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
                                 <div className="shapes-content">
-                                    <p>WhatsApp and SMS<br/> alerts for critical dates.</p>
+                                    <p>Expert guidance for parents and students<br/> based on data and insights.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
                                 <div className="shapes-content">
-                                    <p>Data-based parent and <br />student guidance by professionals.</p>
+                                    <p>Personalized guidance for optimal <br/>college choices based on Mock Test</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
                                 <div className="shapes-content">
-                                    <p>Optimised college selection<br/> based onaptitude and goals.</p>
+                                    <p>Receive important date alerts<br/> via WhatsApp and SMS.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
                                 <div className="shapes-content">
-                                    <p>Transparent admission <br/> process through official channels.</p>
+                                    <p>Open and straightforward admission<br/> process through authorized channels.</p>
                                 </div>
                             </div>
                     </div>
