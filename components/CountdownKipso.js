@@ -123,7 +123,7 @@ const CountdownKipso = () => {
               <div className="countdown-one__content">
                 <h2 className="countdown-one__title">Book Consultation! </h2>
                 <p className="countdown-one__tag-line">
-                  Expert in Hassle-free admission
+                  Experts in Hassle-free admission
                 </p>
               </div>
               <img

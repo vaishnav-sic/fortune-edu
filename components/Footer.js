@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="site-footer">
                 <div className="site-footer__upper">
                     <div className="container">
-                        <div className="row-footer">
+                        <div className="row">
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__contact">
                                     <h2 className="footer-widget__title">Experts in hassle-free Admissions!</h2>
@@ -42,7 +42,7 @@ const Footer = () => {
                                     </div>
                                 </div>
                                 <div className="footer-widget footer-widget__link">
-                                    <h2 className="footer-widget__title"></h2>
+                                    <h2 className="footer-widget__title">Join Us</h2>
                                     <div className="footer-widget__link-wrap">
                                         <ul className="list-unstyled footer-widget__link-list">
                                             <li>
@@ -126,6 +126,7 @@ const Footer = () => {
                     <div className="container">
                         <p className="site-footer__copy">
                             &copy; सर्वहक्कस्वाधीन  2023{" "}
+                            <img src="/assets/images/logo/SIC_logo.svg" alt="Logo" />
                             <a href="#">SIC द्वारे ❤ प्रेमपूर्वक विकसित</a>
                         </p>
                         <div className="site-footer__social">
