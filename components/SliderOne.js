@@ -23,11 +23,7 @@ const SliderOne = () => {
             <div className="banner-one__bubble-1"></div>
             <div className="banner-one__bubble-2"></div>
             <div className="banner-one__bubble-3"></div>
-            <img
-              src="/assets/images/HP_Doctor.png"
-              alt=""
-              className="banner-one__scratch"
-            />
+            
             {/* <img src="/assets/images/Engineer.jpg" className="banner-one__person" alt="" /> */}
             <div className="row no-gutters">
               <div className="col-xl-12">

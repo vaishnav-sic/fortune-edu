@@ -4390,8 +4390,8 @@ a:visited {
   left: 0;
 }
 .footer-widget {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 .footer-widget .list-unstyled {
   margin: 0;
@@ -4401,7 +4401,7 @@ a:visited {
   font-size: 15px;
   line-height: 30px;
   color: #94a3ac;
-  margin-top: -10px;
+  margin-top: 0px;
 }
 .footer-widget__about {
   position: relative;
@@ -6205,6 +6205,25 @@ a:visited {
   color: #2da397;
   margin-top: 5px;
 }
+
+.consultation-image {
+  border-radius: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+}
+
+
+.countdown-one__content,
+.become-teacher__form {
+  text-align: center;
+}
+
+.become-teacher__form {
+  position: relative;
+}
+
 .countdown-one__text {
   margin: 0;
   font-size: 16px;
@@ -6413,14 +6432,28 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
   border: none;
-  background-color: #f1f1f1;
+  background-color: #e0e0e0;
   font-size: 16px;
   color: #81868a;
   font-weight: 500;
   display: block;
 }
+.become-teacher__form-content input::placeholder {
+  color: grey;
+}
+
+.become-teacher__form-content select::placeholder {
+  color: grey;
+}
 .error {
-  border-color: #ff0000; /* Red border for error */
+  border-color: red; 
+}
+.error-message {
+  color: red;
+  font-size: 14px; 
+  margin-top: 0.2px; 
+  max-height: 20px;
+  margin-bottom: 5px;
 }
 button {
   /* width: 100%; */
@@ -6473,6 +6506,7 @@ button {
 }
 /* formField  */
 .form-field {
+  color: grey;
   background-color: #e0e0e0;
   border: 1px solid #ccc;
   padding: 5px;
@@ -6762,16 +6796,20 @@ p {
   width: 100%;
 }
 .row {
-  padding-top: 10rem;
+  padding-top: 6rem;
   justify-content: center;
   align-items: center;
   /* padding-top: 20rem; */
 }
 .row-footer {
-  padding-top: 1rem;
-  justify-content: center;
+  padding-top: 2rem;  
+  display: flex;
+  flex-direction: row;  
+  justify-content: space-between;
+  /* justify-content: center; */
   align-items: center;
 }
+
 .container_Contact {
   border-style: solid;
   text-align: center;
@@ -7069,11 +7107,12 @@ background: #001253;
   max-height: 100%;
 }
 /* formField  */
-.become-teacher__form input .form-field {
+.become-teacher__form input.form-field {
   background-color: #e0e0e0;
   border: 1px solid #ccc;
   padding: 5px;
   margin-bottom: 8px;
+  color: black; /* Add this line to set the text color to black */
 }
 /* CollegeList.css */
 .college-list {
@@ -7656,3 +7695,47 @@ a:hover {
   cursor: pointer;
 }
 /*-------------------------------------------------- End------------------------------------------  */
+/* MainPage start */
+
+.main-img {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 20px;
+  
+  border: 10px solid;
+  border-image: linear-gradient(to right,#FCA712, #001253);
+  border-image-slice: 1;
+}
+
+.banner-one__scratch {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  position: static;
+  z-index: 2;
+}
+
+
+.other-component {
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 767px) {
+  .main-img {
+    height: auto;
+  }
+
+  .banner-one__scratch {
+    height: auto;
+  }
+}
+
+
+/* MainPage end  */

@@ -35,8 +35,8 @@ const HomePage = () => (
   <Layout pageTitle="Fortune Education Services">
     <Topbar />
     <NavOne />
-    {/* <MainPage /> */}
-    <SliderOne />
+    <MainPage />
+    {/* <SliderOne /> */}
     <CourseOne />
     <AboutTwo />
     <CourseCatOne />

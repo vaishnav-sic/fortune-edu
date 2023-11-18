@@ -8,7 +8,7 @@ const Footer = () => {
       <footer className="site-footer">
                 <div className="site-footer__upper">
                     <div className="container">
-                        <div className="row">
+                        <div className="row-footer">
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__contact">
                                     <h2 className="footer-widget__title">Experts in hassle-free Admissions!</h2>
@@ -39,6 +39,11 @@ const Footer = () => {
                                                 <a href="/mocktest">Mock Test</a>
                                             </li>
                                         </ul>
+                                    </div>
+                                </div>
+                                <div className="footer-widget footer-widget__link">
+                                    <h2 className="footer-widget__title"></h2>
+                                    <div className="footer-widget__link-wrap">
                                         <ul className="list-unstyled footer-widget__link-list">
                                             <li>
                                                 <br />
