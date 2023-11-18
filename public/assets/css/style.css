@@ -4310,6 +4310,13 @@ a:visited {
 .site-footer__copy a:hover {
   color: #fff;
 }
+.site-footer img {
+  
+    vertical-align: middle;
+    border-style: none;
+    height: 60px;
+}
+
 .site-footer__social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4521,6 +4528,37 @@ a:visited {
   color: #fff;
   font-weight: 600;
 }
+/* Footer responsive  */
+.site-footer__social {
+  padding: 35px 0;
+  padding-right: 70px;
+  padding-left: 30px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .site-footer__social {
+    padding: 20px 0;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  
+  .site-footer__scroll-top {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+  
+  .footer-widget__link {
+    padding-right: 20px;
+    left: 0;
+  }
+  
+  .footer-widget__btn-block .thm-btn:nth-child(2) {
+    margin-left: 5px;
+  }
+}
+
 /*
 * 14. blog styles
 */
@@ -7739,3 +7777,10 @@ a:hover {
 
 
 /* MainPage end  */
+/* SIC logo start */ */
+/* sic_logo {
+  vertical-align: middle;
+  border-style: none;
+  height: 60px;
+} */
+/* SIC logo end 
