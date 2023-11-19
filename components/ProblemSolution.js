@@ -1,7 +1,7 @@
 import React from 'react';
 import Swiper from 'react-id-swiper';
 import 'swiper/css/swiper.css';
-const CourseCatOne = () => {
+const ProblemSolution = () => {
     const params = {
         slidesPerView: 6,
         loop: true,
@@ -98,4 +98,4 @@ const CourseCatOne = () => {
         </section>
     );
 }
-export default CourseCatOne;
+export default ProblemSolution;

@@ -5030,14 +5030,12 @@ a:visited {
   margin-top: -5rem;
   text-align: center;
 }
-.container{
-  padding-bottom: 2rem !important;
-}
 .blog-two__inner {
   padding: 40px;
   padding-top: 20px;
   background-color: #001253;
-  padding-bottom: 2rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
