@@ -21,7 +21,7 @@ const AdminLogin = () => {
       const user = userCredential.user;
       console.log("User signed in:", user);
       // Redirect or perform other actions upon successful login
-      router.push("/about");
+      router.push("/admin");
     } catch (error) {
       // Handle authentication errors
       const errorCode = error.code;
