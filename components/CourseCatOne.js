@@ -68,27 +68,27 @@ const CourseCatOne = () => {
                         </div>
                         <div className="problem-solution_main-1">
                             <div className="problem-solution_shapes-1">
-                                <div className="shapes-content">
+                                <div className="shapes-content-1">
                                     <p>Stress-free & hassle-free <br/> support in completing forms.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
-                                <div className="shapes-content">
+                                <div className="shapes-content-1">
                                     <p>Expert guidance for parents and students<br/> based on data and insights.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
-                                <div className="shapes-content">
+                                <div className="shapes-content-1">
                                     <p>Personalized guidance for optimal <br/>college choices based on Mock Test</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
-                                <div className="shapes-content">
+                                <div className="shapes-content-1">
                                     <p>Receive important date alerts<br/> via WhatsApp and SMS.</p>
                                 </div>
                             </div>
                             <div className="problem-solution_shapes-1">
-                                <div className="shapes-content">
+                                <div className="shapes-content-1">
                                     <p>Open and straightforward admission<br/> process through authorized channels.</p>
                                 </div>
                             </div>
