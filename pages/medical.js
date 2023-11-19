@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import AboutTwo from "../components/AboutTwo";
 import CourseOne from "../components/CourseOne";
 import VideoTwo from "../components/VideoTwo";
-import CountdownKipso from "../components/CountdownKipso";
 // import CourseCatOne from "../components/CourseCatOne";
 import CallToActionThree from "../components/CallToActionThree";
 import BrandsTwo from "../components/BrandsTwo";
@@ -17,7 +16,9 @@ import SubscribeOne from "../components/SubscribeOne";
 import GovtEngineering from "../components/GovtEngineering";
 import PvtEngineering from "../components/PvtEngineering";
 import ClgSeatTable from "../components/ClgSeatTable";
+import Medical_Info from "../components/MedicalInfo";
 import MedicalInfo from "../components/MedicalInfo";
+
 import CollegeListIconA from "../components/CollegeListIconA";
 import CollegeListIconB from "../components/CollegeListIconB";
 import CollegeListIconC from "../components/CollegeListIconC";
@@ -192,7 +193,6 @@ const medicalCollege = () => {
       <CollegeListIconB colleges={colleges2} />
       <CollegeListIconC colleges={colleges3} />
       {/* <VideoTwo /> */}
-      {/* <CountdownKipso /> */}
       {/* <CourseCatOne /> */}
       {/* <CallToActionThree /> */}
       {/* <BrandsTwo /> */}

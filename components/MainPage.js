@@ -10,7 +10,7 @@ const MainPage = () => {
     //       <div className="container">
           <div className="main-img">
             <img
-              src="/assets/images/MainPage.svg"
+              src="/assets/images/FES_MainPage.svg"
               alt=""
               className="banner-one__scratch"
             />

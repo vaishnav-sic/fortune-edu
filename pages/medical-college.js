@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import AboutTwo from "../components/AboutTwo";
 import CourseOne from "../components/CourseOne";
 import VideoTwo from "../components/VideoTwo";
-import CountdownKipso from "../components/CountdownKipso";
 import CourseCatOne from "../components/CourseCatOne";
 import CallToActionThree from "../components/CallToActionThree";
 import BrandsTwo from "../components/BrandsTwo";
@@ -159,7 +158,6 @@ const medicalCollege = () => {
       <Clg2 colleges={colleges} />
       <Clg3 colleges1={colleges1} />
       {/* <VideoTwo /> */}
-      {/* <CountdownKipso /> */}
       {/* <CourseCatOne /> */}
       {/* <CallToActionThree /> */}
       {/* <BrandsTwo /> */}

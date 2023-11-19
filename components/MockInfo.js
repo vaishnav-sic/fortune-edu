@@ -31,22 +31,17 @@ const SliderOne = () => {
             <div className="row no-gutters">
               <div className="col-xl-12">
                 <h3 className="banner-one__title banner-one__light-color">
-                  Medical                 
+                  Mock Test                 
                 </h3>                
                 <p className="banner-one__tag-line-one">
-                Unlock Your Path to Success with Our Comprehensive College and Medical Branch Counselling Services! 🚀<br/> We offer expert guidance for all stages of your academic journey, from helping you navigate the selection of
-                the ideal college to specialized counselling for medical fields like MBBS, BAMS, BHMS, and physiotherapy.
-                Our wealth of knowledge spans across government, private, and deemed medical colleges, detailing available
-                seats in each institution and in-depth information about their fee structures and infrastructure and much more.
-                Your path to a successful future starts here!
+                Master your admissions journey with our Mock Test. Our seasoned experts analyze your performance, providing personalized guidance and presenting top college options in Maharashtra and India—tailored to your budget. Simplify admissions and secure your spot effortlessly. Success begins with a click
                 </p>
               </div>
             </div>
             <div className="examButtons">
-              <button className="examButton">NEET</button>
-              <button className="examButton">AIIMS</button>
-              <button className="examButton">JIPMER</button>
-          </div>
+              <button className="examButton">Hurry up! Take Mock test now</button>
+              
+            </div>
           </div>
         </div>
       </section>     
