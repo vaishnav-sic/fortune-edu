@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from '../firebaseConfig';
 import { collection, getDocs, addDoc } from 'firebase/firestore';
 
-const CountdownKipso = () => {
+const BookConsultation = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -277,4 +277,4 @@ const CountdownKipso = () => {
   );
 };
 
-export default CountdownKipso;
+export default BookConsultation;

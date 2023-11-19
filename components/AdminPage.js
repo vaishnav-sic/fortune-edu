@@ -72,6 +72,12 @@ const AdminPage = () => {
 
   const columnsForStudentds = [
     { field: "id", headerName: "Sr No", width: 150, editable: true },
+    // date time 
+    {
+      field: "appliedDateTime",
+      headerName: "Date-Time",
+      width: 100,
+    },
     {
       field: "firstName",
       headerName: "FirstName",
@@ -107,6 +113,12 @@ const AdminPage = () => {
       headerName: "Consultation City",
       width: 200,
     },
+    {
+      field: "CouponCode",
+      headerName: "CouponCode",
+      width: 100,
+    },
+    // coupanCode
   ];
 
   return (
