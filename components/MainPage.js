@@ -8,7 +8,7 @@ const MainPage = () => {
     //   <section className="banner-one banner-carousel__one no-dots">
     //     <div className="banner-one__slide banner-one__slide-one">
     //       <div className="container">
-          <div>
+          <div className="main-img">
             <img
               src="/assets/images/MainPage.svg"
               alt=""
