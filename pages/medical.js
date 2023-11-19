@@ -8,7 +8,7 @@ import AboutTwo from "../components/AboutTwo";
 import CourseOne from "../components/CourseOne";
 import VideoTwo from "../components/VideoTwo";
 import CountdownKipso from "../components/CountdownKipso";
-import CourseCatOne from "../components/CourseCatOne";
+// import CourseCatOne from "../components/CourseCatOne";
 import CallToActionThree from "../components/CallToActionThree";
 import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
@@ -21,6 +21,7 @@ import MedicalInfo from "../components/MedicalInfo";
 import CollegeListIconA from "../components/CollegeListIconA";
 import CollegeListIconB from "../components/CollegeListIconB";
 import CollegeListIconC from "../components/CollegeListIconC";
+import ProblemSolution from "../components/ProblemSolution";
 const medicalCollege = () => {
   const colleges1 = [
     {

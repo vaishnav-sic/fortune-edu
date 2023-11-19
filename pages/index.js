@@ -8,7 +8,7 @@ import AboutTwo from "../components/AboutTwo";
 import CourseOne from "../components/CourseOne";
 import VideoTwo from "../components/VideoTwo";
 import CountdownKipso from "../components/CountdownKipso";
-import CourseCatOne from "../components/CourseCatOne";
+// import CourseCatOne from "../components/CourseCatOne";
 import CallToActionThree from "../components/CallToActionThree";
 import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
@@ -25,6 +25,7 @@ import AdmissionAlert from "../components/AdmissionAlert";
 import AdmissionFillingForm from "../components/AdmissionFillingForm";
 import Admissionguidance from "../components/Admissionguidance";
 import CollegeChoicePref from "../components/CollegeChoicePref";
+import ProblemSolution from "../components/ProblemSolution";
 import { app, db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
 import { useEffect } from "react";
@@ -39,7 +40,7 @@ const HomePage = () => (
     {/* <SliderOne /> */}
     <CourseOne />
     <AboutTwo />
-    <CourseCatOne />
+    <ProblemSolution />
     {/* <VideoTwo /> */}
     <CountdownKipso />
     {/* <CallToActionThree /> */}
