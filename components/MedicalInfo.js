@@ -2,18 +2,8 @@ import React, { useState } from "react";
 import Swiper from "react-id-swiper";
 import "swiper/css/swiper.css";
 import NumberAni from "./NumberAni";
-const SliderOne = () => {
-  const [swiper, setSwiper] = useState(null);
-  const goNext = () => {
-    if (swiper !== null) {
-      swiper.slideNext();
-    }
-  };
-  const goPrev = () => {
-    if (swiper !== null) {
-      swiper.slidePrev();
-    }
-  };
+const MedicalInfo = () => {
+  
   return (
     <div className="banner-wrapper">
       <section className="banner-one banner-carousel__one no-dots">
@@ -53,4 +43,4 @@ const SliderOne = () => {
     </div>
   );
 };
-export default SliderOne;
+export default MedicalInfo;

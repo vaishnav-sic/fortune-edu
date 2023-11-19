@@ -125,7 +125,7 @@ const Footer = () => {
                 <div className="site-footer__bottom">
                     <div className="container">
                         <p className="site-footer__copy">
-                            &copy; सर्वहक्कस्वाधीन  2023 {" "}
+                            &copy; सर्वहक्कस्वाधीन  2023&nbsp;&nbsp;{" "}
                             <img src="/assets/images/logo/SIC_logo.svg" alt="Logo" />
                             <a href="#">SIC द्वारे ❤ प्रेमपूर्वक विकसित</a>
                         </p>

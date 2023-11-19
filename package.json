@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "ag-grid-community": "^30.2.1",
     "ag-grid-react": "^30.2.1",
     "aos": "^2.3.4",
     "firebase": "^10.6.0",
