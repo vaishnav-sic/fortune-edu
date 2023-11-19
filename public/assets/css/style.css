@@ -7722,7 +7722,8 @@ a:hover {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  margin-top: 20px;
   height: 100vh;
   overflow: hidden;
   /* margin: 20px; */
