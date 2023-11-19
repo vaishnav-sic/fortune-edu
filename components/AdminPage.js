@@ -1,16 +1,43 @@
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
+import { auth } from '../firebaseConfig';
+import { useRouter } from 'next/router';
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { db } from '../firebaseConfig';
 import { collection, getDocs } from 'firebase/firestore';
-import { useEffect } from "react";
+ 
 
 
 const AdminPage = () => {
   const [dataForStudents,setDataForStudents] = useState([]);
   const [dataForNews,setDataForNews] = useState([]);
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true); 
+  const router = useRouter();
+  
 
+  useEffect(() => {
+    const checkAuthentication = () => {
+      const user = auth.currentUser;
+
+      if (!user) {
+        router.push('/adminlogin');
+      } else {
+        setUser(user);
+        setLoading(false); // Set loading to false when authentication check is complete
+      }
+    };
+
+    checkAuthentication();
+
+    // Add a cleanup function to clear any ongoing asynchronous tasks when the component unmounts
+    return () => {
+      // Cleanup tasks (if any)
+    };
+  }, [router]);
+
+  
   
   const columnsForNews = [
     { field: "id", headerName: "Sr No", width: 150 },
@@ -37,9 +64,8 @@ const AdminPage = () => {
         setDataForNews(newsData);
         setDataForStudents(studentsData);
     };
-
     fetchData();
-  }, []); // The empty dependency array ensures that the effect runs only once when the component mounts
+  },[]); // The empty dependency array ensures that the effect runs only once when the component mounts
 
   console.log(dataForStudents);
 
