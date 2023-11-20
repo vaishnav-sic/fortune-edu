@@ -1,5 +1,5 @@
 import React from 'react';
-import IMG from "../public/assets/images/logo/FES_logo.svg";
+import IMG from "../public/assets/images/logo/FES_Logo.svg";
 const ContactUs = () => {
     return (
         <div>
