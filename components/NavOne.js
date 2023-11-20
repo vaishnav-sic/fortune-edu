@@ -66,7 +66,7 @@ class NavOne extends Component {
                   <img
                     src="/assets/images/logo/FES_LogoName.svg"
                     className="main-logo"
-                    width="200px"
+                    width="300px"
                     alt="Awesome Image"
                   />
                 </a>
