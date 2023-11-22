@@ -1651,7 +1651,7 @@ a:visited {
   text-align: center;
   margin: 0;
   color: white;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 55px;
 }
@@ -2942,7 +2942,7 @@ a:visited {
   padding-left: 45px;
   padding-right: 45px;
   position: relative;
-  padding-top: 50px;
+  padding-top: 88px;
   padding-bottom: 50px;
   border-style: solid;
   border-width: 2px;
@@ -6915,8 +6915,8 @@ p {
   transition: -webkit-box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 1px;
+  padding-bottom: 46px;
 }
 
 .container_Contact_main {
@@ -6968,6 +6968,34 @@ p {
   color: #81868a;
   margin-top: -15px;
   margin-bottom: -10px;
+}
+.course-one__content_baramati {
+  padding-left: 34px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 88px;
+  padding-bottom: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-top: 0;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+}
+.course-one__content_manchar {
+  padding-left: 36px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 88px;
+  padding-bottom: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-top: 0;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
 }
 .course-one__Direction {
   display: inline-block;

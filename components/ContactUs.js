@@ -38,11 +38,7 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MUMBAI</h2>
-                                <p className="contact-info-one__text_Branch"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
-                                    <br /><a href="#" className="course-one__Direction">direction</a>
-                                </p>
+                               
                             </div>
                         </div>
                     </div>
@@ -52,37 +48,25 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">KARAD </h2>
-                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
-                                    <br /><a href="#" className="course-one__Direction">direction</a>
-                                </p>
+                               
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-3">
                         <div className="course-one__single">
-                            <div className="course-one__content">
+                            <div className="course-one__content_baramati">
                                 <h2 className="contact-info-one__title">BARAMATI </h2>
-                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
-                                    <br /><a href="https://www.google.com/maps?authuser=0" className="course-one__Direction">direction</a>
-                                </p>
+                              
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-3">
                         <div className="course-one__single">
-                            <div className="course-one__content">
+                            <div className="course-one__content_manchar">
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MANCHAR </h2>
-                                <p className="contact-info-one__text"><i className="fa fa-address-book"></i> 01,ABC,ABCDE.
-                                    <br /><i className="fa fa-envelope"></i> ABC123@GMAIL.COM
-                                    <br /><i className='fas fa-phone-square-alt'></i> 00123456789
-                                    <br /><a href="#" className="course-one__Direction">direction</a>
-                                </p>
+                               
                             </div>
                         </div>
                     </div>
