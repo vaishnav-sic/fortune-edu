@@ -64,9 +64,9 @@ class NavOne extends Component {
               <Link href="/">
                 <a className="navbar-brand">
                   <img
-                    src="/assets/images/logo/FES_main.svg"
+                    src="/assets/images/logo/FES_LogoName.svg"
                     className="main-logo"
-                    width="200px"
+                    width="300px"
                     alt="Awesome Image"
                   />
                 </a>
@@ -90,7 +90,9 @@ class NavOne extends Component {
             <div className="main-navigation">
               <ul className=" navigation-box">
                 <li>
-                  <a href="/service">SERVICES</a>
+                  <Link href="/services">
+                        <a>SERVICES</a>
+                      </Link>
                   {/* <ul className="sub-menu">
                                         <li><Link href="/admission-guidance"><a>Admission Guidance</a></Link></li>
                                         <li><Link href="/registration"><a>Registration</a></Link></li>

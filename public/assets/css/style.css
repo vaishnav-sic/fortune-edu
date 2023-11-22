@@ -6816,7 +6816,8 @@ p {
   transition: -webkit-box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .contact-info-one__single:hover {
   -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
@@ -6944,8 +6945,8 @@ p {
   transition: -webkit-box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 .contact-info-one__text_main {
   text-align: center;
@@ -7722,7 +7723,8 @@ a:hover {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  margin-top: 20px;
   height: 100vh;
   overflow: hidden;
   /* margin: 20px; */

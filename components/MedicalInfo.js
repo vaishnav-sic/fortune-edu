@@ -14,7 +14,7 @@ const MedicalInfo = () => {
             <div className="banner-one__bubble-2"></div>
             {/* <div className="banner-one__bubble-3"></div> */}
             <img
-              src="/assets/images/Dr3.png"
+              src="/assets/images/Dr2.png"
               alt=""
               className="banner-one__scratch__mock"
             />

@@ -1,11 +1,20 @@
 import React from 'react';
-import IMG from "../public/assets/images/logo/FES_logo.svg";
+import IMG from "../public/assets/images/logo/FES_Logo.svg";
 const ContactUs = () => {
     return (
         <div>
             <div className='Branch__Main'>
                 <div className='Branch__Main__In' >
                     <div className='Branch__Main__In__Left'>
+                        <div className="contact-info-one__single">
+                            {/* <img className="picture1" src={IMG} alt="collage group photo" /> */}
+                            <img
+                                src="/assets/images/logo/FES_Logo.svg"
+                                className="main-logo"
+                                width="300px"
+                                alt="Awesome Image"
+                            />
+                        </div>
                         <div className="container_Contact_main">
                             <h2 className="contact-info-one__title__main">HEAD OFFICE </h2>
                             <h2 className="contact-info-one__title__main1">PUNE </h2>
@@ -13,9 +22,6 @@ const ContactUs = () => {
                                 <br /><i className="fa fa-envelope"></i> dhairyasheelmore@fortuneeduservices.com
                                 <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                             </p>
-                        </div>
-                        <div className="contact-info-one__single">
-                            <img className="picture1" src={IMG} alt="collage group photo" />
                         </div>
                     </div>
                     <div className='Branch__Main__In__Right'>
