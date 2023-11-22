@@ -5,7 +5,6 @@ import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
 import AdminPage from "../components/AdminPage";
 
-
 const Admin = () => {
     return (
         <Layout pageTitle="Fortune | Admin">
