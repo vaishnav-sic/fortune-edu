@@ -1651,7 +1651,7 @@ a:visited {
   text-align: center;
   margin: 0;
   color: white;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 55px;
 }
@@ -2942,7 +2942,7 @@ a:visited {
   padding-left: 45px;
   padding-right: 45px;
   position: relative;
-  padding-top: 50px;
+  padding-top: 88px;
   padding-bottom: 50px;
   border-style: solid;
   border-width: 2px;
@@ -6796,27 +6796,15 @@ p {
   border-width: 2px;
   border-color: #f1f1f1;
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: -webkit-box-shadow 0.4s ease;
-  transition: -webkit-box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease;
   transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .contact-info-one__single:hover {
   -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.05);
@@ -6894,58 +6882,29 @@ p {
   text-align: center;
   border-width: 2px;
   border-color: #f1f1f1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: -webkit-box-shadow 0.4s ease;
-  transition: -webkit-box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 1px;
+  padding-bottom: 46px;
 }
 
 .container_Contact_main {
   background-color: white;
   border-style: solid;
-  text-align: center;
   border-width: 2px;
   border-color: #f1f1f1;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition: -webkit-box-shadow 0.4s ease;
-  transition: -webkit-box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease;
-  transition: box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
-  padding-top: 48px;
-  padding-bottom: 48px;
+  padding-top: 5px;
+  padding-bottom: 15px;
 }
 .contact-info-one__text_main {
   text-align: center;
@@ -6967,6 +6926,40 @@ p {
   color: #81868a;
   margin-top: -15px;
   margin-bottom: -10px;
+}
+.course-one__content_baramati {
+  padding-left: 34px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 88px;
+  padding-bottom: 50px;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+}
+
+.course-one__content__subbranch {
+  padding-left: 34px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 88px;
+  padding-bottom: 50px;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+}
+.course-one__content_manchar {
+  padding-left: 36px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 88px;
+  padding-bottom: 50px;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
 }
 .course-one__Direction {
   display: inline-block;
@@ -7722,7 +7715,8 @@ a:hover {
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  margin-top: 20px;
   height: 100vh;
   overflow: hidden;
   /* margin: 20px; */
