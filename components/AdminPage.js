@@ -37,7 +37,7 @@ const AdminPage = () => {
   }, [router]);
 
   const columnsForNews = [
-    { field: "id", headerName: "Sr No", width: 150,  },
+    { field: "id", headerName: "Sr No", width: 150 },
     {
       field: "Description",
       headerName: "Description",
@@ -48,8 +48,6 @@ const AdminPage = () => {
       field: "Visibility",
       headerName: "Visibility",
       width: 200,
-      // checkboxSelection: true,
-      // hide:true
     },
     {
       field: "displayNews",
@@ -82,7 +80,6 @@ const AdminPage = () => {
 
   const columnsForStudentds = [
     { field: "id", headerName: "Sr No", width: 150, editable: true },
-    // date time
     {
       field: "appliedDateTime",
       headerName: "Date-Time",
@@ -128,7 +125,6 @@ const AdminPage = () => {
       headerName: "CouponCode",
       width: 100,
     },
-    // coupanCode
   ];
 
   const updateNews = async (event) => {
@@ -143,7 +139,6 @@ const AdminPage = () => {
   };
 
   const onGridReady = (params) => {
-    // gridApi = params.api;
     setGridApi(params.api);
   };
 
@@ -157,7 +152,6 @@ const AdminPage = () => {
       }
       updateNews(element);
     });
-    console.log(dataForNews);
   };
 
   return (
@@ -174,21 +168,26 @@ const AdminPage = () => {
         }}
       >
         <AgGridReact
-          //   ref={gridRef}
           columnDefs={columnsForNews}
           rowData={dataForNews}
           onCellValueChanged={updateNews}
           editType={"fullRow"}
           rowSelection={"single"}
           suppressRowClickSelection={true}
-          //   gridOptions={gridOptions}
           onGridReady={onGridReady}
         ></AgGridReact>
-        <button onClick={changeNews} style={{backgroundColor:"#2da397"}}>Save</button>
+        <button onClick={changeNews} style={{ backgroundColor: "#2da397" }}>
+          Save
+        </button>
       </div>
       <div
         className="bulkMain ag-theme-alpine ag-style"
-        style={{ height: 300, width: "85%", marginBottom: "2rem" ,marginTop:"2rem"}}
+        style={{
+          height: 300,
+          width: "85%",
+          marginBottom: "2rem",
+          marginTop: "2rem",
+        }}
       >
         <AgGridReact
           columnDefs={columnsForStudentds}
