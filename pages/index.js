@@ -29,16 +29,19 @@ import ProblemSolution from "../components/ProblemSolution";
 import { app, db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
 import { useEffect } from "react";
+import NewsFlash from "../components/NewsFlash";
 const HomePage = () => (
   useEffect(() => {
      collection(db, 'notes');
   },[]),
   <Layout pageTitle="Fortune Education Services">
-    <Topbar />
+    {/* <Topbar /> */}
+    <NewsFlash />
     <NavOne />
     <MainPage />
+    
     {/* <SliderOne /> */}
-    <CourseOne />
+    {/* <CourseOne /> */}
     <AboutTwo />
     <ProblemSolution />
     {/* <VideoTwo /> */}
