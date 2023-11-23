@@ -10,7 +10,7 @@ const Admissionguidance = () => {
               Admission Guidance
             </h3>
           </div>
-          <div className="service-in-content">
+          <div className="service-in-content" id="AG">
             <div className="service-in-content-left">
               <h4
                 data-aos="fade-right"

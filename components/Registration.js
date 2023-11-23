@@ -8,7 +8,7 @@ const Registration = () => {
             Registration
           </h3>
         </div>
-        <div className="service-in-content-alt">
+        <div className="service-in-content-alt" id="REG">
           <div
             className="service-in-content-right"
             data-aos="fade-right"

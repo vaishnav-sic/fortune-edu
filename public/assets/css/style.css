@@ -7563,15 +7563,19 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+#ILM{
+  margin-top: -1.5rem;
 }
 .service-in-heading {
   display: flex;
   align-items: center;
-  margin-bottom: -1rem;
+  margin-bottom: -4rem;
 }
 .service-in-heading h3 {
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-left: 5rem;
   font-size: 40px;
   font-weight: bold;
@@ -7584,14 +7588,16 @@ h2 {
   justify-content: center;
   flex-wrap: wrap-reverse;
   gap: 8rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .service-in-content-left {
-  width: 40rem;
-  padding: 0 2rem;
+  width: 55rem;
+  padding: 0 1rem; 
+  margin-top: -4rem;
 }
 .service-in-content-left {
   line-height: 1.6rem;
+  /* margin-top: -2rem; */
 }
 .service-in-content-right {
   height: 290px;
@@ -7616,6 +7622,9 @@ h2 {
   align-items: center;
   position: absolute;
 }
+#right-img-service{
+    margin-top: 0.2rem;
+}
 .servinice-in-content-right-in-in {
   height: 250px;
   width: 250px;
@@ -7632,16 +7641,69 @@ h2 {
 .serservinice-in-content-right-in-in img:hover {
   box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
 }
+ 
+svg {
+  height: 20px;
+  width: 20px;
+}
+.service-in-content-left li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  /* border-bottom: 1px solid gray; */
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+}
+.service-in-content-left li:hover {
+  box-shadow: 0 4px 2px -2px rgba(11, 11, 11, 0.45);
+}
+.service-in-content-left h5 {
+  color: #000;
+  padding: 2rem 0;
+}
+.service-in-content-left li img {
+  height: 10px;
+  margin-top: 8px;
+}
+#AG{
+  margin-top: -4rem;
+}
+#NSA{
+  margin-top: -4rem;
+}
+#CCP{
+  margin-top: -3rem;
+}
+#OTOC{
+  margin-top: -4rem;
+}
+#AAAN{
+margin-top: -5rem;
+}
+#NRID{
+  margin-top: -5rem;
+}
+/* responsive Services  */
+
 @media screen and (max-width: 1058px) {
   .service-in-content-left {
     width: 30rem;
-    padding: 0 2rem;
+    padding: 2rem 0rem;
+  }
+  .service-Main{
+    width: 100vw;
+  }
+  #OTOC{
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 899px) {
   #alt-long {
     margin-left: -2rem;
     margin-bottom: 4rem;
+  }
+  #AMSACQ{
+    margin-top: -7rem;
   }
   .service-in-heading {
     display: flex;
@@ -7679,29 +7741,65 @@ h2 {
     padding-bottom: 5rem;
   }
 }
-svg {
-  height: 20px;
-  width: 20px;
+@media screen and (min-width: 898px) and (max-width:1056px){
+  #ILM{
+    margin-top: 1.2rem;
+  }
+  #AAAN{
+       margin-top: 2rem;
+  }
 }
-.service-in-content-left li {
-  display: flex;
-  align-items: start;
-  gap: 1rem;
-  /* border-bottom: 1px solid gray; */
-  border-bottom: 1px solid black;
-  padding-bottom: 1rem;
+@media screen and (max-width:900px){
+  #SAAG{
+        margin-top: -8rem;
+  }
 }
-.service-in-content-left li:hover {
-  box-shadow: 0 4px 2px -2px rgba(11, 11, 11, 0.45);
+@media screen and (max-width:1058px){
+  #AG{
+    margin-top: 2.5rem;
+  }
+  #NSA{
+    margin-top: 2rem;
+  }
+  #NRID{
+    margin-top: 2rem;
+  }
 }
-.service-in-content-left h5 {
-  color: #000;
-  padding: 2rem 0;
+/* @media screen and (max-width:1269px) and (min-width:1060px){
+  .service-in-content, .service-in-content-alt{
+    flex-wrap: nowrap;
+   
+  }
+ 
+} */
+
+
+@media screen and (max-width:899px){
+  #REG{
+    margin-top: -6rem;
+  }
+  #DOC{
+    margin-top: -4rem;
+  }
+  #AFF{
+    margin-top: -6rem;
+  }
 }
-.service-in-content-left li img {
-  height: 10px;
-  margin-top: 8px;
+
+@media screen and (max-width:1060px) and (min-width:900px){
+#AFF{
+  margin-top: 3rem;
 }
+
+}
+
+
+
+
+ 
+
+
+
 /* -------------------------------------------services component style end ---------------------- */
 /* -------------------------------------------Counselling Start----------------------------------  */
 a:hover {

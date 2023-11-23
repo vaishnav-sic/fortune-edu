@@ -12,7 +12,7 @@ const oneToOneCons = () => {
           >
             <h3>One To One Consulling</h3>
           </div>
-          <div className="service-in-content">
+          <div className="service-in-content" id="OTOC">
             <div className="service-in-content-left">
               <h4
                 data-aos="fade-right"

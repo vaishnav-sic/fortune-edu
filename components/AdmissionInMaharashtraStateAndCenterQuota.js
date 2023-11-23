@@ -10,7 +10,8 @@ const AdmissionInMaharashtraStateAndCenterQuota = () => {
           </h3>
         </div>
         <div className="service-in-content-alt">
-          <div
+          <div 
+            id="AMSACQ"
             className="service-in-content-right"
             data-aos="fade-right"
             data-aos-duration="800"

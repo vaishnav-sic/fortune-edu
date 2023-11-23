@@ -11,7 +11,7 @@ const Nridoc = () => {
         >
           <h3>NRI Documentation & Guidance</h3>
         </div>
-        <div className="service-in-content">
+        <div className="service-in-content" id="NRID">
           <div className="service-in-content-left">
             <h4
               data-aos="fade-right"

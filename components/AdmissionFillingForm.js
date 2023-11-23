@@ -12,9 +12,9 @@ const AdmissionFillingForm = () => {
           >
             <h3>Admission Filling Form</h3>
           </div>
-          <div className="service-in-content-alt">
+          <div className="service-in-content-alt" id="AFF">
             <div
-              className="service-in-content-right"
+              className="service-in-content-right" id="right-img-service"
               data-aos="fade-right"
               data-aos-duration="800"
             >
