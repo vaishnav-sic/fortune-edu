@@ -7947,45 +7947,10 @@ label input[type="checkbox"] {
  /* ------------------------------------------admin login style end-------------------------------- */
  
 
- /* new Counter Start */
- /* CounterComponent.module.css */
+ 
 
-.counterContainer {
-  display: flex;
-  background-image: url('your-background-image.jpg'); /* Replace with your image path */
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  border-radius: 10px;
-}
 
-.counter {
-  flex: 1;
-  text-align: center;
-  color: #fff;
-}
-
-.counterLabel {
-  display: block;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* You can customize the styles for the CountUp component if needed */
-.react-countup {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-@media (max-width: 600px) {
-  .counterContainer {
-    flex-direction: column;
-  }
-}
-
- /* new Counter End */
-
- /* NewsFlash start  */
+ /*------------------------------------------ NewsFlash start ----------------------------- */
  .topbar-one {
   background-color: #333;
   color: #fff;
@@ -8017,7 +7982,7 @@ label input[type="checkbox"] {
 
 
 
-/* NewsFlash start  */
+/* =================================NewsFlash start ==================================== */
 
 .newsFlash {
   display: flex;
@@ -8054,4 +8019,4 @@ label input[type="checkbox"] {
   }
 }
 
- /* NewsFlash end  */
+ /* ------------------------------------NewsFlash end------------------------------------------  */
