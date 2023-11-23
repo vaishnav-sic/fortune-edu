@@ -34,7 +34,7 @@ const ContactUs = () => {
                 <div className="row">
                     <div className="col-lg-3">
                         <div className="course-one__single">
-                            <div className="course-one__content">
+                            <div className="course-one__content__subbranch">
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MUMBAI</h2>
@@ -44,7 +44,7 @@ const ContactUs = () => {
                     </div>
                     <div className="col-lg-3">
                         <div className="course-one__single">
-                            <div className="course-one__content">
+                            <div className="course-one__content__subbranch">
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">KARAD </h2>
