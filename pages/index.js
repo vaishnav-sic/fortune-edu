@@ -8,7 +8,6 @@ import AboutTwo from "../components/AboutTwo";
 import CourseOne from "../components/CourseOne";
 import VideoTwo from "../components/VideoTwo";
 import BookConsultation from "../components/BookConsultation";
-// import CourseCatOne from "../components/CourseCatOne";
 import CallToActionThree from "../components/CallToActionThree";
 import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
