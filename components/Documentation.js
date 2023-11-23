@@ -10,7 +10,7 @@ const Documentation = () => {
                 Documentation
               </h3>
             </div>
-            <div className="service-in-content">
+            <div className="service-in-content" id="DOC">
               <div className="service-in-content-left">
                 <p data-aos="fade-right" data-aos-duration="800">
                   And most importantly, essential guidance on the documentation

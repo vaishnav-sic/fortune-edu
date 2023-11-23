@@ -8,7 +8,7 @@ const NeetScoreAnalysis = () => {
             NEET Score Analysis
           </h3>
         </div>
-        <div className="service-in-content">
+        <div className="service-in-content" id="NSA">
           <div className="service-in-content-left">
             <h4
               data-aos="fade-right"

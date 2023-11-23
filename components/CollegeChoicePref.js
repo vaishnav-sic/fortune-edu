@@ -11,7 +11,7 @@ const CollegeChoicePref = () => {
         >
           <h3>College Choice Preferences</h3>
         </div>
-        <div className="service-in-content-alt">
+        <div className="service-in-content-alt" id="CCP">
           <div
             className="service-in-content-right"
             data-aos="fade-right"
