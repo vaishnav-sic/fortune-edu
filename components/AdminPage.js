@@ -1,28 +1,27 @@
-import React, { useState ,useEffect} from "react";
-import { auth } from '../firebaseConfig';
-import { useRouter } from 'next/router';
+import React, { useState, useEffect } from "react";
+import { auth } from "../firebaseConfig";
+import { useRouter } from "next/router";
 import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
-import { db } from '../firebaseConfig';
-import { collection, getDocs } from 'firebase/firestore';
- 
-
+import { db } from "../firebaseConfig";
+import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
+import { element } from "prop-types";
 
 const AdminPage = () => {
-  const [dataForStudents,setDataForStudents] = useState([]);
-  const [dataForNews,setDataForNews] = useState([]);
+  const [dataForStudents, setDataForStudents] = useState([]);
+  const [dataForNews, setDataForNews] = useState([]);
   const [user, setUser] = useState(null);
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
   const router = useRouter();
-  
+  const [gridApi, setGridApi] = useState(null);
 
   useEffect(() => {
     const checkAuthentication = () => {
       const user = auth.currentUser;
 
       if (!user) {
-        router.push('/adminlogin');
+        router.push("/adminlogin");
       } else {
         setUser(user);
         setLoading(false); // Set loading to false when authentication check is complete
@@ -37,46 +36,54 @@ const AdminPage = () => {
     };
   }, [router]);
 
-  
-  
   const columnsForNews = [
     { field: "id", headerName: "Sr No", width: 150 },
-    {
-      field: "Header",
-      headerName: "Header",
-      width: 200,
-      // editable: true,
-    },
     {
       field: "Description",
       headerName: "Description",
       width: 525,
-      // editable: true,
+      editable: true,
+    },
+    {
+      field: "Visibility",
+      headerName: "Visibility",
+      width: 200,
+    },
+    {
+      field: "displayNews",
+      headerName: "Display News",
+      width: 200,
+      checkboxSelection: true,
     },
   ];
 
   useEffect(() => {
-    const fetchData = async () => {
-        const querySnapshotForNews = await getDocs(collection(db, 'NewsUpdates'));
-        const querySnapshotForStudents = await getDocs(collection(db, 'StudentInfo'));
-        const newsData = querySnapshotForNews.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-        const studentsData = querySnapshotForStudents.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
-        setDataForNews(newsData);
-        setDataForStudents(studentsData);
-    };
     fetchData();
-  },[]); // The empty dependency array ensures that the effect runs only once when the component mounts
+  }, []); // The empty dependency array ensures that the effect runs only once when the component mounts
 
-  console.log(dataForStudents);
-
+  const fetchData = async () => {
+    const querySnapshotForNews = await getDocs(collection(db, "NewsUpdates"));
+    const querySnapshotForStudents = await getDocs(
+      collection(db, "StudentInfo")
+    );
+    const newsData = querySnapshotForNews.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    const studentsData = querySnapshotForStudents.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+    setDataForNews(newsData);
+    setDataForStudents(studentsData);
+  };
 
   const columnsForStudentds = [
     { field: "id", headerName: "Sr No", width: 150, editable: true },
-    // date time 
     {
       field: "appliedDateTime",
       headerName: "Date-Time",
-      width: 100,
+      width: 150,
     },
     {
       field: "firstName",
@@ -101,7 +108,7 @@ const AdminPage = () => {
     {
       field: "courseInterest",
       headerName: "Course",
-      width: 200,
+      width: 100,
     },
     {
       field: "cityLiveIn",
@@ -111,40 +118,80 @@ const AdminPage = () => {
     {
       field: "consultationCity",
       headerName: "Consultation City",
-      width: 200,
+      width: 150,
     },
     {
       field: "CouponCode",
       headerName: "CouponCode",
       width: 100,
     },
-    // coupanCode
   ];
 
+  const updateNews = async (event) => {
+    if (event.data) {
+      const userRef = doc(db, "NewsUpdates", event.data.id);
+      await updateDoc(userRef, event.data);
+    } else {
+      const userRef = doc(db, "NewsUpdates", event.id);
+      await updateDoc(userRef, event);
+    }
+    fetchData();
+  };
+
+  const onGridReady = (params) => {
+    setGridApi(params.api);
+  };
+
+  const changeNews = () => {
+    const selectedRow = gridApi.getSelectedNodes()[0].data;
+    dataForNews.forEach((element) => {
+      if (element.id == selectedRow.id) {
+        element.Visibility = true;
+      } else {
+        element.Visibility = false;
+      }
+      updateNews(element);
+    });
+  };
+
   return (
-    <div style={{ display:"flex",flexDirection:"column",alignItems:"center" }}>
+    <div
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <div
         className="bulkMain ag-theme-alpine ag-style"
-        style={{ height: 300, width: "65%" ,marginTop:"2rem",marginBottom:"2rem"}}
+        style={{
+          height: 177,
+          width: "85%",
+          marginTop: "2rem",
+          marginBottom: "2rem",
+        }}
       >
         <AgGridReact
-          //   ref={gridRef}
           columnDefs={columnsForNews}
           rowData={dataForNews}
-          //   gridOptions={gridOptions}
-          //   onGridReady={onGridReady}
+          onCellValueChanged={updateNews}
+          editType={"fullRow"}
+          rowSelection={"single"}
+          suppressRowClickSelection={true}
+          onGridReady={onGridReady}
         ></AgGridReact>
+        <button onClick={changeNews} style={{ backgroundColor: "#2da397" }}>
+          Save
+        </button>
       </div>
       <div
         className="bulkMain ag-theme-alpine ag-style"
-        style={{ height: 300, width: "85%" ,marginBottom:"2rem"}}
+        style={{
+          height: 300,
+          width: "85%",
+          marginBottom: "2rem",
+          marginTop: "2rem",
+        }}
       >
         <AgGridReact
-          //   ref={gridRef}
           columnDefs={columnsForStudentds}
           rowData={dataForStudents}
-          //   gridOptions={gridOptions}
-          //   onGridReady={onGridReady}
         ></AgGridReact>
       </div>
     </div>
