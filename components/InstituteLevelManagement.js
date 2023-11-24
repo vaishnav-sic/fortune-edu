@@ -11,8 +11,8 @@ const InstituteLevelManagement = () => {
               Institute Level or Management Quota Admission
             </h3>
           </div>
-          <div className="service-in-content">
-            <div className="service-in-content-left">
+          <div className="service-in-content" id="ILM">
+            <div className="service-in-content-left"  >
               <li data-aos="fade-right" data-aos-duration="800">
                 <img src={arrow} />
                 <p>

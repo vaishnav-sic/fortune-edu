@@ -11,6 +11,7 @@ const SpecialAssureAdmissionGuidance = () => {
         </div>
         <div className="service-in-content-alt">
           <div
+          id="SAAG"
             className="service-in-content-right"
             data-aos="fade-right"
             data-aos-duration="800"

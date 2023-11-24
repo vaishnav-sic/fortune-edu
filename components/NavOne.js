@@ -90,6 +90,12 @@ class NavOne extends Component {
             <div className="main-navigation">
               <ul className=" navigation-box">
                 <li>
+                <Link href="/">
+                    <a>HOME</a>
+                </Link>
+                </li>
+
+                <li>                
                   <Link href="/services">
                         <a>SERVICES</a>
                       </Link>

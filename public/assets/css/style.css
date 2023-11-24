@@ -324,7 +324,7 @@ a:visited {
   margin-bottom: 0;
   border: none;
   border-radius: 0;
-  padding: 0;
+  padding: 1px 1px 1px 1px;
   position: relative;
   background-color: transparent;
 }
@@ -363,9 +363,15 @@ a:visited {
   right: 15px;
 }
 .header-navigation .main-navigation {
-  float: none;
+  /* float: none; */
   text-align: right;
-  padding-right: 90px;
+  /* padding-right: 90px; */
+}
+.header-navigation .main-navigation ul {
+  margin-right: 2px; 
+}
+.header-navigation .main-navigation li {
+  margin-right: 2px; 
 }
 @media (min-width: 1200px) {
   .header-navigation .main-navigation {
@@ -382,7 +388,7 @@ a:visited {
 }
 .header-navigation ul.navigation-box > li {
   position: relative;
-  padding: 35px 0;
+  padding: 35px 1px 10px;
   display: inline-block;
   vertical-align: middle;
   /* Second Level Menu */
@@ -5676,11 +5682,11 @@ a:visited {
   margin-left: 80px;
 }
 .about-two__count {
-  /* margin-top: 7.3rem; */
-  border-radius: 50%;
+  margin-top: 7.3rem;
+  border-radius: 0 20% 0 20%;
   width: 147px;
   height: 147px;
-  background-color: #001253;
+  background-color: #FCA712;
   /* -webkit-box-pack: center;
   -ms-flex-pack: center; */
   justify-content: center;
@@ -5709,11 +5715,12 @@ a:visited {
 }
 
 .about-two__count p {
-  color: white;
+  color: whitesmoke;
+  font-size: 20px;
 }
 .about-two__count span {
   display: block;
-  color: #f16101;
+  color: #001253;
   letter-spacing: 0em;
   font-weight: 400;
   font-size: 25px;
@@ -7369,130 +7376,6 @@ h2 {
   }
 }
 /* end */
-
-/* --------------------------------------------CourceCatOne title styling(problem-solution)---------------------------------------- */
-.block-title__title {
-  margin: 0;
-  color: #012237;
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: -15px;
-  margin-top: -15px;
-}
-.problem-solution {
-  display: flex;
-  gap: 23rem;
-  margin-left: 18rem;
-}
-.title {
-  font-size: 30px;
-  color: black;
-}
-.problem-solution_main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 38vw;
-  margin-left: 9rem;
-  margin-top: 1.5rem;
-}
-.problem-solution_main-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 38vw;
-  margin-left: 40rem;
-  margin-top: -28rem;
-}
-.problem-solution_shapes {
-  margin: 6px;
-  text-align: center;
-  padding: 14px 0px;
-  border: 3px solid #d6d6d6;
-  border-radius: 26px 26px 0px 26px;
-  position: relative;
-  line-height: 18px;
-  font-weight: 600;
-  background-color: white;
-}
-.problem-solution_shapes-1 {
-  margin: 6px;
-  text-align: center;
-  padding: 14px 0px;
-  border: 3px solid #d6d6d6;
-  border-radius: 26px 26px 26px 0px;
-  position: relative;
-  line-height: 18px;
-  font-weight: 600;
-  background-color: white;
-}
-.shapes-content p {
-  font-size: 18px;
-  color: red;
-}
-.shapes-content-1 p {
-  font-size: 18px;
-  color: green;
-}
-.shapes-content-1 p:hover {
-  color: white;
-}
-.problem-solution_shapes:hover{
-  transform: translateY(-7px); /*Adjust the distance you want the shape to move on hover*/
-  /* background: red; Change to the desired hover color */
-}
-.problem-solution_shapes-1:hover {
-  transform: translateY(-7px); /* Adjust the distance you want the shape to move on hover */
-  background: green; /* Change to the desired hover color */
-}
-/* @media screen and (max-width: 768px) {
-  .block-title__title {
-    font-size: 40px;
-  }
-
-  .problem-solution {
-    gap: 10rem;
-    margin-left: 5rem;
-  }
-
-  .title {
-    font-size: 24px;
-    margin-left: 2rem;
-  }
-
-  .problem-solution_main,
-  .problem-solution_main-1 {
-    width: auto;
-    margin-left: 2rem;
-    margin-top: 1rem;
-  }
-
-  .problem-solution_main-1 {
-    margin-left: 2rem;
-    margin-top: 1rem;
-  }
-
-  .problem-solution_shapes,
-  .problem-solution_shapes-1 {
-    min-width: 120px;
-  }
-
-  .shapes-content p {
-    font-size: 16px;
-  }
-  .shapes-content-1 p:hover {
-    color: white;
-  }
-  .problem-solution_shapes:hover{
-    transform: translateY(-7px); Adjust the distance you want the shape to move on hover
-     background: red; Change to the desired hover color
-  }
-  .problem-solution_shapes-1:hover {
-    transform: translateY(-7px);  Adjust the distance you want the shape to move on hover 
-    background: green;  Change to the desired hover color 
-
-} */
-/* ---------------------------------------end---------------------------------- */
 /* ------------------------------------------aboutOne img styling------------------------------------*/
 .about-one__img img {
   width: 100vh;
@@ -7563,15 +7446,19 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+#ILM{
+  margin-top: -1.5rem;
 }
 .service-in-heading {
   display: flex;
   align-items: center;
-  margin-bottom: -1rem;
+  margin-bottom: -4rem;
 }
 .service-in-heading h3 {
-  margin-top: 5rem;
+  margin-top: 1rem;
   margin-left: 5rem;
   font-size: 40px;
   font-weight: bold;
@@ -7584,14 +7471,16 @@ h2 {
   justify-content: center;
   flex-wrap: wrap-reverse;
   gap: 8rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
 }
 .service-in-content-left {
-  width: 40rem;
-  padding: 0 2rem;
+  width: 55rem;
+  padding: 0 1rem; 
+  margin-top: -4rem;
 }
 .service-in-content-left {
   line-height: 1.6rem;
+  /* margin-top: -2rem; */
 }
 .service-in-content-right {
   height: 290px;
@@ -7616,6 +7505,9 @@ h2 {
   align-items: center;
   position: absolute;
 }
+#right-img-service{
+    margin-top: 0.2rem;
+}
 .servinice-in-content-right-in-in {
   height: 250px;
   width: 250px;
@@ -7632,16 +7524,69 @@ h2 {
 .serservinice-in-content-right-in-in img:hover {
   box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
 }
+ 
+svg {
+  height: 20px;
+  width: 20px;
+}
+.service-in-content-left li {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+  /* border-bottom: 1px solid gray; */
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+}
+.service-in-content-left li:hover {
+  box-shadow: 0 4px 2px -2px rgba(11, 11, 11, 0.45);
+}
+.service-in-content-left h5 {
+  color: #000;
+  padding: 2rem 0;
+}
+.service-in-content-left li img {
+  height: 10px;
+  margin-top: 8px;
+}
+#AG{
+  margin-top: -4rem;
+}
+#NSA{
+  margin-top: -4rem;
+}
+#CCP{
+  margin-top: -3rem;
+}
+#OTOC{
+  margin-top: -4rem;
+}
+#AAAN{
+margin-top: -5rem;
+}
+#NRID{
+  margin-top: -5rem;
+}
+/* responsive Services  */
+
 @media screen and (max-width: 1058px) {
   .service-in-content-left {
     width: 30rem;
-    padding: 0 2rem;
+    padding: 2rem 0rem;
+  }
+  .service-Main{
+    width: 100vw;
+  }
+  #OTOC{
+    margin-top: 2rem;
   }
 }
 @media screen and (max-width: 899px) {
   #alt-long {
     margin-left: -2rem;
     margin-bottom: 4rem;
+  }
+  #AMSACQ{
+    margin-top: -7rem;
   }
   .service-in-heading {
     display: flex;
@@ -7679,29 +7624,65 @@ h2 {
     padding-bottom: 5rem;
   }
 }
-svg {
-  height: 20px;
-  width: 20px;
+@media screen and (min-width: 898px) and (max-width:1056px){
+  #ILM{
+    margin-top: 1.2rem;
+  }
+  #AAAN{
+       margin-top: 2rem;
+  }
 }
-.service-in-content-left li {
-  display: flex;
-  align-items: start;
-  gap: 1rem;
-  /* border-bottom: 1px solid gray; */
-  border-bottom: 1px solid black;
-  padding-bottom: 1rem;
+@media screen and (max-width:900px){
+  #SAAG{
+        margin-top: -8rem;
+  }
 }
-.service-in-content-left li:hover {
-  box-shadow: 0 4px 2px -2px rgba(11, 11, 11, 0.45);
+@media screen and (max-width:1058px){
+  #AG{
+    margin-top: 2.5rem;
+  }
+  #NSA{
+    margin-top: 2rem;
+  }
+  #NRID{
+    margin-top: 2rem;
+  }
 }
-.service-in-content-left h5 {
-  color: #000;
-  padding: 2rem 0;
+/* @media screen and (max-width:1269px) and (min-width:1060px){
+  .service-in-content, .service-in-content-alt{
+    flex-wrap: nowrap;
+   
+  }
+ 
+} */
+
+
+@media screen and (max-width:899px){
+  #REG{
+    margin-top: -6rem;
+  }
+  #DOC{
+    margin-top: -4rem;
+  }
+  #AFF{
+    margin-top: -6rem;
+  }
 }
-.service-in-content-left li img {
-  height: 10px;
-  margin-top: 8px;
+
+@media screen and (max-width:1060px) and (min-width:900px){
+#AFF{
+  margin-top: 3rem;
 }
+
+}
+
+
+
+
+ 
+
+
+
 /* -------------------------------------------services component style end ---------------------- */
 /* -------------------------------------------Counselling Start----------------------------------  */
 a:hover {
@@ -7940,3 +7921,104 @@ label input[type="checkbox"] {
 }
  /* ------------------------------------------admin login style end-------------------------------- */
  
+
+ 
+
+
+ /*------------------------------------------ NewsFlash start ----------------------------- */
+ .topbar-one {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.topbar-one__left {
+  font-size: 14px;
+  overflow: hidden;
+}
+
+.news-flash {
+  animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.newsFlash {
+  display: flex;
+  align-items: center;
+  background-color: #2da397; 
+  padding: 8px;
+  border-radius: 4px;
+  justify-content: center;
+  /* margin-right: 16px; */
+}
+
+.bulletPoint {
+  font-size: 1rem;
+  margin-right: 8px;
+  animation: flashAnimation 5s infinite;
+}
+
+.newsText {
+  font-size: 1rem;
+  color: white;
+  animation: flashAnimation 5s infinite;
+}
+.newsText p{
+  color: white;
+  align-items: center;
+}
+
+@keyframes flashAnimation {
+  0%, 50%, 100% {
+    opacity: 1;
+  }
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+ /* ------------------------------------NewsFlash end------------------------------------------  */
+
+ /* --------------------------------------------problem-solution styling---------------------------------------- */
+.heading-text-start {
+  margin: 0;
+  color: #012237;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 3rem;
+}
+.accordion-header-question{
+  background-color: #F0F4FA;
+  border-radius: 20px;
+  height: 7rem;
+  width: 30rem;
+  padding: 20px;
+  margin-top: 1rem;
+}
+.accordion-header-question h5{
+  color: #000;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: bold;
+}
+.accordion-header-question p{
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+.qna-faq-img{
+  margin-top: 10rem;
+}
+/* ---------------------------------------end---------------------------------- */

@@ -22,8 +22,8 @@ const Service = () => {
             <NavOne />
             <PageHeader title="Service" />
             <AdmissionInMaharashtraStateAndCenterQuota />
-            <SpecialAssureAdmissionGuidance />
             <InstituteLevelManagement />
+            <SpecialAssureAdmissionGuidance />
             <Admissionguidance />
             <Registration />
             <Documentation />

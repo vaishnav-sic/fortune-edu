@@ -11,7 +11,7 @@ const AdmissionAlert = () => {
         >
           <h3>Admission Alert And News</h3>
         </div>
-        <div className="service-in-content-alt">
+        <div className="service-in-content-alt" id="AAAN">
           <div
             className="service-in-content-right"
             data-aos="fade-right"

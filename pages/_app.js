@@ -8,7 +8,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({
       duration: 800,
-      offset: 80,
+      offset: 40,
       once: false,
     });
   }, []);
