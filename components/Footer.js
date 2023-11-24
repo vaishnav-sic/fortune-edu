@@ -15,9 +15,19 @@ const Footer = () => {
                                     <ul className="list-unstyled footer-widget__course-list">
                                         <li>
                                             <h2>
-                                               Elite Squad of Specialists
+                                               Elite Squad of Specialists.
                                             </h2>
                                         </li>
+                                        <li>
+                                            <h2>
+                                                Recommended by thousands of doctors and engineers.
+                                            </h2>
+                                        </li> 
+                                        <li>
+                                            <h2>
+                                                We provide Many Choice for Admission in Various Colleges!
+                                            </h2>
+                                        </li>                                        
                                     </ul>
                                 </div>
                             </div>

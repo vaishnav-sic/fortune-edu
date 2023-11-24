@@ -23,6 +23,7 @@ const NewsFlash = () => {
   return (
     <div className="newsFlash">
       <div className="bulletPoint">⭐</div>
+      <div className="newsText1"><p>Important News & Updates&nbsp;&nbsp;</p></div>
       <div className="newsText"><p>{data.length > 0 && data[visibleIndex].Description}</p></div>
     </div>
   );
