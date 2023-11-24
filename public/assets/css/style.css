@@ -39,6 +39,7 @@ body {
   font-size: 16px;
   line-height: 34px;
   letter-spacing: -0.02em;
+  height: 100dvh;
 }
 a:active,
 a:hover,
@@ -5682,7 +5683,7 @@ a:visited {
   margin-left: 80px;
 }
 .about-two__count {
-  margin-top: 7.3rem;
+  margin-top: 1rem;
   border-radius: 0 20% 0 20%;
   width: 147px;
   height: 147px;
@@ -5712,6 +5713,7 @@ a:visited {
   font-size: 16px;
   font-family: "Poppins";
   font-weight: 600;
+  margin-bottom: 10px;
 }
 
 .about-two__count p {
@@ -7387,14 +7389,17 @@ h2 {
 /* ------------------------------------------about2 styling----------------------------------------- */
 .about2_main {
   display: flex;
-  /* align-items: center; */
+  flex-direction: row;
+  align-items: center;
   justify-content: center;
-  margin-top: -13rem;
+  margin: 0;
   background-color: whitesmoke;
-  padding: 3rem 0;
+  padding: 1rem 0;
   gap: 8rem;
   flex-wrap: wrap;
 }
+
+
 @media screen and (max-width: 699px) {
   .about2_main {
     gap: 2rem;
@@ -7675,37 +7680,33 @@ margin-top: -5rem;
 }
 
 }
-
-
-
-
- 
-
-
-
 /* -------------------------------------------services component style end ---------------------- */
 /* -------------------------------------------Counselling Start----------------------------------  */
 a:hover {
   cursor: pointer;
 }
 /*-------------------------------------------------- End------------------------------------------  */
-/* MainPage start */
+/* ============================================MainPage start===================================== */
 
 .main-img {
   position: relative;
   z-index: 1;
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   margin-top: 20px;
+  margin-bottom: 1px;
   height: 100vh;
   overflow: hidden;
-  /* margin: 20px; */
-  
-  /* border: 10px solid;
-  border-image: linear-gradient(to right,#FCA712, #001253);
-  border-image-slice: 1; */
+  background-color: #000;
 }
+
+.main-img img {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+
 
 .banner-one__scratch {
   max-width: 100%;
@@ -7980,6 +7981,16 @@ label input[type="checkbox"] {
   color: white;
   align-items: center;
 }
+.newsText1 {
+  font-size: 1rem;
+  color: Red;
+  animation: flashAnimation 5s infinite;
+}
+.newsText1 p{
+  color: red;
+  align-items:flex-start;
+}
+
 
 @keyframes flashAnimation {
   0%, 50%, 100% {
@@ -7993,32 +8004,59 @@ label input[type="checkbox"] {
  /* ------------------------------------NewsFlash end------------------------------------------  */
 
  /* --------------------------------------------problem-solution styling---------------------------------------- */
-.heading-text-start {
+ .heading-text-start {
   margin: 0;
   color: #012237;
   font-size: 40px;
   font-weight: bold;
   line-height: 3rem;
 }
-.accordion-header-question{
+
+.accordion-header-question {
   background-color: #F0F4FA;
   border-radius: 20px;
-  height: 7rem;
-  width: 30rem;
   padding: 20px;
   margin-top: 1rem;
 }
-.accordion-header-question h5{
+
+.accordion-header-question h5 {
   color: #000;
   font-size: 1rem;
   text-align: left;
   font-weight: bold;
 }
-.accordion-header-question p{
+
+.accordion-header-question p {
   font-size: 0.9rem;
   line-height: 1.3rem;
 }
-.qna-faq-img{
+
+.qna-faq-img {
   margin-top: 10rem;
 }
+
+@media (max-width: 767px) {
+  
+  .accordion-header-question {
+    width: 100%;
+  }
+
+  .d-flex {
+    flex-direction: column;
+  }
+
+  .col-6 {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .qna-faq-img {
+    margin-top: 2rem;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
 /* ---------------------------------------end---------------------------------- */

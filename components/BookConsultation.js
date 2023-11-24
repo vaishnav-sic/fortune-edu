@@ -54,6 +54,9 @@ const BookConsultation = () => {
     if (!formData.courseInterest || formData.courseInterest === "Course") {
       errors.courseInterest = 'Please select a course';
     }
+    if (!formData.cityLiveIn) {
+      errors.cityLiveIn = 'City you Live in is required';
+    }
     if (!formData.consultationCity || formData.consultationCity === "City") {
       errors.consultationCity = 'Please select a city';
     }
@@ -61,36 +64,24 @@ const BookConsultation = () => {
       errors.CouponCode = 'CouponCode must be 7 digits';
     }
 
-    // Add validations for other fields here
+   
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
     } else {
       setFormErrors({});
       try {
-        // Add the form data to the 'StudentInfo' collection
+        
         const appliedDateTime = new Date().toLocaleString();
         const docRef = await addDoc(collection(db, 'StudentInfo'), {
           ...formData,
           appliedDateTime,
         });
 
-        // Fetch and log data from 'StudentInfo' collection
         fetchDataFromFirestore('StudentInfo');
-
-        // Fetch and log data from 'consultations' collection
         fetchDataFromFirestore('consultations');
-
-        // Set the applied date-time in state
         setAppliedDateTime(appliedDateTime);
-
-        // Log the form data after submission
-        // console.log("Form Data after submission:", {
-        //   ...formData,
-        //   appliedDateTime,
-        // });
       } catch (error) {
-        // Handle error
         console.error("Error submitting form:", error);
       }
     }
@@ -100,11 +91,8 @@ const BookConsultation = () => {
     try {
       const querySnapshot = await getDocs(collection(db, collectionName));
       querySnapshot.forEach((doc) => {
-        // Log or manipulate data as needed
       });
     } catch (error) {
-      // Handle error
-      // console.error("Error fetching data from Firestore:", error);
     }
   };
 
@@ -215,21 +203,26 @@ const BookConsultation = () => {
                   <input
                     className="form-field"
                     type="text"
-                    placeholder="City you Live in"
+                    placeholder="Type Your City Name"
                     name="cityLiveIn"
                     value={formData.cityLiveIn}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
                   />
+                  {formErrors.cityLiveIn && (
+                    <span className="error-message">{formErrors.cityLiveIn}</span>
+                  )}
+
                   <select
                     className="form-field"
                     name="consultationCity"
+                    value="Select a City"
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
                   >
-                    <option value="" disabled selected>Select a City</option>
+                    <option value="" >Select a City</option>
                     <option value="Karad">Karad</option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>

@@ -38,7 +38,7 @@ const ProblemSolution = () => {
             </div>
           </div>
           <div className="col-6 ps-4 d-lg-block d-none">
-            <img className="qna-faq-img" src="https://www.pw.live/qna/assets/img/faq-img.png" alt="faq-img" />
+            <img className="qna-faq-img" src="/assets/images/faq-img-new.jpg" alt="faq-img" />
           </div>
         </div>
       </div>
