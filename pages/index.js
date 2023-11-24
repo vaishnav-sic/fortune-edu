@@ -24,6 +24,7 @@ import AdmissionAlert from "../components/AdmissionAlert";
 import AdmissionFillingForm from "../components/AdmissionFillingForm";
 import Admissionguidance from "../components/Admissionguidance";
 import CollegeChoicePref from "../components/CollegeChoicePref";
+import CoursesHome from "../components/CoursesHome";
 import ProblemSolution from "../components/ProblemSolution";
 import { app, db } from '../firebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';
@@ -45,6 +46,7 @@ const HomePage = () => (
     <ProblemSolution />
     {/* <VideoTwo /> */}
     <BookConsultation />
+    <CoursesHome />
     {/* <CallToActionThree /> */}
     {/* <AboutUs /> */}
     {/* <BrandsTwo /> */}
