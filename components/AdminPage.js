@@ -75,6 +75,11 @@ const AdminPage = () => {
       ...doc.data(),
     }));
     setDataForNews(newsData);
+    let count=0;
+    studentsData.forEach((element)=>{
+      element.id=++count;
+    })
+    count=0;
     setDataForStudents(studentsData);
   };
 
