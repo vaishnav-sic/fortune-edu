@@ -7696,9 +7696,9 @@ a:hover {
   align-items: center;
   margin-top: 20px;
   margin-bottom: 1px;
-  height: 100vh;
+  /* height: 100vh; */
   overflow: hidden;
-  background-color: #000;
+  background-color: white;
 }
 
 .main-img img {
