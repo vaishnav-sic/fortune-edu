@@ -5682,11 +5682,11 @@ a:visited {
   margin-left: 80px;
 }
 .about-two__count {
-  /* margin-top: 7.3rem; */
-  border-radius: 50%;
+  margin-top: 7.3rem;
+  border-radius: 0 20% 0 20%;
   width: 147px;
   height: 147px;
-  background-color: #001253;
+  background-color: #FCA712;
   /* -webkit-box-pack: center;
   -ms-flex-pack: center; */
   justify-content: center;
@@ -5715,11 +5715,12 @@ a:visited {
 }
 
 .about-two__count p {
-  color: white;
+  color: whitesmoke;
+  font-size: 20px;
 }
 .about-two__count span {
   display: block;
-  color: #f16101;
+  color: #001253;
   letter-spacing: 0em;
   font-weight: 400;
   font-size: 25px;
@@ -7375,130 +7376,6 @@ h2 {
   }
 }
 /* end */
-
-/* --------------------------------------------CourceCatOne title styling(problem-solution)---------------------------------------- */
-.block-title__title {
-  margin: 0;
-  color: #012237;
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: -15px;
-  margin-top: -15px;
-}
-.problem-solution {
-  display: flex;
-  gap: 23rem;
-  margin-left: 18rem;
-}
-.title {
-  font-size: 30px;
-  color: black;
-}
-.problem-solution_main {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 38vw;
-  margin-left: 9rem;
-  margin-top: 1.5rem;
-}
-.problem-solution_main-1 {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 38vw;
-  margin-left: 40rem;
-  margin-top: -28rem;
-}
-.problem-solution_shapes {
-  margin: 6px;
-  text-align: center;
-  padding: 14px 0px;
-  border: 3px solid #d6d6d6;
-  border-radius: 26px 26px 0px 26px;
-  position: relative;
-  line-height: 18px;
-  font-weight: 600;
-  background-color: white;
-}
-.problem-solution_shapes-1 {
-  margin: 6px;
-  text-align: center;
-  padding: 14px 0px;
-  border: 3px solid #d6d6d6;
-  border-radius: 26px 26px 26px 0px;
-  position: relative;
-  line-height: 18px;
-  font-weight: 600;
-  background-color: white;
-}
-.shapes-content p {
-  font-size: 18px;
-  color: red;
-}
-.shapes-content-1 p {
-  font-size: 18px;
-  color: green;
-}
-.shapes-content-1 p:hover {
-  color: white;
-}
-.problem-solution_shapes:hover{
-  transform: translateY(-7px); /*Adjust the distance you want the shape to move on hover*/
-  /* background: red; Change to the desired hover color */
-}
-.problem-solution_shapes-1:hover {
-  transform: translateY(-7px); /* Adjust the distance you want the shape to move on hover */
-  background: green; /* Change to the desired hover color */
-}
-/* @media screen and (max-width: 768px) {
-  .block-title__title {
-    font-size: 40px;
-  }
-
-  .problem-solution {
-    gap: 10rem;
-    margin-left: 5rem;
-  }
-
-  .title {
-    font-size: 24px;
-    margin-left: 2rem;
-  }
-
-  .problem-solution_main,
-  .problem-solution_main-1 {
-    width: auto;
-    margin-left: 2rem;
-    margin-top: 1rem;
-  }
-
-  .problem-solution_main-1 {
-    margin-left: 2rem;
-    margin-top: 1rem;
-  }
-
-  .problem-solution_shapes,
-  .problem-solution_shapes-1 {
-    min-width: 120px;
-  }
-
-  .shapes-content p {
-    font-size: 16px;
-  }
-  .shapes-content-1 p:hover {
-    color: white;
-  }
-  .problem-solution_shapes:hover{
-    transform: translateY(-7px); Adjust the distance you want the shape to move on hover
-     background: red; Change to the desired hover color
-  }
-  .problem-solution_shapes-1:hover {
-    transform: translateY(-7px);  Adjust the distance you want the shape to move on hover 
-    background: green;  Change to the desired hover color 
-
-} */
-/* ---------------------------------------end---------------------------------- */
 /* ------------------------------------------aboutOne img styling------------------------------------*/
 .about-one__img img {
   width: 100vh;
@@ -8078,10 +7955,6 @@ label input[type="checkbox"] {
   }
 }
 
-
-
-/* =================================NewsFlash start ==================================== */
-
 .newsFlash {
   display: flex;
   align-items: center;
@@ -8118,3 +7991,34 @@ label input[type="checkbox"] {
 }
 
  /* ------------------------------------NewsFlash end------------------------------------------  */
+
+ /* --------------------------------------------problem-solution styling---------------------------------------- */
+.heading-text-start {
+  margin: 0;
+  color: #012237;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 3rem;
+}
+.accordion-header-question{
+  background-color: #F0F4FA;
+  border-radius: 20px;
+  height: 7rem;
+  width: 30rem;
+  padding: 20px;
+  margin-top: 1rem;
+}
+.accordion-header-question h5{
+  color: #000;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: bold;
+}
+.accordion-header-question p{
+  font-size: 0.9rem;
+  line-height: 1.3rem;
+}
+.qna-faq-img{
+  margin-top: 10rem;
+}
+/* ---------------------------------------end---------------------------------- */

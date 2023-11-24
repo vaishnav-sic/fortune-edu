@@ -192,7 +192,6 @@ const medicalCollege = () => {
       <CollegeListIconB colleges={colleges2} />
       <CollegeListIconC colleges={colleges3} />
       {/* <VideoTwo /> */}
-      {/* <CourseCatOne /> */}
       {/* <CallToActionThree /> */}
       {/* <BrandsTwo /> */}
       {/* <BlogTwo /> */}
