@@ -5,8 +5,14 @@ import { AgGridReact } from "ag-grid-react";
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { db } from "../firebaseConfig";
-import { collection, getDocs, doc, updateDoc } from "firebase/firestore";
-import { element } from "prop-types";
+import {
+  collection,
+  getDocs,
+  doc,
+  updateDoc,
+  orderBy,
+  query,
+} from "firebase/firestore";
 
 const AdminPage = () => {
   const [dataForStudents, setDataForStudents] = useState([]);
@@ -24,13 +30,12 @@ const AdminPage = () => {
         router.push("/adminlogin");
       } else {
         setUser(user);
-        setLoading(false); // Set loading to false when authentication check is complete
+        setLoading(false);
       }
     };
 
     checkAuthentication();
 
-    // Add a cleanup function to clear any ongoing asynchronous tasks when the component unmounts
     return () => {
       // Cleanup tasks (if any)
     };
@@ -59,32 +64,35 @@ const AdminPage = () => {
 
   useEffect(() => {
     fetchData();
-  }, []); // The empty dependency array ensures that the effect runs only once when the component mounts
+  }, []);
 
   const fetchData = async () => {
     const querySnapshotForNews = await getDocs(collection(db, "NewsUpdates"));
     const querySnapshotForStudents = await getDocs(
-      collection(db, "StudentInfo")
+      query(collection(db, "StudentInfo"), orderBy("appliedDateTime", "desc"))
     );
+
     const newsData = querySnapshotForNews.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
+
     const studentsData = querySnapshotForStudents.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
+
     setDataForNews(newsData);
-    let count=0;
-    studentsData.forEach((element)=>{
-      element.id=++count;
-    })
-    count=0;
+    let count = 0;
+    studentsData.forEach((element) => {
+      element.id = ++count;
+    });
+    count = 0;
     setDataForStudents(studentsData);
   };
 
-  const columnsForStudentds = [
-    { field: "id", headerName: "Sr No", width: 150, editable: true },
+  const columnsForStudents = [
+    { field: "id", headerName: "Sr No", width: 100, editable: true },
     {
       field: "appliedDateTime",
       headerName: "Date-Time",
@@ -150,7 +158,7 @@ const AdminPage = () => {
   const changeNews = () => {
     const selectedRow = gridApi.getSelectedNodes()[0].data;
     dataForNews.forEach((element) => {
-      if (element.id == selectedRow.id) {
+      if (element.id === selectedRow.id) {
         element.Visibility = true;
       } else {
         element.Visibility = false;
@@ -161,8 +169,11 @@ const AdminPage = () => {
 
   return (
     <div
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
-    >
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}>
       <div
         className="bulkMain ag-theme-alpine ag-style"
         style={{
@@ -170,8 +181,7 @@ const AdminPage = () => {
           width: "85%",
           marginTop: "2rem",
           marginBottom: "2rem",
-        }}
-      >
+        }}>
         <AgGridReact
           columnDefs={columnsForNews}
           rowData={dataForNews}
@@ -179,8 +189,7 @@ const AdminPage = () => {
           editType={"fullRow"}
           rowSelection={"single"}
           suppressRowClickSelection={true}
-          onGridReady={onGridReady}
-        ></AgGridReact>
+          onGridReady={onGridReady}></AgGridReact>
         <button onClick={changeNews} style={{ backgroundColor: "#2da397" }}>
           Save
         </button>
@@ -192,12 +201,10 @@ const AdminPage = () => {
           width: "85%",
           marginBottom: "2rem",
           marginTop: "2rem",
-        }}
-      >
+        }}>
         <AgGridReact
-          columnDefs={columnsForStudentds}
-          rowData={dataForStudents}
-        ></AgGridReact>
+          columnDefs={columnsForStudents}
+          rowData={dataForStudents}></AgGridReact>
       </div>
     </div>
   );
