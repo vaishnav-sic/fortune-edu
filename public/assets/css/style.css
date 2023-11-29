@@ -6912,19 +6912,19 @@ p {
   text-align: center;
   flex-direction: column;
   box-shadow: none;
-  padding-top: 5px;
+  padding-top: 0px;
   padding-bottom: 15px;
 }
 .contact-info-one__text_main {
   text-align: center;
   margin: 0;
   font-size: 16px;
-  line-height: 34px;
+  line-height: 25px;
   font-weight: 500;
   color: #81868a;
   margin-top: -15px;
   margin-bottom: -10px;
-  padding-top: 2rem;
+  padding-top: 1rem;
 }
 .contact-info-one__text_Branch {
   text-align: center;
