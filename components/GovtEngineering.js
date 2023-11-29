@@ -11,7 +11,6 @@ const EGClgIconList = ({ colleges }) => {
             </div>
             <div className="college-details">
               <h2>{college.name}</h2>
-              <p>Ranking: #{college.ranking}</p>
             </div>
           </li>
         ))}

@@ -18,8 +18,10 @@ const ContactUs = () => {
                         <div className="container_Contact_main">
                             <h2 className="contact-info-one__title__main">HEAD OFFICE </h2>
                             <h2 className="contact-info-one__title__main1">PUNE </h2>
-                            <p className="contact-info-one__text_main"><i className="fa fa-address-book"></i> A 601, Omkar Nandan, Navale Bridge, Pune.
-                                <br /><i className="fa fa-envelope"></i> dhairyasheelmore@fortuneeduservices.com
+                            <p className="contact-info-one__text_main"><i className="fa fa-address-book"></i> A2, 601, Omkar Nandan, Navale Bridge,
+                                <br /> Next to Hotel Deccan Pavilion, Vadgaon Bk,
+                                <br /> Pune,  Maharashtra 411041
+                                <br /><i className="fa fa-envelope"></i> support@fortuneeduservices.com
                                 <br /><i className='fas fa-phone-square-alt'></i> 00123456789
                             </p>
                         </div>
