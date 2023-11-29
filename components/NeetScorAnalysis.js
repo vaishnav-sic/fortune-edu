@@ -38,7 +38,7 @@ const NeetScoreAnalysis = () => {
           >
             <div className="servinice-in-content-right-in">
               <div className="servinice-in-content-right-in-in">
-                <img src="assets/images/p-img1.jpg" alt=""></img>
+                <img src="assets/images/neet score analy.png" alt=""></img>
               </div>
             </div>
           </div>
