@@ -19,7 +19,7 @@ const AdmissionAlert = () => {
           >
             <div className="servinice-in-content-right-in">
               <div className="servinice-in-content-right-in-in">
-                <img src="assets/images/p-img1.jpg" alt=""></img>
+                <img src="assets/images/admissionalert (1).jpg" alt=""></img>
               </div>
             </div>
           </div>
