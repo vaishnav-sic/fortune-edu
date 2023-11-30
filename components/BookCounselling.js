@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from '../firebaseConfig';
 import { collection, getDocs, addDoc } from 'firebase/firestore';
 
-const BookConsultation = () => {
+const BookCounselling = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -270,4 +270,4 @@ const BookConsultation = () => {
   );
 };
 
-export default BookConsultation;
+export default BookCounselling;

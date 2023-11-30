@@ -6619,9 +6619,6 @@ button {
   padding: 5px;
   margin-bottom: 8px;
 }
-.form-field option {
-  color: black; /* Set color for options in the dropdown */
-}
 /* CollegeList.css */
 .college-list {
   padding: 20px;
