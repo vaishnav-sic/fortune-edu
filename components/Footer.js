@@ -11,11 +11,11 @@ const Footer = () => {
                         <div className="row">
                             <div className="col-xl-3 col-lg-6 col-sm-12">
                                 <div className="footer-widget footer-widget__contact">
-                                    <h2 className="footer-widget__title">Experts in hassle-free Admissions!</h2>
+                                    <h2 className="footer-widget__title">Experts in hassle-free admissions!</h2>
                                     <ul className="list-unstyled footer-widget__course-list">
                                         <li>
                                             <h2>
-                                               Elite Squad of Specialists.
+                                               Elite squad of specialists.
                                             </h2>
                                         </li>
                                         <li>
@@ -25,7 +25,7 @@ const Footer = () => {
                                         </li> 
                                         <li>
                                             <h2>
-                                                We provide Many Choice for Admission in Various Colleges!
+                                                We provide many choice for admission in various colleges!
                                             </h2>
                                         </li>                                        
                                     </ul>
@@ -63,7 +63,7 @@ const Footer = () => {
                                                 <a href="/contact">Contact Us</a>
                                             </li>
                                             <li>
-                                                <a href="index#registration1">Book Consultation</a>
+                                                <a href="index#registration1">Book Counselling</a>
                                             </li>
                                         </ul>
                                     </div>

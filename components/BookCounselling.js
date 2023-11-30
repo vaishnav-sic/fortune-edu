@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { db } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 
-const BookConsultation = () => {
+const BookCounselling = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -114,9 +114,9 @@ const BookConsultation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="countdown-one__content">
-                <h2 className="countdown-one__title">Book Consultation! </h2>
+                <h2 className="countdown-one__title">Book Counselling! </h2>
                 <p className="countdown-one__tag-line">
-                  Experts in Hassle-free admission
+                  Experts in hassle-free admission
                 </p>
               </div>
               <img
@@ -129,7 +129,7 @@ const BookConsultation = () => {
               <div className="become-teacher__form">
                 <div className="become-teacher__form-top">
                   <h2 className="become-teacher__form-title">
-                    Book Consultation
+                    Book Counselling
                   </h2>
                 </div>
                 <form
@@ -198,7 +198,7 @@ const BookConsultation = () => {
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}>
                     <option value="" disabled selected>
-                      Course Interested In
+                      Course interested in
                     </option>
                     <option value="Medical">Medical</option>
                     <option value="Engineering">Engineering</option>
@@ -232,7 +232,7 @@ const BookConsultation = () => {
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}>
                     <option value="" disabled selected>
-                      Select a City
+                      Select a city
                     </option>
                     <option value="Karad">Karad</option>
                     <option value="Pune">Pune</option>
@@ -265,7 +265,7 @@ const BookConsultation = () => {
                     type="submit"
                     className="thm-btn become-teacher__form-btn"
                     disabled={!!Object.keys(formErrors).length}>
-                    Apply For It
+                    Apply for it
                   </button>
                 </form>
                 {appliedDateTime && (
@@ -283,4 +283,4 @@ const BookConsultation = () => {
   );
 };
 
-export default BookConsultation;
+export default BookCounselling;

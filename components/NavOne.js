@@ -176,6 +176,7 @@ class NavOne extends Component {
               </a>
             </div> */}
           </div>
+          <a href="/index#registration1" className="coun-btn">Book Counselling</a>
         </nav>
         <div className="site-header__decor">
           <div className="site-header__decor-row">

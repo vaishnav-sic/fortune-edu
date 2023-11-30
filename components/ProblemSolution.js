@@ -6,7 +6,7 @@ const ProblemSolution = () => {
       <div className="container">
         <div className="d-flex col-12 py-3 mt-5">
           <div className="col-12 col-lg-6 my-auto text-start">
-            <div className="heading-text-start" data-aos="fade-in" data-aos-duration="800">Challenges Ahead? We're here to Help!</div>
+            <div className="heading-text-start">Challenges ahead? We're here to help!</div>
             <div className="d-flex flex-wrap col-12 justify-content-between my-md-4 my-2">
               <div id="qna-faq" className="accordion accordion-flush col-12">
                 <div className="accordion-item mt-3 faq-container">
