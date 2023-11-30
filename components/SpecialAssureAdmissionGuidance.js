@@ -18,7 +18,7 @@ const SpecialAssureAdmissionGuidance = () => {
           >
             <div className="servinice-in-content-right-in">
               <div className="servinice-in-content-right-in-in">
-                <img src="assets/images/RegistrationInfo.jpg" alt=""></img>
+                <img src="assets/images/pathto sucess.jpg" alt=""></img>
               </div>
             </div>
           </div>
