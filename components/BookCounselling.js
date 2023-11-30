@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../firebaseConfig";
-import { collection, getDocs, addDoc } from "firebase/firestore";
+import { db } from '../firebaseConfig';
+import { collection, getDocs, addDoc } from 'firebase/firestore';
 
 const BookConsultation = () => {
   const [formData, setFormData] = useState({
@@ -11,7 +11,8 @@ const BookConsultation = () => {
     courseInterest: "Course",
     cityLiveIn: "",
     consultationCity: "City",
-    CouponCode: "",
+    CouponCode: "", // new field for CouponCode
+    // Add other input fields here
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -32,79 +33,73 @@ const BookConsultation = () => {
     setInputFocused(false);
   };
 
-  const fetchDataFromFirestore = async (collectionName) => {
-    try {
-      const querySnapshot = await getDocs(collection(db, collectionName));
-      querySnapshot.forEach((doc) => {});
-    } catch (error) {}
-  };
-
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
+    // console.log(formData);
 
     // Validation logic
     if (!formData.firstName) {
-      errors.firstName = "First Name is required";
+      errors.firstName = 'First Name is required';
     }
     if (!formData.lastName) {
-      errors.lastName = "Last Name is required";
+      errors.lastName = 'Last Name is required';
     }
     if (!formData.mobile || formData.mobile.length !== 10) {
-      errors.mobile = "Mobile number must be 10 digits";
+      errors.mobile = 'Mobile number must be 10 digits';
     }
-    if (!formData.email || !formData.email.includes("@gmail.com")) {
-      errors.email = "Please enter a valid Gmail address";
+    if (!formData.email || !formData.email.includes('@gmail.com')) {
+      errors.email = 'Please enter a valid Gmail address';
     }
     if (!formData.courseInterest || formData.courseInterest === "Course") {
-      errors.courseInterest = "Please select a course";
+      errors.courseInterest = 'Please select a course';
     }
     if (!formData.cityLiveIn) {
-      errors.cityLiveIn = "City you Live in is required";
+      errors.cityLiveIn = 'City you Live in is required';
     }
     if (!formData.consultationCity || formData.consultationCity === "City") {
-      errors.consultationCity = "Please select a city";
+      errors.consultationCity = 'Please select a city';
     }
     if (formData.CouponCode && formData.CouponCode.length !== 7) {
-      errors.CouponCode = "CouponCode must be 7 digits";
+      errors.CouponCode = 'CouponCode must be 7 digits';
     }
+
+   
 
     if (Object.keys(errors).length > 0) {
       setFormErrors(errors);
     } else {
       setFormErrors({});
       try {
+        
         const appliedDateTime = new Date().toLocaleString();
-        const docRef = await addDoc(collection(db, "StudentInfo"), {
+        const docRef = await addDoc(collection(db, 'StudentInfo'), {
           ...formData,
           appliedDateTime,
         });
 
-        fetchDataFromFirestore("StudentInfo");
-        fetchDataFromFirestore("consultations");
+        fetchDataFromFirestore('StudentInfo');
+        fetchDataFromFirestore('consultations');
         setAppliedDateTime(appliedDateTime);
-
-        // Reset form data to empty values
-        setFormData({
-          firstName: "",
-          lastName: "",
-          mobile: "",
-          email: "",
-          courseInterest: "Course",
-          cityLiveIn: "",
-          consultationCity: "City",
-          CouponCode: "",
-        });
       } catch (error) {
         console.error("Error submitting form:", error);
       }
     }
   };
 
+  const fetchDataFromFirestore = async (collectionName) => {
+    try {
+      const querySnapshot = await getDocs(collection(db, collectionName));
+      querySnapshot.forEach((doc) => {
+      });
+    } catch (error) {
+    }
+  };
+
   useEffect(() => {
     setCountdownDate(Date.now() + 5000);
-    fetchDataFromFirestore("StudentInfo");
-    fetchDataFromFirestore("consultations");
+    fetchDataFromFirestore('StudentInfo');
+    fetchDataFromFirestore('consultations');
   }, []);
 
   return (
@@ -114,9 +109,9 @@ const BookConsultation = () => {
           <div className="row">
             <div className="col-lg-6">
               <div className="countdown-one__content">
-                <h2 className="countdown-one__title">Book Consultation! </h2>
+                <h2 className="countdown-one__title">Book Counselling! </h2>
                 <p className="countdown-one__tag-line">
-                  Experts in Hassle-free admission
+                  Experts in hassle-free admission
                 </p>
               </div>
               <img
@@ -129,14 +124,15 @@ const BookConsultation = () => {
               <div className="become-teacher__form">
                 <div className="become-teacher__form-top">
                   <h2 className="become-teacher__form-title">
-                    Book Consultation
+                    Book Counselling
                   </h2>
                 </div>
                 <form
                   action="#"
                   method="POST"
                   className="become-teacher__form-content contact-form-validated"
-                  onSubmit={handleFormSubmit}>
+                  onSubmit={handleFormSubmit}
+                >
                   <input
                     className="form-field"
                     type="text"
@@ -148,9 +144,7 @@ const BookConsultation = () => {
                     onBlur={handleInputBlur}
                   />
                   {formErrors.firstName && (
-                    <span className="error-message">
-                      {formErrors.firstName}
-                    </span>
+                    <span className="error-message">{formErrors.firstName}</span>
                   )}
                   <input
                     className="form-field"
@@ -196,17 +190,15 @@ const BookConsultation = () => {
                     name="courseInterest"
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
-                    <option value="" disabled selected>
-                      Course Interested In
-                    </option>
+                    onBlur={handleInputBlur}
+                  >
+                    <option value="" disabled selected>Course Interested In</option>
                     <option value="Medical">Medical</option>
                     <option value="Engineering">Engineering</option>
+                    
                   </select>
                   {formErrors.courseInterest && (
-                    <span className="error-message">
-                      {formErrors.courseInterest}
-                    </span>
+                    <span className="error-message">{formErrors.courseInterest}</span>
                   )}
                   <input
                     className="form-field"
@@ -219,31 +211,27 @@ const BookConsultation = () => {
                     onBlur={handleInputBlur}
                   />
                   {formErrors.cityLiveIn && (
-                    <span className="error-message">
-                      {formErrors.cityLiveIn}
-                    </span>
+                    <span className="error-message">{formErrors.cityLiveIn}</span>
                   )}
 
                   <select
                     className="form-field"
                     name="consultationCity"
-                    value={formData.consultationCity}
+                    value="Select a City"
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
-                    <option value="" disabled selected>
-                      Select a City
-                    </option>
+                    onBlur={handleInputBlur}
+                  >
+                    <option value="" >Select a City</option>
                     <option value="Karad">Karad</option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
                     <option value="Baramati">Baramati</option>
                     <option value="Manchar">Manchar</option>
+                    
                   </select>
                   {formErrors.consultationCity && (
-                    <span className="error-message">
-                      {formErrors.consultationCity}
-                    </span>
+                    <span className="error-message">{formErrors.consultationCity}</span>
                   )}
                   <input
                     className="form-field"
@@ -256,15 +244,14 @@ const BookConsultation = () => {
                     onBlur={handleInputBlur}
                   />
                   {formErrors.CouponCode && (
-                    <span className="error-message">
-                      {formErrors.CouponCode}
-                    </span>
+                    <span className="error-message">{formErrors.CouponCode}</span>
                   )}
-
+                  
                   <button
                     type="submit"
                     className="thm-btn become-teacher__form-btn"
-                    disabled={!!Object.keys(formErrors).length}>
+                    disabled={!!Object.keys(formErrors).length} 
+                  >
                     Apply For It
                   </button>
                 </form>

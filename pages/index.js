@@ -7,7 +7,7 @@ import Footer from "../components/Footer";
 import AboutTwo from "../components/AboutTwo";
 import CourseOne from "../components/CourseOne";
 import VideoTwo from "../components/VideoTwo";
-import BookConsultation from "../components/BookConsultation";
+import BookCounselling from "../components/BookCounselling";
 import CallToActionThree from "../components/CallToActionThree";
 import BrandsTwo from "../components/BrandsTwo";
 import BlogTwo from "../components/BlogTwo";
@@ -39,13 +39,12 @@ const HomePage = () => (
     <NewsFlash />
     <NavOne />
     <MainPage />
-    
     {/* <SliderOne /> */}
     {/* <CourseOne /> */}
-    <AboutTwo />
     <ProblemSolution />
+    <AboutTwo />
     {/* <VideoTwo /> */}
-    <BookConsultation />
+    <BookCounselling />
     <CoursesHome />
     {/* <CallToActionThree /> */}
     {/* <AboutUs /> */}

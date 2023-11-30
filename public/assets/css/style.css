@@ -404,6 +404,25 @@ a:visited {
 .header-navigation ul.navigation-box > li:last-child {
   padding-right: 0;
 }
+.coun-btn{
+    display: inline-block;
+    border: none;
+    width: 8rem;
+    border-radius: 9%;
+    line-height: 1rem;
+    background-color: #fca712;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    padding: 6.5px 27px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.coun-btn:hover{
+  color: white;
+  background-color: #012237;
+}
 .header-navigation ul.navigation-box > li > a {
   padding: 0;
   -webkit-transition: all 0.4s ease;
@@ -6599,6 +6618,9 @@ button {
   border: 1px solid #ccc;
   padding: 5px;
   margin-bottom: 8px;
+}
+.form-field option {
+  color: black; /* Set color for options in the dropdown */
 }
 /* CollegeList.css */
 .college-list {
