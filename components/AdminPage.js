@@ -13,6 +13,7 @@ import {
   orderBy,
   query,
 } from "firebase/firestore";
+import * as XLSX from "xlsx";
 
 const AdminPage = () => {
   const [dataForStudents, setDataForStudents] = useState([]);
@@ -21,6 +22,11 @@ const AdminPage = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
   const [gridApi, setGridApi] = useState(null);
+  const [gridApiForStudents, setGridApiForStudents] = useState(null);
+  const gridOptions = {
+    pagination: true,
+    paginationPageSize: 20, // Set the number of rows per page
+  };
 
   useEffect(() => {
     const checkAuthentication = () => {
@@ -40,6 +46,18 @@ const AdminPage = () => {
       // Cleanup tasks (if any)
     };
   }, [router]);
+
+  const exportToExcel = () => {
+    const allRowNodes = gridApiForStudents.getModel().rootNode.allLeafChildren;
+    const data = [];
+    allRowNodes.forEach((element)=>{
+      data.push(element.data);
+    })
+    const ws = XLSX.utils.json_to_sheet(data);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, "Sheet 1");
+    XLSX.writeFile(wb, "exported_data.xlsx");
+  };
 
   const columnsForNews = [
     { field: "id", headerName: "Sr No", width: 150 },
@@ -90,9 +108,10 @@ const AdminPage = () => {
     count = 0;
     setDataForStudents(studentsData);
   };
+  console.log(dataForNews, dataForStudents);
 
   const columnsForStudents = [
-    { field: "id", headerName: "Sr No", width: 100, editable: true },
+    { field: "id", headerName: "Sr No", width: 70, editable: true },
     {
       field: "appliedDateTime",
       headerName: "Date-Time",
@@ -121,7 +140,7 @@ const AdminPage = () => {
     {
       field: "courseInterest",
       headerName: "Course",
-      width: 100,
+      width: 110,
     },
     {
       field: "cityLiveIn",
@@ -136,7 +155,7 @@ const AdminPage = () => {
     {
       field: "CouponCode",
       headerName: "CouponCode",
-      width: 100,
+      width: 120,
     },
   ];
 
@@ -153,6 +172,9 @@ const AdminPage = () => {
 
   const onGridReady = (params) => {
     setGridApi(params.api);
+  };
+  const onStudentsGridReady = (params) => {
+    setGridApiForStudents(params.api);
   };
 
   const changeNews = () => {
@@ -173,7 +195,8 @@ const AdminPage = () => {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-      }}>
+      }}
+    >
       <div
         className="bulkMain ag-theme-alpine ag-style"
         style={{
@@ -181,7 +204,8 @@ const AdminPage = () => {
           width: "85%",
           marginTop: "2rem",
           marginBottom: "2rem",
-        }}>
+        }}
+      >
         <AgGridReact
           columnDefs={columnsForNews}
           rowData={dataForNews}
@@ -189,22 +213,38 @@ const AdminPage = () => {
           editType={"fullRow"}
           rowSelection={"single"}
           suppressRowClickSelection={true}
-          onGridReady={onGridReady}></AgGridReact>
+          onGridReady={onGridReady}
+        ></AgGridReact>
         <button onClick={changeNews} style={{ backgroundColor: "#2da397" }}>
           Save
         </button>
       </div>
       <div
-        className="bulkMain ag-theme-alpine ag-style"
+        className="bulkMain ag-theme-alpine ag-style d-flex flex-column"
         style={{
-          height: 300,
-          width: "85%",
+          height: "62rem",
+          width: "90%",
           marginBottom: "2rem",
           marginTop: "2rem",
-        }}>
+        }}
+      >
+        <button
+          onClick={exportToExcel}
+          style={{
+            backgroundColor: "#2da397",
+            width: "7rem",
+            alignSelf: "end",
+            marginBottom: 5,
+          }}
+        >
+          Export to Excel
+        </button>
         <AgGridReact
           columnDefs={columnsForStudents}
-          rowData={dataForStudents}></AgGridReact>
+          rowData={dataForStudents}
+          gridOptions={gridOptions}
+          onGridReady={onStudentsGridReady}
+        ></AgGridReact>
       </div>
     </div>
   );
