@@ -39,13 +39,13 @@ const HomePage = () => (
     <NewsFlash />
     <NavOne />
     <MainPage />
+    <CoursesHome />
     {/* <SliderOne /> */}
     {/* <CourseOne /> */}
     <ProblemSolution />
     <AboutTwo />
     {/* <VideoTwo /> */}
     <BookCounselling />
-    <CoursesHome />
     {/* <CallToActionThree /> */}
     {/* <AboutUs /> */}
     {/* <BrandsTwo /> */}

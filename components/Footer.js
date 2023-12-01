@@ -20,7 +20,7 @@ const Footer = () => {
                                         </li>
                                         <li>
                                             <h2>
-                                                Recommended by thousands of doctors and engineers.
+                                                Recommended by number of doctors and engineers.
                                             </h2>
                                         </li> 
                                         <li>
@@ -116,8 +116,8 @@ const Footer = () => {
                                 <div className="footer-widget footer-widget__about">
                                     <h2 className="footer-widget__title">About</h2>
                                     <p className="footer-widget__text">20+ Years of Excellence: Your Trusted Source
-                                    for Assured Medical and Engineering Admissions
-                                    Recommended by thousands of doctors and engineers
+                                    for Guaranteed Medical and Engineering Admissions
+                                    Recommended by number of doctors and engineers
                                     </p>
                                     <div className="footer-widget__btn-block">
                                         <a href="/contact" className="thm-btn">

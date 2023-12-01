@@ -38,8 +38,7 @@ const Nridoc = () => {
               style={{ lineHeight: "1.2rem" }}
             >
               Admission through the NRI Quota demands the submission of several
-              essential documents, including a valid passport, sponsor's
-              documents, and various NOCs from competent authorities. Our team
+              essential documents. Our team
               of NRI document experts expertly handles these requirements,
               guiding students at every stage until they qualify for NRI quota
               admissions. Once eligibility is achieved, our medical admission

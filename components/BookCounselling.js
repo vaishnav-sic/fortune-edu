@@ -234,9 +234,9 @@ const BookCounselling = () => {
                     <option value="" disabled selected>
                       Select a city
                     </option>
-                    <option value="Karad">Karad</option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
+                    <option value="Karad">Karad</option>
                     <option value="Baramati">Baramati</option>
                     <option value="Manchar">Manchar</option>
                   </select>

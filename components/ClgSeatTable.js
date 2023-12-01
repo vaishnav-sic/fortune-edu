@@ -15,18 +15,18 @@ const ClgSeatTable = () => {
           <tbody>
             <tr>
               <td>Government</td>
-              <td>181</td>
-              <td>25816</td>
+              <td>388</td>
+              <td>54278</td>
             </tr>
             <tr>
               <td>Private</td>
-              <td>188</td>
-              <td>25620</td>
+              <td>263</td>
+              <td>42315</td>
             </tr>
             <tr>
               <td>Deemed</td>
-              <td>393</td>
-              <td>55484</td>
+              <td>52</td>
+              <td>8850</td>
             </tr>
           </tbody>
         </table>
@@ -44,18 +44,18 @@ const ClgSeatTable = () => {
           <tbody>
             <tr>
               <td>Government</td>
-              <td>21</td>
-              <td>2960</td>
+              <td>31</td>
+              <td>4950</td>
             </tr>
             <tr>
               <td>Private</td>
-              <td>19</td>
-              <td>2320</td>
+              <td>22</td>
+              <td>3170</td>
             </tr>
             <tr>
               <td>Deemed</td>
-              <td>10</td>
-              <td>1850</td>
+              <td>13</td>
+              <td>2450</td>
             </tr>
           </tbody>
         </table>
@@ -74,46 +74,17 @@ const ClgSeatTable = () => {
             <tr>
               <td>Government</td>
               <td>4</td>
-              <td>260</td>
+              <td>326</td>
             </tr>
             <tr>
               <td>Private</td>
               <td>25</td>
-              <td>2300</td>
+              <td>2400</td>
             </tr>
             <tr>
               <td>Deemed</td>
-              <td>10</td>
-              <td>1850</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div className="mbbsColleges">
-        <h1>BHMS ALL MAHARASHTRA COLLEGES</h1>
-        <table className="collegeTable">
-          <thead>
-            <tr>
-              <th>College Type</th>
-              <th>Number of Colleges</th>
-              <th>Number of Seats</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Government</td>
-              <td>-</td>
-              <td>-</td>
-            </tr>
-            <tr>
-              <td>Private</td>
-              <td>46</td>
-              <td>3565</td>
-            </tr>
-            <tr>
-              <td>Deemed</td>
-              <td>-</td>
-              <td>-</td>
+              <td>8</td>
+              <td>800</td>
             </tr>
           </tbody>
         </table>
@@ -131,24 +102,53 @@ const ClgSeatTable = () => {
           <tbody>
             <tr>
               <td>Government</td>
-              <td>23</td>
-              <td>1140</td>
+              <td>22</td>
+              <td>1824</td>
             </tr>
             <tr>
               <td>Private</td>
-              <td>43</td>
-              <td>2670</td>
+              <td>83</td>
+              <td>6316</td>
             </tr>
             <tr>
               <td>Deemed</td>
-              <td>-</td>
-              <td>-</td>
+              <td>5</td>
+              <td>500</td>
             </tr>
           </tbody>
         </table>
       </div>
       <div className="mbbsColleges">
-        <h1>PHYSIOTHERAPY MAHARASTRA COLLEGES</h1>
+        <h1>BHMS ALL MAHARASHTRA COLLEGES</h1>
+        <table className="collegeTable">
+          <thead>
+            <tr>
+              <th>College Type</th>
+              <th>Number of Colleges</th>
+              <th>Number of Seats</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Government</td>
+              <td>1</td>
+              <td>63</td>
+            </tr>
+            <tr>
+              <td>Private</td>
+              <td>56</td>
+              <td>4540</td>
+            </tr>
+            <tr>
+              <td>Deemed</td>
+              <td>3</td>
+              <td>300</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div className="mbbsColleges">
+        <h1>BPTH MAHARASTRA COLLEGES</h1>
         <table className="collegeTable">
           <thead>
             <tr>
@@ -165,13 +165,13 @@ const ClgSeatTable = () => {
             </tr>
             <tr>
               <td>Private</td>
-              <td>20</td>
-              <td>790</td>
+              <td>79</td>
+              <td>4170</td>
             </tr>
             <tr>
               <td>Deemed</td>
-              <td>-</td>
-              <td>-</td>
+              <td>6</td>
+              <td>560</td>
             </tr>
           </tbody>
         </table>

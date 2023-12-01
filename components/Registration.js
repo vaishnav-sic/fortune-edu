@@ -33,23 +33,15 @@ const Registration = () => {
               data-aos-duration="800"
               style={{ lineHeight: "1rem" }}
             >
-              1. NEET Login: Begin by registering as a 'New User' to generate
-              your login credentials, paving the way for effortless form
-              completion.<br></br>
+              1. NEET Login<br></br>
               <br></br>
-              2. Form Filling: Following registration, input your educational
-              qualifications, personal details, and more in the NEET Application
-              Form 2024. <br></br>
+              2. Form Filling<br></br>
               <br></br>
-              3. Document Upload: Easily submit necessary documents—photos,
-              signatures, SC/ST Certificates, and PwD Certificates—as per
-              precise guidelines. <br></br>
+              3. Document Upload<br></br>
               <br></br>
-              4. Fee Payment: Seamlessly settle the application fees online
-              using credit cards, debit cards, or net banking. <br></br>
+              4. Fee Payment<br></br>
               <br></br>
-              5. Confident Submission: Wrap up by affirming the declaration and
-              hitting 'Submit' to finalize your NEET application.<br></br>
+              5. Confident Submission<br></br>
               <br></br>
             </p>
             <h4
