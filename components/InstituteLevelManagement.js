@@ -47,8 +47,7 @@ const InstituteLevelManagement = () => {
                 <img src={arrow} />
                 <p>
                   We're here to support you through every step, right up to your
-                  actual admission in Private and Deemed Colleges in
-                  Maharashtra.
+                  actual admission in Semi-Govt (Private) and Deemed Colleges.
                 </p>
               </li>
               <li data-aos="fade-right" data-aos-duration="800">

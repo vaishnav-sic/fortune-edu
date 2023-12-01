@@ -24,26 +24,31 @@ const AdmissionInMaharashtraStateAndCenterQuota = () => {
           </div>
           <div className="service-in-content-left">
             <h5 data-aos="fade-left" data-aos-duration="800">
-              Understanding the Three MBBS Admission Routes 🏥
+              Understanding the Four MBBS Admission Routes 🏥
             </h5>
             <li data-aos="fade-left" data-aos-duration="800">
               <img src={arrow} />
               <p>
-                1. MBBS Admission Procedure in Maharashtra for Govt. and Private
-                Colleges (85% Seats).
+                1. MBBS Admission Procedure in Maharashtra for Govt. and Semi-Govt. (Private)
+                Colleges.
               </p>
             </li>
             <li data-aos="fade-left" data-aos-duration="800">
               <img src={arrow} />
               <p>
-                2. MBBS Admission Procedure in Govt. Colleges Across India (15%
-                Seats).
+                2. MBBS Admission Procedure in Govt. Colleges Across India through All India Quota (AIQ).
               </p>
             </li>
             <li data-aos="fade-left" data-aos-duration="800">
               <img src={arrow} />
               <p>
-                MBBS Admission Procedure in Deemed University Colleges Across
+                3. MBBS Admission Procedure of Open states for Semi-Govt. (Private) Colleges.
+              </p>
+            </li>
+            <li data-aos="fade-left" data-aos-duration="800">
+              <img src={arrow} />
+              <p>
+                4. MBBS Admission Procedure in Deemed University Colleges Across
                 India, including Maharashtra.
               </p>
             </li>
@@ -64,7 +69,7 @@ const AdmissionInMaharashtraStateAndCenterQuota = () => {
               <img src={arrow} />
               <p>
                 We provide you with the latest information about college names,
-                available seats, teaching staff, infrastructure, and more.
+                available seats, infrastructure, and more.
               </p>
             </li>
             <li data-aos="fade-left" data-aos-duration="800">
