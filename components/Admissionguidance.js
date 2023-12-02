@@ -46,7 +46,7 @@ const Admissionguidance = () => {
             >
               <div className="servinice-in-content-right-in">
                 <div className="servinice-in-content-right-in-in">
-                  <img src="assets/images/Dr2.png"></img>
+                  <img src="assets/images/asp1.jpg"></img>
                 </div>
               </div>
             </div>
