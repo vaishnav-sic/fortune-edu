@@ -1,5 +1,4 @@
 import react from "react";
-import pImg from "../public/assets/images/p-img.jpg";
 import arrow from "../public/assets/images/arrow-service-icon.png";
 const InstituteLevelManagement = () => {
   return (

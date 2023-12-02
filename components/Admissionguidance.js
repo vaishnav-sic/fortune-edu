@@ -1,5 +1,4 @@
 import react from "react";
-import pImg from "../public/assets/images/p-img.jpg";
 const Admissionguidance = () => {
   return (
     <>
@@ -46,7 +45,7 @@ const Admissionguidance = () => {
             >
               <div className="servinice-in-content-right-in">
                 <div className="servinice-in-content-right-in-in">
-                  <img src="assets/images/p-img1.jpg"></img>
+                  <img src="assets/images/asp1.jpg"></img>
                 </div>
               </div>
             </div>
