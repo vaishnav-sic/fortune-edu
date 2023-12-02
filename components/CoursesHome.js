@@ -4,11 +4,11 @@ const CoursesHome = () => {
         // <section className="cta-five">
         <section className="cta-one cta-one__home-one">
             <img src="/assets/images/MBBS.jpg" className="cta-five__members-1" alt="" />
-            <img src="/assets/images/MBBS.jpg" className="cta-five__members-2" alt="" />
-            <img src="/assets/images/MBBS.jpg" className="cta-five__members-3" alt="" />
-            <img src="/assets/images/MBBS.jpg" className="cta-five__members-4" alt="" />
-            <img src="/assets/images/MBBS.jpg" className="cta-five__members-5" alt="" />
-            <img src="/assets/images/MBBS.jpg" className="cta-five__members-6" alt="" />
+            <img src="/assets/images/BDS.jpg" className="cta-five__members-2" alt="" />
+            <img src="/assets/images/BAMS.jpg" className="cta-five__members-3" alt="" />
+            <img src="/assets/images/CS-IT.jpg" className="cta-five__members-4" alt="" />
+            <img src="/assets/images/BHMS.jpg" className="cta-five__members-5" alt="" />
+            <img src="/assets/images/BPTH.jpg" className="cta-five__members-6" alt="" />
             {/* <div className="cta-five__bubble-1"><i className="fas fa-rocket"></i></div>
             <div className="cta-five__bubble-2"><i className="fas fa-bolt"></i></div> */}
             <div className="container text-center">

@@ -9,11 +9,11 @@ const Layout = (props) => {
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
                 <link rel="apple-touch-icon" sizes="180x180"
-                    href="/assets/images/favicons/apple-touch-icon.png" />
+                    href="/assets/images/favicons/FES_apple_touch.jpg" />
                 <link rel="icon" type="image/png" sizes="32x32"
-                    href="/assets/images/favicons/FES_symbol.png" />
+                    href="/assets/images/favicons/FES_32x32.jpg" />
                 <link rel="icon" type="image/png" sizes="16x16"
-                    href="/assets/images/favicons/FES_symbol.png" />
+                    href="/assets/images/favicons/FES_16x16.jpg" />
                 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,500i,600,700,800%7CSatisfy&display=swap" rel="stylesheet" />
                 <link rel="stylesheet" href="/assets/plugins/bootstrap/bootstrap.min.css" />
                 <link rel="stylesheet" href="/assets/css/animate.min.css" />
