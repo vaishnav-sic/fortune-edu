@@ -22,6 +22,7 @@ const ContactUs = () => {
                                 <br /> Next to Hotel Deccan Pavilion, Vadgaon Bk,
                                 <br /> Pune,  Maharashtra 411041
                                 <br /><i className="fa fa-envelope"></i> support@fortuneeduservices.com
+                                <br /><i className='fas fa-phone-square-alt'></i> +91 9607450555
                                 <br /><i className='fas fa-phone-square-alt'></i> +91 7798950555
                             </p>
                         </div>

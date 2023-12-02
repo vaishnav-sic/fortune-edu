@@ -20,7 +20,7 @@ const AdmissionFillingForm = () => {
             >
               <div className="servinice-in-content-right-in">
                 <div className="servinice-in-content-right-in-in">
-                  <img src="assets/images/AdmissionInfo.jpg" alt=""></img>
+                  <img src="assets/images/Dr3.png" alt=""></img>
                 </div>
               </div>
             </div>
