@@ -1,5 +1,4 @@
 import react from "react";
-import pImg from "../public/assets/images/p-img.jpg";
 const Admissionguidance = () => {
   return (
     <>
