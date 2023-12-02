@@ -22,7 +22,7 @@ const ProblemSolution = () => {
                   </div>
                   <div className="accordion-item mt-3 faq-container">
                       <div className="accordion-header-question"  data-aos="fade-up-right" data-aos-duration="1000"><h5>Challenges in selecting a college and prioritizing preferences.</h5>
-                      <p>Personalized guidance for optimal college choices based on Mock Test</p>
+                      <p>Personalized guidance for optimal college choices based on NEET score</p>
                     </div>
                   </div>
                   <div className="accordion-item mt-3 faq-container">
