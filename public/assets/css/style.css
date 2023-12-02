@@ -8030,21 +8030,21 @@ label input[type="checkbox"] {
   font-weight: bold;
   line-height: 3rem;
 }
-
+.main-page{
+  background-color: #2da397;
+}
 .accordion-header-question {
   background-color: #F0F4FA;
   border-radius: 20px;
   padding: 20px;
   margin-top: 1rem;
 }
-
 .accordion-header-question h5 {
   color: #000;
   font-size: 1rem;
   text-align: left;
   font-weight: bold;
 }
-
 .accordion-header-question p {
   font-size: 0.9rem;
   line-height: 1.3rem;

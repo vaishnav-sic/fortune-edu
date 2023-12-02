@@ -22,17 +22,17 @@ class AboutOne extends Component {
                 <img src="assets/images/circle-stripe.png" className="about-one__circle" alt="" />
                 <div className="container text-center">
                     <div className="block-title text-center">
-                        <h2 className="block-title__title">Let’s Secure Your Admission With <br />
-                           Our Expert Guidance</h2>
+                        <h1 className="block-title__title">Let’s Secure Your Admission With <br />
+                           Our Expert Guidance</h1>
                     </div>
-                    <div className="about-one__img">
+                    <img
+                        src="/assets/images/DrGroup.jpeg"
+                        alt="Consultation Image"
+                        className="consultation-image"
+                    />
+                    {/* <div className="about-one__img">
                         <div className="row">
-                            <div className="col-lg-6">
-                                <img src="assets/images/Doctor.jpg" alt="Medical students" />
-                            </div>
-                            <div className="col-lg-6">
-                                <img src="assets/images/Engineers.png" alt="Engineering students" />
-                            </div>
+                            
                         </div>
                         <div className="about-one__review">
                             <p className="about-one__review-count counter">
@@ -47,7 +47,7 @@ class AboutOne extends Component {
                             </div>
                             <p className="about-one__review-text">students loved us</p>
                         </div>
-                    </div>
+                    </div> */}
                     <p className="about-one__text">We firmly believe in the principle that every individual should have
                     <br/>the opportunity to pursue their dreams and passions unhindered.
                     <br/>It is disheartening to witness countless young aspiring minds facing various

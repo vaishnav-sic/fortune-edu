@@ -159,9 +159,9 @@ const medicalCollege = () => {
       logo: "/assets/images/logo/logo3-6.jpeg",
     },
     {
-      name: "D.Y. Patil Medical College, Navi Mumbai",
+      name: "Symbiosis Medical College for Women (SMCW), Pune",
       ranking: 1,
-      logo: "/assets/images/logo/logo3-7.jpeg",
+      logo: "/assets/images/logo/logo3-7.png",
     },
     {
       name: "D.Y. Patil Medical College, Pune",

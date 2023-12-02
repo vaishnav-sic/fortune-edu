@@ -146,18 +146,18 @@ const Footer = () => {
                             >
                                 <i className="kipso-icon-top-arrow"></i>
                             </div>
-                            <a href="#">
-                                <i className="fab fa-twitter"></i>
-                            </a>
-                            <a href="#">
-                                <i className="fab fa-facebook-square"></i>
-                            </a>
-                            <a href="#">
-                                <i className="fab fa-pinterest-p"></i>
+                            <a href="https://api.whatsapp.com/send?phone=7798950555">
+                                <i className="fab fa-whatsapp"></i>
                             </a>
                             <a href="#">
                                 <i className="fab fa-instagram"></i>
                             </a>
+                            <a href="#">
+                                <i className="fab fa-facebook-square"></i>
+                            </a>
+                            {/* <a href="#">
+                                <i className="fab fa-pinterest-p"></i>
+                            </a> */}
                         </div>
                     </div>
                 </div>
