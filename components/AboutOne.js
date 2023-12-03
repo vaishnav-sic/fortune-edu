@@ -22,8 +22,8 @@ class AboutOne extends Component {
                 <img src="assets/images/circle-stripe.png" className="about-one__circle" alt="" />
                 <div className="container text-center">
                     <div className="block-title text-center">
-                        <h2 className="block-title__title">Let’s Secure Your Admission With <br />
-                           Our Expert Guidance</h2>
+                        <h1 className="block-title__title">Let’s Secure Your Admission With <br />
+                           Our Expert Guidance</h1>
                     </div>
                     <img
                         src="/assets/images/DrGroup.jpeg"

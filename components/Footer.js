@@ -155,9 +155,9 @@ const Footer = () => {
                             <a href="#">
                                 <i className="fab fa-facebook-square"></i>
                             </a>
-                            <a href="#">
+                            {/* <a href="#">
                                 <i className="fab fa-pinterest-p"></i>
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 </div>
