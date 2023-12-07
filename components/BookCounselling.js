@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../firebaseConfig";
+import { db, auth } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
+import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 
 const BookCounselling = () => {
   const [formData, setFormData] = useState({
@@ -18,6 +19,11 @@ const BookCounselling = () => {
   const [countdownDate, setCountdownDate] = useState(Date.now() + 5000000000);
   const [inputFocused, setInputFocused] = useState(false);
   const [appliedDateTime, setAppliedDateTime] = useState(null);
+  const [otp, setOtp] = useState("");
+  const [confirmation, setConfirmation] = useState(null);
+  const [enterOtp, setEnterOtp] = useState(true);
+  const [apply, setApply] = useState(false);
+  const [isOtpVerified, setIsOtpVerified] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -42,61 +48,62 @@ const BookCounselling = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
+    if (apply && isOtpVerified) {
+      // Validation logic
+      if (!formData.firstName) {
+        errors.firstName = "First Name is required";
+      }
+      if (!formData.lastName) {
+        errors.lastName = "Last Name is required";
+      }
+      if (!formData.mobile || formData.mobile.length !== 10) {
+        errors.mobile = "Mobile number must be 10 digits";
+      }
+      if (!formData.email || !formData.email.includes("@gmail.com")) {
+        errors.email = "Please enter a valid Gmail address";
+      }
+      if (!formData.courseInterest || formData.courseInterest === "Course") {
+        errors.courseInterest = "Please select a course";
+      }
+      if (!formData.cityLiveIn) {
+        errors.cityLiveIn = "City you Live in is required";
+      }
+      if (!formData.consultationCity || formData.consultationCity === "City") {
+        errors.consultationCity = "Please select a city";
+      }
+      if (formData.CouponCode && formData.CouponCode.length !== 7) {
+        errors.CouponCode = "CouponCode must be 7 digits";
+      }
 
-    // Validation logic
-    if (!formData.firstName) {
-      errors.firstName = "First Name is required";
-    }
-    if (!formData.lastName) {
-      errors.lastName = "Last Name is required";
-    }
-    if (!formData.mobile || formData.mobile.length !== 10) {
-      errors.mobile = "Mobile number must be 10 digits";
-    }
-    if (!formData.email || !formData.email.includes("@gmail.com")) {
-      errors.email = "Please enter a valid Gmail address";
-    }
-    if (!formData.courseInterest || formData.courseInterest === "Course") {
-      errors.courseInterest = "Please select a course";
-    }
-    if (!formData.cityLiveIn) {
-      errors.cityLiveIn = "City you Live in is required";
-    }
-    if (!formData.consultationCity || formData.consultationCity === "City") {
-      errors.consultationCity = "Please select a city";
-    }
-    if (formData.CouponCode && formData.CouponCode.length !== 7) {
-      errors.CouponCode = "CouponCode must be 7 digits";
-    }
+      if (Object.keys(errors).length > 0) {
+        setFormErrors(errors);
+      } else {
+        setFormErrors({});
+        try {
+          const appliedDateTime = new Date().toLocaleString();
+          const docRef = await addDoc(collection(db, "StudentInfo"), {
+            ...formData,
+            appliedDateTime,
+          });
 
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors);
-    } else {
-      setFormErrors({});
-      try {
-        const appliedDateTime = new Date().toLocaleString();
-        const docRef = await addDoc(collection(db, "StudentInfo"), {
-          ...formData,
-          appliedDateTime,
-        });
+          fetchDataFromFirestore("StudentInfo");
+          fetchDataFromFirestore("consultations");
+          setAppliedDateTime(appliedDateTime);
 
-        fetchDataFromFirestore("StudentInfo");
-        fetchDataFromFirestore("consultations");
-        setAppliedDateTime(appliedDateTime);
-
-        // Reset form data to empty values
-        setFormData({
-          firstName: "",
-          lastName: "",
-          mobile: "",
-          email: "",
-          courseInterest: "Course",
-          cityLiveIn: "",
-          consultationCity: "City",
-          CouponCode: "",
-        });
-      } catch (error) {
-        console.error("Error submitting form:", error);
+          // Reset form data to empty values
+          setFormData({
+            firstName: "",
+            lastName: "",
+            mobile: "",
+            email: "",
+            courseInterest: "Course",
+            cityLiveIn: "",
+            consultationCity: "City",
+            CouponCode: "",
+          });
+        } catch (error) {
+          console.error("Error submitting form:", error);
+        }
       }
     }
   };
@@ -106,6 +113,47 @@ const BookCounselling = () => {
     fetchDataFromFirestore("StudentInfo");
     fetchDataFromFirestore("consultations");
   }, []);
+
+  const sendOtp = async () => {
+    window.RecaptchaVerifier = new RecaptchaVerifier(
+      auth,
+      "recaptcha-container",
+      {
+        size: "invisible",
+      }
+    );
+    console.log(window.RecaptchaVerifier);
+    await signInWithPhoneNumber(
+      auth,
+      "+91" + formData.mobile,
+      window.RecaptchaVerifier
+    )
+      .then((confirmationResult) => {
+        setConfirmation(confirmationResult);
+        setApply(true);
+        setEnterOtp(true);
+        console.log(confirmationResult);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const checkOtp = async () => {
+    await confirmation
+      .confirm(otp)
+      .then((result) => {
+        setIsOtpVerified(true);
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  const setOtpp = (element) => {
+    setOtp(element.target.value);
+  };
 
   return (
     <div id="registration1">
@@ -136,7 +184,8 @@ const BookCounselling = () => {
                   action="#"
                   method="POST"
                   className="become-teacher__form-content contact-form-validated"
-                  onSubmit={handleFormSubmit}>
+                  onSubmit={handleFormSubmit}
+                >
                   <input
                     className="form-field"
                     type="text"
@@ -170,6 +219,7 @@ const BookCounselling = () => {
                     type="text"
                     placeholder="Mobile"
                     name="mobile"
+                    id="recaptcha-container"
                     value={formData.mobile}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
@@ -196,7 +246,8 @@ const BookCounselling = () => {
                     name="courseInterest"
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
+                    onBlur={handleInputBlur}
+                  >
                     <option value="" disabled selected>
                       Course interested in
                     </option>
@@ -230,7 +281,8 @@ const BookCounselling = () => {
                     value={formData.consultationCity}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
+                    onBlur={handleInputBlur}
+                  >
                     <option value="" disabled selected>
                       Select a city
                     </option>
@@ -260,13 +312,51 @@ const BookCounselling = () => {
                       {formErrors.CouponCode}
                     </span>
                   )}
-
-                  <button
-                    type="submit"
-                    className="thm-btn become-teacher__form-btn"
-                    disabled={!!Object.keys(formErrors).length}>
-                    Apply for it
-                  </button>
+                  {enterOtp ? (
+                    <div className="d-flex flex-row">
+                      <input
+                        className="form-field"
+                        type="text"
+                        placeholder="Enter Otp"
+                        name="otp"
+                        value={otp}
+                        onChange={setOtpp}
+                      />
+                      <button
+                        style={{
+                          width: "5rem",
+                          height: "2.2rem",
+                          marginTop: "6px",
+                          marginLeft: "1rem",
+                          display: "flex",
+                          alignItems: "center",
+                        }}
+                        onClick={checkOtp}
+                      >
+                        Verify
+                      </button>
+                    </div>
+                  ) : null}
+                  <div className="d-flex flex-column">
+                    {!apply ? (
+                      <button
+                        onClick={sendOtp}
+                        className="thm-btn become-teacher__form-btn"
+                        disabled={!formData.mobile}
+                      >
+                        Get Otp
+                      </button>
+                    ) : null}
+                    {apply ? (
+                      <button
+                        type="submit"
+                        className="thm-btn become-teacher__form-btn"
+                        disabled={!isOtpVerified}
+                      >
+                        Apply for it
+                      </button>
+                    ) : null}
+                  </div>
                 </form>
                 {appliedDateTime && (
                   <div className="applied-datetime">
