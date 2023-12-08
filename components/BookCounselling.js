@@ -18,6 +18,7 @@ const BookCounselling = () => {
   const [countdownDate, setCountdownDate] = useState(Date.now() + 5000000000);
   const [inputFocused, setInputFocused] = useState(false);
   const [appliedDateTime, setAppliedDateTime] = useState(null);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -43,7 +44,6 @@ const BookCounselling = () => {
     e.preventDefault();
     const errors = {};
 
-    // Validation logic
     if (!formData.firstName) {
       errors.firstName = "First Name is required";
     }
@@ -84,7 +84,6 @@ const BookCounselling = () => {
         fetchDataFromFirestore("consultations");
         setAppliedDateTime(appliedDateTime);
 
-        // Reset form data to empty values
         setFormData({
           firstName: "",
           lastName: "",
@@ -95,6 +94,11 @@ const BookCounselling = () => {
           consultationCity: "City",
           CouponCode: "",
         });
+        setShowPopup(true);
+
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000);
       } catch (error) {
         console.error("Error submitting form:", error);
       }
@@ -197,7 +201,7 @@ const BookCounselling = () => {
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}>
-                    <option value="" disabled selected>
+                    <option value="Course interested in" selected disabled>
                       Course interested in
                     </option>
                     <option value="Medical">Medical</option>
@@ -227,12 +231,13 @@ const BookCounselling = () => {
                   <select
                     className="form-field"
                     name="consultationCity"
-                    value={formData.consultationCity}
+                    placeholder="Location for counseling"
+                    // value={formData.consultationCity}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}>
-                    <option value="" disabled selected>
-                      Select a city
+                    <option value="Location for counseling" selected disabled>
+                      Location for counseling
                     </option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
@@ -268,6 +273,19 @@ const BookCounselling = () => {
                     Apply for it
                   </button>
                 </form>
+                {showPopup && (
+                  <div className="popup">
+                    <p>We will get back to you shortly.</p>
+
+                    <img
+                      src="../assets/images/logo/Fortune-Edu-logo.png"
+                      alt="Fortune"
+                      className="trophy-image"
+                    />
+
+                    <div className="green-line"></div>
+                  </div>
+                )}
                 {appliedDateTime && (
                   <div className="applied-datetime">
                     Applied on: {appliedDateTime}
