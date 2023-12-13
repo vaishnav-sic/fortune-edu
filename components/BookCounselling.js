@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { db, auth } from "../firebaseConfig";
+import { db, } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
-import { RecaptchaVerifier, signInWithPhoneNumber } from "firebase/auth";
 
 const BookCounselling = () => {
   const [formData, setFormData] = useState({
@@ -20,9 +19,12 @@ const BookCounselling = () => {
   const [inputFocused, setInputFocused] = useState(false);
   const [appliedDateTime, setAppliedDateTime] = useState(null);
   const [otp, setOtp] = useState("");
-  const [confirmation, setConfirmation] = useState(null);
-  const [enterOtp, setEnterOtp] = useState(true);
+  let [randomOtp, setRandomOtp] = useState("");
+  const [enableVerify, setEnableVerify] = useState(false);
+  const [enterOtp, setEnterOtp] = useState(false);
   const [apply, setApply] = useState(false);
+  const [getOtp, setGetOtp] = useState(true);
+  const [isOtpValid, setIsOtpValid] = useState(false);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
 
   const handleInputChange = (e) => {
@@ -48,38 +50,39 @@ const BookCounselling = () => {
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     const errors = {};
-    if (apply && isOtpVerified) {
-      // Validation logic
-      if (!formData.firstName) {
-        errors.firstName = "First Name is required";
-      }
-      if (!formData.lastName) {
-        errors.lastName = "Last Name is required";
-      }
-      if (!formData.mobile || formData.mobile.length !== 10) {
-        errors.mobile = "Mobile number must be 10 digits";
-      }
-      if (!formData.email || !formData.email.includes("@gmail.com")) {
-        errors.email = "Please enter a valid Gmail address";
-      }
-      if (!formData.courseInterest || formData.courseInterest === "Course") {
-        errors.courseInterest = "Please select a course";
-      }
-      if (!formData.cityLiveIn) {
-        errors.cityLiveIn = "City you Live in is required";
-      }
-      if (!formData.consultationCity || formData.consultationCity === "City") {
-        errors.consultationCity = "Please select a city";
-      }
-      if (formData.CouponCode && formData.CouponCode.length !== 7) {
-        errors.CouponCode = "CouponCode must be 7 digits";
-      }
 
-      if (Object.keys(errors).length > 0) {
-        setFormErrors(errors);
-      } else {
-        setFormErrors({});
-        try {
+    // Validation logic
+    if (!formData.firstName) {
+      errors.firstName = "First Name is required";
+    }
+    if (!formData.lastName) {
+      errors.lastName = "Last Name is required";
+    }
+    if (!formData.mobile || formData.mobile.length !== 10) {
+      errors.mobile = "Mobile number must be 10 digits";
+    }
+    if (!formData.email || !formData.email.includes("@gmail.com")) {
+      errors.email = "Please enter a valid Gmail address";
+    }
+    if (!formData.courseInterest || formData.courseInterest === "Course") {
+      errors.courseInterest = "Please select a course";
+    }
+    if (!formData.cityLiveIn) {
+      errors.cityLiveIn = "City you Live in is required";
+    }
+    if (!formData.consultationCity || formData.consultationCity === "City") {
+      errors.consultationCity = "Please select a city";
+    }
+    if (formData.CouponCode && formData.CouponCode.length !== 7) {
+      errors.CouponCode = "CouponCode must be 7 digits";
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+    } else {
+      setFormErrors({});
+      try {
+        if (apply && isOtpVerified) {
           const appliedDateTime = new Date().toLocaleString();
           const docRef = await addDoc(collection(db, "StudentInfo"), {
             ...formData,
@@ -101,9 +104,12 @@ const BookCounselling = () => {
             consultationCity: "City",
             CouponCode: "",
           });
-        } catch (error) {
-          console.error("Error submitting form:", error);
+          setApply(false);
+          randomOtp = "";
+          setGetOtp(true);
         }
+      } catch (error) {
+        console.error("Error submitting form:", error);
       }
     }
   };
@@ -115,44 +121,73 @@ const BookCounselling = () => {
   }, []);
 
   const sendOtp = async () => {
-    window.RecaptchaVerifier = new RecaptchaVerifier(
-      auth,
-      "recaptcha-container",
-      {
-        size: "invisible",
-      }
-    );
-    console.log(window.RecaptchaVerifier);
-    await signInWithPhoneNumber(
-      auth,
-      "+91" + formData.mobile,
-      window.RecaptchaVerifier
-    )
-      .then((confirmationResult) => {
-        setConfirmation(confirmationResult);
-        setApply(true);
-        setEnterOtp(true);
-        console.log(confirmationResult);
-      })
-      .catch((error) => {
-        console.error(error);
+    if (
+      (formData.mobile,
+      formData.cityLiveIn,
+      formData.consultationCity,
+      formData.courseInterest,
+      formData.email,
+      formData.firstName,
+      formData.lastName) &&
+      formData.CouponCode.length == 7
+    ) {
+      randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+      setRandomOtp(randomOtp);
+      console.log(randomOtp);
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append(
+        "Authorization",
+        "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1WVB6eWYwMg=="
+      );
+
+      var raw = JSON.stringify({
+        Text: "User Admin login OTP is " + randomOtp + " - SMSCNT",
+        Number: "91" + formData.mobile,
+        SenderId: "SMSCNT",
+        DRNotifyUrl: "https://www.domainname.com/notifyurl",
+        DRNotifyHttpMethod: "POST",
+        Tool: "API",
       });
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      fetch(
+        "https://restapi.smscountry.com/v0.1/Accounts/j3quOt3waue6AbS8P4iA/SMSes/",
+        requestOptions
+      )
+        .then((response) => {
+          response.text();
+          setEnterOtp(true);
+          setGetOtp(false);
+        })
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+    }
   };
 
   const checkOtp = async () => {
-    await confirmation
-      .confirm(otp)
-      .then((result) => {
-        setIsOtpVerified(true);
-        console.log(result);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (randomOtp == otp) {
+      setApply(true);
+      setEnterOtp(false);
+      setIsOtpVerified(true);
+      setIsOtpValid(true);
+    } else {
+      setIsOtpValid(false);
+      setApply(false);
+    }
   };
 
   const setOtpp = (element) => {
     setOtp(element.target.value);
+    if (element.target.value.length == 4) {
+      setEnableVerify(true);
+    } else setEnableVerify(false);
   };
 
   return (
@@ -313,36 +348,43 @@ const BookCounselling = () => {
                     </span>
                   )}
                   {enterOtp ? (
-                    <div className="d-flex flex-row">
-                      <input
-                        className="form-field"
-                        type="text"
-                        placeholder="Enter Otp"
-                        name="otp"
-                        value={otp}
-                        onChange={setOtpp}
-                      />
-                      <button
-                        style={{
-                          width: "5rem",
-                          height: "2.2rem",
-                          marginTop: "6px",
-                          marginLeft: "1rem",
-                          display: "flex",
-                          alignItems: "center",
-                        }}
-                        onClick={checkOtp}
-                      >
-                        Verify
-                      </button>
+                    <div className="d-flex flex-column">
+                      <div className="d-flex flex-row">
+                        <input
+                          className="form-field"
+                          type="text"
+                          placeholder="Enter Otp"
+                          name="otp"
+                          value={otp}
+                          onChange={setOtpp}
+                        />
+                        <button
+                          style={{
+                            width: "5rem",
+                            height: "2.2rem",
+                            marginTop: "6px",
+                            marginLeft: "1rem",
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                          onClick={checkOtp}
+                          disabled={!enableVerify}
+                        >
+                          Verify
+                        </button>
+                      </div>
+                      {!isOtpValid && (
+                        <span className="error-message">
+                          Please enter valid otp
+                        </span>
+                      )}
                     </div>
                   ) : null}
                   <div className="d-flex flex-column">
-                    {!apply ? (
+                    {getOtp ? (
                       <button
                         onClick={sendOtp}
                         className="thm-btn become-teacher__form-btn"
-                        disabled={!formData.mobile}
                       >
                         Get Otp
                       </button>
