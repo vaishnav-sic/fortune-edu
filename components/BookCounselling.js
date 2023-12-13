@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { db, } from "../firebaseConfig";
+import { db } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 
 const BookCounselling = () => {
@@ -133,7 +133,6 @@ const BookCounselling = () => {
     ) {
       randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
       setRandomOtp(randomOtp);
-      console.log(randomOtp);
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
       myHeaders.append(
