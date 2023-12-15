@@ -486,9 +486,9 @@
   .contact-info-one {
     padding-top: 80px;
   }
-  .contact-info-one__single {
+  /* .contact-info-one__single {
     margin-top: 30px;
-  }
+  } */
 }
 @media (max-width: 767px) {
   .banner-one .banner-one__person {

@@ -1,5 +1,4 @@
 import React from 'react';
-import IMG from "../public/assets/images/logo/FES_Logo.svg";
 const ContactUs = () => {
     return (
         <div>
@@ -9,7 +8,7 @@ const ContactUs = () => {
                         <div className="contact-info-one__single">
                             {/* <img className="picture1" src={IMG} alt="collage group photo" /> */}
                             <img
-                                src="/assets/images/logo/FES_Logo.svg"
+                                src="/assets/images/logo/FES_LogoName.svg"
                                 className="main-logo"
                                 width="300px"
                                 alt="Awesome Image"
@@ -41,9 +40,8 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MUMBAI</h2>
-                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> 302, 3rd floor, Shreeji Tandle Arcade,
-                                <br /> Above Waman Hari Pethe Jewellers,
-                                <br />Shivaji Chowk, Kalyan(W) - 421301
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> 302, 3rd floor, Shreeji
+                                Tandle Arcade, Above Waman Hari Pethe Jewellers, Shivaji Chowk, Kalyan(W) - 421301
 
                             </p>
                             </div>
@@ -55,9 +53,8 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">KARAD </h2>
-                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Near shivraj  Dhaba, warunji phata,
-                                <br /> below Mohite clinic,
-                                <br /> Karad 415114
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Near Shivraj Dhaba, Warunji Phata,
+                                Below Mohite Clinic, Karad 415114
                             </p>
                             </div>
                         </div>
@@ -77,9 +74,7 @@ const ContactUs = () => {
                                 </div>
                                 <h2 className="contact-info-one__title">MANCHAR </h2>
                                 <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Gurukul Engineering Academy,
-                                <br /> Near Government Girls Hostel
-                                <br /> Government College of Engineering and Research,
-                                <br /> Awasari (Kh), Manchar - 412405
+                                Near Gov. Girls Hostel, Gov. College of Engg. and Research, Awasari (Kh), Manchar - 412405
                                 </p>
                             </div>
                         </div>
