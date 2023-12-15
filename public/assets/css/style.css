@@ -6866,6 +6866,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 .Branch__Main__In__Left {
   width: 400px;
   height: 500px;
@@ -6946,6 +6947,19 @@ p {
   margin-bottom: -10px;
   padding-top: 1rem;
 }
+.contact-info-one__text_sub {
+  text-align: center;
+  margin: 0;
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 500;
+  color: #81868a;
+  margin-top: -50px;
+  margin-bottom: -40px;
+  /* padding-top: 1rem; */
+}
+
+
 .contact-info-one__text_Branch {
   text-align: center;
   margin: 0;
@@ -6956,12 +6970,11 @@ p {
   margin-top: -15px;
   margin-bottom: -10px;
 }
-.course-one__content_baramati {
-  padding-left: 34px;
+.course-one__content_baramati {padding-left: 36px;
   padding-right: 45px;
   position: relative;
-  padding-top: 88px;
-  padding-bottom: 50px;
+  padding-top: 13px;
+  padding-bottom: 139px;
   border-radius: 1rem;
   background-color: #001253;
   border: none;
@@ -6983,8 +6996,31 @@ p {
   padding-left: 36px;
   padding-right: 45px;
   position: relative;
-  padding-top: 88px;
+  padding-top: 13px;
   padding-bottom: 50px;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+}
+.course-one__content_mumbai {
+  padding-left: 36px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 85px;
+  border-radius: 1rem;
+  background-color: #001253;
+  border: none;
+  box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+}
+
+.course-one__content_karad {
+  padding-left: 36px;
+  padding-right: 45px;
+  position: relative;
+  padding-top: 13px;
+  padding-bottom: 133px;
   border-radius: 1rem;
   background-color: #001253;
   border: none;
@@ -7289,7 +7325,7 @@ h1 {
   max-width: 100px;
   max-height: 100px;
   border-radius: 5px;
-  margin-right: 20px;
+  margin-right: 20px;`
   mix-blend-mode: multiply;
   
 }
