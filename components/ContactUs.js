@@ -74,7 +74,7 @@ const ContactUs = () => {
                                 </div>
                                 <h2 className="contact-info-one__title">MANCHAR </h2>
                                 <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Gurukul Engineering Academy,
-                                Near Gov. Girls Hostel, Gov. College of Engg. and Research, Awasari (Kh), Manchar - 412405
+                                Near Gov. Girls Hostel, Gov. College of Engg., Awasari (Kh), Manchar - 412405
                                 </p>
                             </div>
                         </div>
