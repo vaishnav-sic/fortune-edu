@@ -625,17 +625,7 @@
     box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
   }
   
-  .course-one__content__subbranch {
-    padding-left: 34px;
-    padding-right: 45px;
-    position: relative;
-    padding-top: 88px;
-    padding-bottom: 50px;
-    border-radius: 1rem;
-    background-color: #001253;
-    border: none;
-    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
-  }
+
   .course-one__content_manchar {
     height: auto;
     padding-left: 36px;
