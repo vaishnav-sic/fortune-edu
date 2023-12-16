@@ -1,6 +1,129 @@
 /*
 * expandable menu started
 */
+
+@media (max-width: 1290px) {
+
+  .course-one__content_baramati {
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 139px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    /* box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651); */
+    height: 205px;
+  
+  }
+  
+  .course-one__content__subbranch {
+    padding-left: 34px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 88px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  .course-one__content_manchar {
+    height: 205px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  .course-one__content_mumbai {
+    height: 205px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 85px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  
+  .course-one__content_karad {
+    height: 205px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 133px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  
+}
+@media (max-width: 1150px) {
+
+  .course-one__content_baramati {
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 139px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+    height: 295px;
+  
+  }
+  
+  .course-one__content_manchar {
+    height: 295px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  .course-one__content_mumbai {
+    height: 295px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 85px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  
+  .course-one__content_karad {
+    height: 295px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 133px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  
+}
+
 @media (max-width: 1280px) {
   .header__search-form {
     display: none;
@@ -489,6 +612,67 @@
   /* .contact-info-one__single {
     margin-top: 30px;
   } */
+  .course-one__content_baramati {
+    height: 20px;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  
+  .course-one__content__subbranch {
+    padding-left: 34px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 88px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  .course-one__content_manchar {
+    height: auto;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  .course-one__content_mumbai {
+    height: auto;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
+  
+  .course-one__content_karad {
+    height: auto;
+    padding-left: 36px;
+    padding-right: 45px;
+    position: relative;
+    padding-top: 18px;
+    padding-bottom: 50px;
+    border-radius: 1rem;
+    background-color: #001253;
+    border: none;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
+  }
 }
 @media (max-width: 767px) {
   .banner-one .banner-one__person {
