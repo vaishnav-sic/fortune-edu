@@ -1,5 +1,4 @@
 import React from 'react';
-import IMG from "../public/assets/images/logo/FES_Logo.svg";
 const ContactUs = () => {
     return (
         <div>
@@ -9,7 +8,7 @@ const ContactUs = () => {
                         <div className="contact-info-one__single">
                             {/* <img className="picture1" src={IMG} alt="collage group photo" /> */}
                             <img
-                                src="/assets/images/logo/FES_Logo.svg"
+                                src="/assets/images/logo/FES_LogoName.svg"
                                 className="main-logo"
                                 width="300px"
                                 alt="Awesome Image"
@@ -37,21 +36,26 @@ const ContactUs = () => {
                 <div className="row">
                     <div className="col-lg-3">
                         <div className="course-one__single">
-                            <div className="course-one__content__subbranch">
+                            <div className="course-one__content_mumbai">
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MUMBAI</h2>
-                               
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> 302, 3rd floor, Shreeji
+                                Tandle Arcade, Above Waman Hari Pethe Jewellers, Shivaji Chowk, Kalyan(W) - 421301
+
+                            </p>
                             </div>
                         </div>
                     </div>
                     <div className="col-lg-3">
                         <div className="course-one__single">
-                            <div className="course-one__content__subbranch">
+                            <div className="course-one__content_karad">
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">KARAD </h2>
-                               
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Near Shivraj Dhaba, Warunji Phata,
+                                Below Mohite Clinic, Karad 415114
+                            </p>
                             </div>
                         </div>
                     </div>
@@ -69,7 +73,9 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MANCHAR </h2>
-                               
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Gurukul Engineering Academy,
+                                Near Gov. Girls Hostel, Gov. College of Engg., Awasari (Kh), Manchar - 412405
+                                </p>
                             </div>
                         </div>
                     </div>

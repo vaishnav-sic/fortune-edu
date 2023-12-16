@@ -227,12 +227,12 @@ const BookCounselling = () => {
                   <select
                     className="form-field"
                     name="consultationCity"
-                    value={formData.consultationCity}
+                    //value={formData.consultationCity}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}>
                     <option value="" disabled selected>
-                      Select a city
+                      Select a city for counselling
                     </option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
