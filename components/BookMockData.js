@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
 import { db } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 
-const BookCounselling = () => {
+const BookMockData = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -28,11 +27,7 @@ const BookCounselling = () => {
   const [isOtpValid, setIsOtpValid] = useState(false);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
-  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
-
-  const handleCaptchaChange = (value) => {
-    setIsCaptchaVerified(true);
-  };
+  const [isMobileExists, setIsMobileExists] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -56,11 +51,6 @@ const BookCounselling = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-
-    if (!isCaptchaVerified) {
-      return;
-    }
-
     const errors = {};
 
     if (!formData.firstName) {
@@ -115,7 +105,7 @@ const BookCounselling = () => {
             CouponCode: "",
           });
           setApply(false);
-          // randomOtp = "";
+          randomOtp = "";
           setGetOtp(true);
         }
         setShowPopup(true);
@@ -133,31 +123,37 @@ const BookCounselling = () => {
     setCountdownDate(Date.now() + 5000);
     fetchDataFromFirestore("StudentInfo");
     fetchDataFromFirestore("consultations");
-  }, []);
+    checkMobileExists(formData.mobile);
+  }, [formData.mobile]);
 
   const sendOtp = async () => {
-    if (
-      formData.mobile &&
-      formData.cityLiveIn &&
-      formData.consultationCity &&
-      formData.courseInterest &&
-      formData.email &&
-      formData.firstName &&
-      formData.lastName &&
-      formData.CouponCode.length === 7
-    ) {
-      try {
-        const randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+    const mobileExists = await checkMobileExists(formData.mobile);
+    if (mobileExists) {
+      setApply(true);
+      setEnterOtp(false);
+      setIsOtpVerified(true);
+      setIsOtpValid(true);
+    } else {
+      if (
+        formData.mobile &&
+        formData.cityLiveIn &&
+        formData.consultationCity &&
+        formData.courseInterest &&
+        formData.email &&
+        formData.firstName &&
+        formData.lastName &&
+        formData.CouponCode.length === 7
+      ) {
+        randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
         setRandomOtp(randomOtp);
-
-        const myHeaders = new Headers();
+        var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append(
           "Authorization",
-          "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1YVB6eWYwMg=="
+          "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1WVB6eWYwMg=="
         );
 
-        const raw = JSON.stringify({
+        var raw = JSON.stringify({
           Text: "User Admin login OTP is " + randomOtp + " - SMSCNT",
           Number: "91" + formData.mobile,
           SenderId: "SMSCNT",
@@ -166,32 +162,42 @@ const BookCounselling = () => {
           Tool: "API",
         });
 
-        const requestOptions = {
+        var requestOptions = {
           method: "POST",
           headers: myHeaders,
           body: raw,
           redirect: "follow",
         };
 
-        const response = await fetch(
+        fetch(
           "https://restapi.smscountry.com/v0.1/Accounts/j3quOt3waue6AbS8P4iA/SMSes/",
           requestOptions
-        );
-        console.log("Response from SMS API:", response);
-
-        if (response.ok) {
-          setEnterOtp(true);
-          setGetOtp(false);
-        } else {
-          console.error("Error sending OTP:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error sending OTP:", error);
+        )
+          .then((response) => {
+            response.text();
+            setEnterOtp(true);
+            setGetOtp(false);
+          })
+          .then((result) => console.log(result))
+          .catch((error) => console.log("error", error));
       }
     }
   };
+  const checkMobileExists = async (mobile) => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "StudentInfo"));
+      const mobileExists = querySnapshot.docs.some(
+        (doc) => doc.data().mobile === mobile
+      );
+      return mobileExists;
+    } catch (error) {
+      console.error("Error checking if mobile exists:", error);
+      return false;
+    }
+  };
+
   const checkOtp = async () => {
-    if (randomOtp === otp) {
+    if (randomOtp == otp) {
       setApply(true);
       setEnterOtp(false);
       setIsOtpVerified(true);
@@ -204,22 +210,22 @@ const BookCounselling = () => {
 
   const setOtpp = (element) => {
     setOtp(element.target.value);
-    if (element.target.value.length === 4) {
+    if (element.target.value.length == 4) {
       setEnableVerify(true);
     } else setEnableVerify(false);
   };
 
   return (
-    <div id="registration1">
+    <div id="registration2">
       <section className="countdown-one">
         <div className="container">
           <div className="row">
             <div className="col-lg-6">
               <div className="countdown-one__content">
-                <h2 className="countdown-one__title">Book Counselling! </h2>
-                <p className="countdown-one__tag-line">
-                  Experts in hassle-free admission
-                </p>
+                <h2 className="countdown-one__title">
+                  Register for your mock{" "}
+                </h2>
+                <p className="countdown-one__tag-line">easy apply</p>
               </div>
               <img
                 src="/assets/images/DrGroup.jpeg"
@@ -230,9 +236,7 @@ const BookCounselling = () => {
             <div className="col-lg-6">
               <div className="become-teacher__form">
                 <div className="become-teacher__form-top">
-                  <h2 className="become-teacher__form-title">
-                    Book Counselling
-                  </h2>
+                  <h2 className="become-teacher__form-title">Register</h2>
                 </div>
                 <form
                   action="#"
@@ -396,24 +400,19 @@ const BookCounselling = () => {
                       )}
                     </div>
                   ) : null}
-                  <ReCAPTCHA
-                    sitekey="6Lf_UjQpAAAAABjk_oc5AueXsKCZCFULM0-VF4Rl"
-                    onChange={handleCaptchaChange}
-                  />
                   <div className="d-flex flex-column">
-                    {getOtp ? (
+                    {!isMobileExists && getOtp ? (
                       <button
                         onClick={sendOtp}
-                        className="thm-btn become-teacher__form-btn"
-                        disabled={!isCaptchaVerified}>
+                        className="thm-btn become-teacher__form-btn">
                         Get Otp
                       </button>
                     ) : null}
-                    {apply ? (
+                    {apply && !isMobileExists ? (
                       <button
                         type="submit"
                         className="thm-btn become-teacher__form-btn"
-                        disabled={!isOtpVerified || !isCaptchaVerified}>
+                        disabled={!isOtpVerified}>
                         Apply for it
                       </button>
                     ) : null}
@@ -447,4 +446,4 @@ const BookCounselling = () => {
   );
 };
 
-export default BookCounselling;
+export default BookMockData;
