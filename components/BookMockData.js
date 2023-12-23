@@ -150,13 +150,15 @@ const BookMockData = () => {
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append(
           "Authorization",
-          "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1WVB6eWYwMg=="
+          "Basic OHJPdWpzaHgybEhPUldKeXl2WFU6bTc1U29DVXFsU2tOWndvaFhSMmZWWnFSdW41NXJZSlBCRFZscFVYMA=="
         );
 
         var raw = JSON.stringify({
-          Text: "User Admin login OTP is " + randomOtp + " - SMSCNT",
+          Text:
+            randomOtp +
+            " is the OTP to verify your mobile number at FORTUNE EDUCATION. It is valid for 10 mins. OTPs are CONFIDENTIAL. DO NOT disclose it to anyone.",
           Number: "91" + formData.mobile,
-          SenderId: "SMSCNT",
+          SenderId: "FRTEDU",
           DRNotifyUrl: "https://www.domainname.com/notifyurl",
           DRNotifyHttpMethod: "POST",
           Tool: "API",
@@ -169,17 +171,18 @@ const BookMockData = () => {
           redirect: "follow",
         };
 
-        fetch(
-          "https://restapi.smscountry.com/v0.1/Accounts/j3quOt3waue6AbS8P4iA/SMSes/",
+        const response = await fetch(
+          "https://restapi.smscountry.com/v0.1/Accounts/8rOujshx2lHORWJyyvXU/SMSes/",
           requestOptions
-        )
-          .then((response) => {
-            response.text();
-            setEnterOtp(true);
-            setGetOtp(false);
-          })
-          .then((result) => console.log(result))
-          .catch((error) => console.log("error", error));
+        );
+        console.log("Response from SMS API:", response);
+
+        if (response.ok) {
+          setEnterOtp(true);
+          setGetOtp(false);
+        } else {
+          console.error("Error sending OTP:", response.statusText);
+        }
       }
     }
   };
@@ -418,7 +421,7 @@ const BookMockData = () => {
                     ) : null}
                   </div>
                 </form>
-                {showPopup && isOtpVerified && (
+                {showPopup && isOtpVerified && isMobileExists && (
                   <div className="popup">
                     <p>We will get back to you shortly.</p>
 

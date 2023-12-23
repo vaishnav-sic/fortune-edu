@@ -146,47 +146,44 @@ const BookCounselling = () => {
       formData.lastName &&
       formData.CouponCode.length === 7
     ) {
-      try {
-        const randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
-        setRandomOtp(randomOtp);
+      randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+      setRandomOtp(randomOtp);
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append(
+        "Authorization",
+        "Basic OHJPdWpzaHgybEhPUldKeXl2WFU6bTc1U29DVXFsU2tOWndvaFhSMmZWWnFSdW41NXJZSlBCRFZscFVYMA=="
+      );
 
-        const myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
-        myHeaders.append(
-          "Authorization",
-          "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1YVB6eWYwMg=="
-        );
+      var raw = JSON.stringify({
+        Text:
+          randomOtp +
+          " is the OTP to verify your mobile number at FORTUNE EDUCATION. It is valid for 10 mins. OTPs are CONFIDENTIAL. DO NOT disclose it to anyone.",
+        Number: "91" + formData.mobile,
+        SenderId: "FRTEDU",
+        DRNotifyUrl: "https://www.domainname.com/notifyurl",
+        DRNotifyHttpMethod: "POST",
+        Tool: "API",
+      });
 
-        const raw = JSON.stringify({
-          Text: "User Admin login OTP is " + randomOtp + " - SMSCNT",
-          Number: "91" + formData.mobile,
-          SenderId: "SMSCNT",
-          DRNotifyUrl: "https://www.domainname.com/notifyurl",
-          DRNotifyHttpMethod: "POST",
-          Tool: "API",
-        });
+      const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
 
-        const requestOptions = {
-          method: "POST",
-          headers: myHeaders,
-          body: raw,
-          redirect: "follow",
-        };
+      const response = await fetch(
+        "https://restapi.smscountry.com/v0.1/Accounts/8rOujshx2lHORWJyyvXU/SMSes/",
+        requestOptions
+      );
+      console.log("Response from SMS API:", response);
 
-        const response = await fetch(
-          "https://restapi.smscountry.com/v0.1/Accounts/j3quOt3waue6AbS8P4iA/SMSes/",
-          requestOptions
-        );
-        console.log("Response from SMS API:", response);
-
-        if (response.ok) {
-          setEnterOtp(true);
-          setGetOtp(false);
-        } else {
-          console.error("Error sending OTP:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error sending OTP:", error);
+      if (response.ok) {
+        setEnterOtp(true);
+        setGetOtp(false);
+      } else {
+        console.error("Error sending OTP:", response.statusText);
       }
     }
   };
