@@ -6305,6 +6305,12 @@ a:visited {
   font-weight: 700;
   margin-top: -15px;
 }
+@media screen and (min-width: 317px) and (max-width: 445px) {
+  .countdown-one__title {
+    font-size: 12rem;
+    color: red;
+  }
+}
 .countdown-one__tag-line {
   margin: 0;
   font-size: 26px;

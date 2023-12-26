@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { db } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const BookMockData = () => {
   const [formData, setFormData] = useState({
@@ -8,10 +9,9 @@ const BookMockData = () => {
     lastName: "",
     mobile: "",
     email: "",
+    collegeName: "",
     courseInterest: "Course",
     cityLiveIn: "",
-    consultationCity: "City",
-    CouponCode: "",
   });
 
   const [formErrors, setFormErrors] = useState({});
@@ -28,6 +28,13 @@ const BookMockData = () => {
   const [isOtpVerified, setIsOtpVerified] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [isMobileExists, setIsMobileExists] = useState(false);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [mobileVerificationStatus, setMobileVerificationStatus] = useState("");
+  const [mobileVerificationMessage, setMobileVerificationMessage] =
+    useState("");
+  const handleCaptchaChange = (value) => {
+    setIsCaptchaVerified(true);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -53,6 +60,10 @@ const BookMockData = () => {
     e.preventDefault();
     const errors = {};
 
+    if (!isCaptchaVerified) {
+      return;
+    }
+
     if (!formData.firstName) {
       errors.firstName = "First Name is required";
     }
@@ -71,11 +82,9 @@ const BookMockData = () => {
     if (!formData.cityLiveIn) {
       errors.cityLiveIn = "City you Live in is required";
     }
-    if (!formData.consultationCity || formData.consultationCity === "City") {
-      errors.consultationCity = "Please select a city";
-    }
-    if (formData.CouponCode && formData.CouponCode.length !== 7) {
-      errors.CouponCode = "CouponCode must be 7 digits";
+
+    if (!formData.collegeName) {
+      errors.collegeName = "College Name is required";
     }
 
     if (Object.keys(errors).length > 0) {
@@ -85,12 +94,12 @@ const BookMockData = () => {
       try {
         if (apply && isOtpVerified) {
           const appliedDateTime = new Date().toLocaleString();
-          const docRef = await addDoc(collection(db, "StudentInfo"), {
+          const docRef = await addDoc(collection(db, "MockInfo"), {
             ...formData,
             appliedDateTime,
           });
 
-          fetchDataFromFirestore("StudentInfo");
+          fetchDataFromFirestore("MockInfo");
           fetchDataFromFirestore("consultations");
           setAppliedDateTime(appliedDateTime);
 
@@ -101,11 +110,10 @@ const BookMockData = () => {
             email: "",
             courseInterest: "Course",
             cityLiveIn: "",
-            consultationCity: "City",
-            CouponCode: "",
+            collegeName: "",
           });
           setApply(false);
-          randomOtp = "";
+          // randomOtp = "";
           setGetOtp(true);
         }
         setShowPopup(true);
@@ -137,14 +145,13 @@ const BookMockData = () => {
       if (
         formData.mobile &&
         formData.cityLiveIn &&
-        formData.consultationCity &&
         formData.courseInterest &&
         formData.email &&
         formData.firstName &&
         formData.lastName &&
-        formData.CouponCode.length === 7
+        formData.collegeName
       ) {
-        randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+        randomOtp = Math.floor(100000 + Math.random() * 900000).toString();
         setRandomOtp(randomOtp);
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -192,7 +199,18 @@ const BookMockData = () => {
       const mobileExists = querySnapshot.docs.some(
         (doc) => doc.data().mobile === mobile
       );
-      return mobileExists;
+      const mockQuerySnapshot = await getDocs(collection(db, "MockInfo"));
+      const mockMobileExists = mockQuerySnapshot.docs.some(
+        (doc) => doc.data().mobile === mobile
+      );
+      if (mobileExists) {
+        setMobileVerificationStatus("verified");
+        setMobileVerificationMessage("Mobile verified");
+      } else {
+        setMobileVerificationStatus("not-verified");
+        setMobileVerificationMessage("");
+      }
+      return mobileExists || mockMobileExists;
     } catch (error) {
       console.error("Error checking if mobile exists:", error);
       return false;
@@ -213,7 +231,7 @@ const BookMockData = () => {
 
   const setOtpp = (element) => {
     setOtp(element.target.value);
-    if (element.target.value.length == 4) {
+    if (element.target.value.length == 6) {
       setEnableVerify(true);
     } else setEnableVerify(false);
   };
@@ -231,7 +249,7 @@ const BookMockData = () => {
                 <p className="countdown-one__tag-line">easy apply</p>
               </div>
               <img
-                src="/assets/images/DrGroup.jpeg"
+                src="/assets/images/mockRegister.jpg"
                 alt="Consultation Image"
                 className="consultation-image"
               />
@@ -274,20 +292,7 @@ const BookMockData = () => {
                   {formErrors.lastName && (
                     <span className="error-message">{formErrors.lastName}</span>
                   )}
-                  <input
-                    className="form-field"
-                    type="text"
-                    placeholder="Mobile"
-                    name="mobile"
-                    id="recaptcha-container"
-                    value={formData.mobile}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                  />
-                  {formErrors.mobile && (
-                    <span className="error-message">{formErrors.mobile}</span>
-                  )}
+
                   <input
                     className="form-field"
                     type="text"
@@ -334,43 +339,46 @@ const BookMockData = () => {
                     </span>
                   )}
 
-                  <select
+                  <input
                     className="form-field"
-                    name="consultationCity"
-                    placeholder="Location for counseling"
-                    // //value={formData.consultationCity}
+                    type="text"
+                    placeholder="College Name"
+                    name="collegeName"
+                    value={formData.collegeName}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
-                    <option value="Location for counseling" selected disabled>
-                      Location for counseling
-                    </option>
-                    <option value="Pune">Pune</option>
-                    <option value="Mumbai">Mumbai</option>
-                    <option value="Karad">Karad</option>
-                    <option value="Baramati">Baramati</option>
-                    <option value="Manchar">Manchar</option>
-                  </select>
-                  {formErrors.consultationCity && (
+                    onBlur={handleInputBlur}
+                  />
+                  {formErrors.collegeName && (
                     <span className="error-message">
-                      {formErrors.consultationCity}
+                      {formErrors.collegeName}
                     </span>
                   )}
                   <input
                     className="form-field"
                     type="text"
-                    placeholder="CouponCode"
-                    name="CouponCode"
-                    value={formData.CouponCode}
+                    placeholder="Mobile"
+                    name="mobile"
+                    id="recaptcha-container"
+                    value={formData.mobile}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}
                   />
-                  {formErrors.CouponCode && (
-                    <span className="error-message">
-                      {formErrors.CouponCode}
+                  {formErrors.mobile && (
+                    <span className="error-message">{formErrors.mobile}</span>
+                  )}
+                  {mobileVerificationStatus === "verified" && (
+                    <span
+                      className="success-message"
+                      style={{ color: "green" }}>
+                      {mobileVerificationMessage}
                     </span>
                   )}
+                  <ReCAPTCHA
+                    sitekey="6Lf_UjQpAAAAABjk_oc5AueXsKCZCFULM0-VF4Rl"
+                    onChange={handleCaptchaChange}
+                  />
                   {enterOtp ? (
                     <div className="d-flex flex-column">
                       <div className="d-flex flex-row">
@@ -382,6 +390,7 @@ const BookMockData = () => {
                           value={otp}
                           onChange={setOtpp}
                         />
+
                         <button
                           style={{
                             width: "5rem",
@@ -403,11 +412,13 @@ const BookMockData = () => {
                       )}
                     </div>
                   ) : null}
+
                   <div className="d-flex flex-column">
                     {!isMobileExists && getOtp ? (
                       <button
                         onClick={sendOtp}
-                        className="thm-btn become-teacher__form-btn">
+                        className="thm-btn become-teacher__form-btn"
+                        disabled={!isCaptchaVerified}>
                         Get Otp
                       </button>
                     ) : null}
@@ -415,7 +426,7 @@ const BookMockData = () => {
                       <button
                         type="submit"
                         className="thm-btn become-teacher__form-btn"
-                        disabled={!isOtpVerified}>
+                        disabled={!isOtpVerified || !isCaptchaVerified}>
                         Apply for it
                       </button>
                     ) : null}

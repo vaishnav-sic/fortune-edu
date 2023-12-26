@@ -28,7 +28,11 @@ const BookCounselling = () => {
   const [isOtpValid, setIsOtpValid] = useState(false);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [isMobileExists, setIsMobileExists] = useState(false);
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [mobileVerificationStatus, setMobileVerificationStatus] = useState("");
+  const [mobileVerificationMessage, setMobileVerificationMessage] =
+    useState("");
 
   const handleCaptchaChange = (value) => {
     setIsCaptchaVerified(true);
@@ -133,58 +137,86 @@ const BookCounselling = () => {
     setCountdownDate(Date.now() + 5000);
     fetchDataFromFirestore("StudentInfo");
     fetchDataFromFirestore("consultations");
-  }, []);
+    checkMobileExists(formData.mobile);
+  }, [formData.mobile]);
 
   const sendOtp = async () => {
-    if (
-      formData.mobile &&
-      formData.cityLiveIn &&
-      formData.consultationCity &&
-      formData.courseInterest &&
-      formData.email &&
-      formData.firstName &&
-      formData.lastName &&
-      formData.CouponCode.length === 7
-    ) {
-      randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
-      setRandomOtp(randomOtp);
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append(
-        "Authorization",
-        "Basic OHJPdWpzaHgybEhPUldKeXl2WFU6bTc1U29DVXFsU2tOWndvaFhSMmZWWnFSdW41NXJZSlBCRFZscFVYMA=="
-      );
+    const mobileExists = await checkMobileExists(formData.mobile);
 
-      var raw = JSON.stringify({
-        Text:
-          randomOtp +
-          " is the OTP to verify your mobile number at FORTUNE EDUCATION. It is valid for 10 mins. OTPs are CONFIDENTIAL. DO NOT disclose it to anyone.",
-        Number: "91" + formData.mobile,
-        SenderId: "FRTEDU",
-        DRNotifyUrl: "https://www.domainname.com/notifyurl",
-        DRNotifyHttpMethod: "POST",
-        Tool: "API",
-      });
+    if (mobileExists) {
+      setApply(true);
+      setEnterOtp(false);
+      setIsOtpVerified(true);
+      setIsOtpValid(true);
+    } else {
+      if (
+        formData.mobile &&
+        formData.cityLiveIn &&
+        formData.consultationCity &&
+        formData.courseInterest &&
+        formData.email &&
+        formData.firstName &&
+        formData.lastName
+      ) {
+        randomOtp = Math.floor(100000 + Math.random() * 900000).toString();
+        setRandomOtp(randomOtp);
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append(
+          "Authorization",
+          "Basic OHJPdWpzaHgybEhPUldKeXl2WFU6bTc1U29DVXFsU2tOWndvaFhSMmZWWnFSdW41NXJZSlBCRFZscFVYMA=="
+        );
 
-      const requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
+        var raw = JSON.stringify({
+          Text:
+            randomOtp +
+            " is the OTP to verify your mobile number at FORTUNE EDUCATION. It is valid for 10 mins. OTPs are CONFIDENTIAL. DO NOT disclose it to anyone.",
+          Number: "91" + formData.mobile,
+          SenderId: "FRTEDU",
+          DRNotifyUrl: "https://www.domainname.com/notifyurl",
+          DRNotifyHttpMethod: "POST",
+          Tool: "API",
+        });
 
-      const response = await fetch(
-        "https://restapi.smscountry.com/v0.1/Accounts/8rOujshx2lHORWJyyvXU/SMSes/",
-        requestOptions
-      );
-      console.log("Response from SMS API:", response);
+        const requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
 
-      if (response.ok) {
-        setEnterOtp(true);
-        setGetOtp(false);
-      } else {
-        console.error("Error sending OTP:", response.statusText);
+        const response = await fetch(
+          "https://restapi.smscountry.com/v0.1/Accounts/8rOujshx2lHORWJyyvXU/SMSes/",
+          requestOptions
+        );
+        console.log("Response from SMS API:", response);
+
+        if (response.ok) {
+          setEnterOtp(true);
+          setGetOtp(false);
+        } else {
+          console.error("Error sending OTP:", response.statusText);
+        }
       }
+    }
+  };
+  const checkMobileExists = async (mobile) => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "StudentInfo"));
+      const mobileExists = querySnapshot.docs.some(
+        (doc) => doc.data().mobile === mobile
+      );
+      if (mobileExists) {
+        setMobileVerificationStatus("verified");
+        setMobileVerificationMessage("Mobile verified");
+      } else {
+        setMobileVerificationStatus("not-verified");
+        setMobileVerificationMessage("");
+      }
+      return mobileExists;
+    } catch (error) {
+      console.error("Error checking if mobile exists:", error);
+      return false;
     }
   };
   const checkOtp = async () => {
@@ -201,7 +233,7 @@ const BookCounselling = () => {
 
   const setOtpp = (element) => {
     setOtp(element.target.value);
-    if (element.target.value.length === 4) {
+    if (element.target.value.length === 6) {
       setEnableVerify(true);
     } else setEnableVerify(false);
   };
@@ -264,20 +296,7 @@ const BookCounselling = () => {
                   {formErrors.lastName && (
                     <span className="error-message">{formErrors.lastName}</span>
                   )}
-                  <input
-                    className="form-field"
-                    type="text"
-                    placeholder="Mobile"
-                    name="mobile"
-                    id="recaptcha-container"
-                    value={formData.mobile}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                  />
-                  {formErrors.mobile && (
-                    <span className="error-message">{formErrors.mobile}</span>
-                  )}
+
                   <input
                     className="form-field"
                     type="text"
@@ -361,6 +380,27 @@ const BookCounselling = () => {
                       {formErrors.CouponCode}
                     </span>
                   )}
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="Mobile"
+                    name="mobile"
+                    id="recaptcha-container"
+                    value={formData.mobile}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                  />
+                  {formErrors.mobile && (
+                    <span className="error-message">{formErrors.mobile}</span>
+                  )}
+                  {mobileVerificationStatus === "verified" && (
+                    <span
+                      className="success-message"
+                      style={{ color: "green" }}>
+                      {mobileVerificationMessage}
+                    </span>
+                  )}
                   {enterOtp ? (
                     <div className="d-flex flex-column">
                       <div className="d-flex flex-row">
@@ -398,7 +438,7 @@ const BookCounselling = () => {
                     onChange={handleCaptchaChange}
                   />
                   <div className="d-flex flex-column">
-                    {getOtp ? (
+                    {!isMobileExists && getOtp ? (
                       <button
                         onClick={sendOtp}
                         className="thm-btn become-teacher__form-btn"
@@ -406,7 +446,7 @@ const BookCounselling = () => {
                         Get Otp
                       </button>
                     ) : null}
-                    {apply ? (
+                    {apply && !isMobileExists ? (
                       <button
                         type="submit"
                         className="thm-btn become-teacher__form-btn"
@@ -416,7 +456,7 @@ const BookCounselling = () => {
                     ) : null}
                   </div>
                 </form>
-                {showPopup && isOtpVerified && (
+                {showPopup && isOtpVerified && isMobileExists && (
                   <div className="popup">
                     <p>We will get back to you shortly.</p>
 
