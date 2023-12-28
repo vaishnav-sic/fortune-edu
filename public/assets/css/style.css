@@ -6298,6 +6298,7 @@ a:visited {
 .countdown-one__content {
   padding-top: 10px;
 }
+
 .countdown-one__title {
   margin: 0;
   color: #012237;
@@ -6305,12 +6306,13 @@ a:visited {
   font-weight: 700;
   margin-top: -15px;
 }
-@media screen and (min-width: 317px) and (max-width: 445px) {
+@media only screen and (max-width: 768px) {
   .countdown-one__title {
-    font-size: 12rem;
-    color: red;
+    font-size: 45px; /* Adjust the font size for smaller screens */
+    margin-top: 0; /* Remove the negative margin for smaller screens */
   }
 }
+
 .countdown-one__tag-line {
   margin: 0;
   font-size: 26px;
@@ -6964,7 +6966,6 @@ p {
   /* padding-top: 1rem; */
 }
 
-
 .contact-info-one__text_Branch {
   text-align: center;
   margin: 0;
@@ -6986,7 +6987,6 @@ p {
   border: none;
   box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
   height: 190px;
-
 }
 .course-one__content__subbranch {
   padding-left: 34px;
@@ -7333,7 +7333,7 @@ h1 {
   max-width: 100px;
   max-height: 100px;
   border-radius: 5px;
-  margin-right: 20px;`
+  margin-right: 20px;
   mix-blend-mode: multiply;
 }
 .college-details {
@@ -7600,16 +7600,16 @@ svg {
   height: 20px;
   width: 20px;
 }
-@media screen and (max-width: 1269px) and (min-width:1059px){
+@media screen and (max-width: 1269px) and (min-width: 1059px) {
   .service-in-content-left {
     width: 40rem;
     padding: 2rem 0rem;
   }
 }
- 
- 
-@media screen and (max-width:1298px) and (min-width:1055px){
-  .service-in-content, .service-in-content-alt{
+
+@media screen and (max-width: 1298px) and (min-width: 1055px) {
+  .service-in-content,
+  .service-in-content-alt {
     flex-wrap: nowrap;
   }
 }
@@ -7732,7 +7732,7 @@ svg {
     margin-top: 2rem;
   }
 }
-  /* @media screen and (max-width:1265px) {
+/* @media screen and (max-width:1265px) {
   .service-in-content, .service-in-content-alt{
     flex-wrap: nowrap;
    
@@ -7744,7 +7744,7 @@ svg {
     flex-wrap: nowrap;
    
   }  */
- 
+
 /* }  */
 
 @media screen and (max-width: 899px) {
