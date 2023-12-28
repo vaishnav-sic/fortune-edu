@@ -18,6 +18,14 @@ const BookCounselling = () => {
   const [countdownDate, setCountdownDate] = useState(Date.now() + 5000000000);
   const [inputFocused, setInputFocused] = useState(false);
   const [appliedDateTime, setAppliedDateTime] = useState(null);
+  const [otp, setOtp] = useState("");
+  let [randomOtp, setRandomOtp] = useState("");
+  const [enableVerify, setEnableVerify] = useState(false);
+  const [enterOtp, setEnterOtp] = useState(false);
+  const [apply, setApply] = useState(false);
+  const [getOtp, setGetOtp] = useState(true);
+  const [isOtpValid, setIsOtpValid] = useState(false);
+  const [isOtpVerified, setIsOtpVerified] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -74,27 +82,32 @@ const BookCounselling = () => {
     } else {
       setFormErrors({});
       try {
-        const appliedDateTime = new Date().toLocaleString();
-        const docRef = await addDoc(collection(db, "StudentInfo"), {
-          ...formData,
-          appliedDateTime,
-        });
+        if (apply && isOtpVerified) {
+          const appliedDateTime = new Date().toLocaleString();
+          const docRef = await addDoc(collection(db, "StudentInfo"), {
+            ...formData,
+            appliedDateTime,
+          });
 
-        fetchDataFromFirestore("StudentInfo");
-        fetchDataFromFirestore("consultations");
-        setAppliedDateTime(appliedDateTime);
+          fetchDataFromFirestore("StudentInfo");
+          fetchDataFromFirestore("consultations");
+          setAppliedDateTime(appliedDateTime);
 
-        // Reset form data to empty values
-        setFormData({
-          firstName: "",
-          lastName: "",
-          mobile: "",
-          email: "",
-          courseInterest: "Course",
-          cityLiveIn: "",
-          consultationCity: "City",
-          CouponCode: "",
-        });
+          // Reset form data to empty values
+          setFormData({
+            firstName: "",
+            lastName: "",
+            mobile: "",
+            email: "",
+            courseInterest: "Course",
+            cityLiveIn: "",
+            consultationCity: "City",
+            CouponCode: "",
+          });
+          setApply(false);
+          randomOtp = "";
+          setGetOtp(true);
+        }
       } catch (error) {
         console.error("Error submitting form:", error);
       }
@@ -106,6 +119,75 @@ const BookCounselling = () => {
     fetchDataFromFirestore("StudentInfo");
     fetchDataFromFirestore("consultations");
   }, []);
+
+  const sendOtp = async () => {
+    if (
+      (formData.mobile,
+      formData.cityLiveIn,
+      formData.consultationCity,
+      formData.courseInterest,
+      formData.email,
+      formData.firstName,
+      formData.lastName) &&
+      formData.CouponCode.length == 7
+    ) {
+      randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
+      setRandomOtp(randomOtp);
+      var myHeaders = new Headers();
+      myHeaders.append("Content-Type", "application/json");
+      myHeaders.append(
+        "Authorization",
+        "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1WVB6eWYwMg=="
+      );
+
+      var raw = JSON.stringify({
+        Text: "User Admin login OTP is " + randomOtp + " - SMSCNT",
+        Number: "91" + formData.mobile,
+        SenderId: "SMSCNT",
+        DRNotifyUrl: "https://www.domainname.com/notifyurl",
+        DRNotifyHttpMethod: "POST",
+        Tool: "API",
+      });
+
+      var requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow",
+      };
+
+      fetch(
+        "https://restapi.smscountry.com/v0.1/Accounts/j3quOt3waue6AbS8P4iA/SMSes/",
+        requestOptions
+      )
+        .then((response) => {
+          response.text();
+          setEnterOtp(true);
+          setGetOtp(false);
+        })
+        .then((result) => console.log(result))
+        .catch((error) => console.log("error", error));
+    }
+  };
+
+  const checkOtp = async () => {
+    if (randomOtp == otp) {
+      setApply(true);
+      setEnterOtp(false);
+      setIsOtpVerified(true);
+      setIsOtpValid(true);
+    } else {
+      setIsOtpValid(false);
+      setApply(false);
+    }
+  };
+
+  const setOtpp = (element) => {
+    setOtp(element.target.value);
+    if (element.target.value.length == 4) {
+      setEnableVerify(true);
+    } else setEnableVerify(false);
+  };
 
   return (
     <div id="registration1">
@@ -136,7 +218,8 @@ const BookCounselling = () => {
                   action="#"
                   method="POST"
                   className="become-teacher__form-content contact-form-validated"
-                  onSubmit={handleFormSubmit}>
+                  onSubmit={handleFormSubmit}
+                >
                   <input
                     className="form-field"
                     type="text"
@@ -170,6 +253,7 @@ const BookCounselling = () => {
                     type="text"
                     placeholder="Mobile"
                     name="mobile"
+                    id="recaptcha-container"
                     value={formData.mobile}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
@@ -196,7 +280,8 @@ const BookCounselling = () => {
                     name="courseInterest"
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
+                    onBlur={handleInputBlur}
+                  >
                     <option value="" disabled selected>
                       Course interested in
                     </option>
@@ -227,12 +312,13 @@ const BookCounselling = () => {
                   <select
                     className="form-field"
                     name="consultationCity"
-                    value={formData.consultationCity}
+                    //value={formData.consultationCity}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}>
+                    onBlur={handleInputBlur}
+                  >
                     <option value="" disabled selected>
-                      Select a city
+                      Select a city for counselling
                     </option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
@@ -260,13 +346,58 @@ const BookCounselling = () => {
                       {formErrors.CouponCode}
                     </span>
                   )}
-
-                  <button
-                    type="submit"
-                    className="thm-btn become-teacher__form-btn"
-                    disabled={!!Object.keys(formErrors).length}>
-                    Apply for it
-                  </button>
+                  {enterOtp ? (
+                    <div className="d-flex flex-column">
+                      <div className="d-flex flex-row">
+                        <input
+                          className="form-field"
+                          type="text"
+                          placeholder="Enter Otp"
+                          name="otp"
+                          value={otp}
+                          onChange={setOtpp}
+                        />
+                        <button
+                          style={{
+                            width: "5rem",
+                            height: "2.2rem",
+                            marginTop: "6px",
+                            marginLeft: "1rem",
+                            display: "flex",
+                            alignItems: "center",
+                          }}
+                          onClick={checkOtp}
+                          disabled={!enableVerify}
+                        >
+                          Verify
+                        </button>
+                      </div>
+                      {!isOtpValid && (
+                        <span className="error-message">
+                          Please enter valid otp
+                        </span>
+                      )}
+                    </div>
+                  ) : null}
+                  <div className="d-flex flex-column">
+                    {getOtp ? (
+                      <button
+                        onClick={sendOtp}
+                        className="thm-btn become-teacher__form-btn"
+                      >
+                        Get Otp
+                      </button>
+                    ) : null}
+                    {apply ? (
+                      <button
+                        type="submit"
+                        className="thm-btn become-teacher__form-btn"
+                        disabled={!isOtpVerified}
+                      >
+                        Apply for it
+                      </button>
+                    ) : null}
+                  </div>
                 </form>
                 {appliedDateTime && (
                   <div className="applied-datetime">
