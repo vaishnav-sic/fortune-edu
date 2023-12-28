@@ -815,9 +815,9 @@
   .banner-one__title {
     font-size: 50px;
   }
-  .banner-one__scratch {
+  /* .banner-one__scratch {
     display: none !important;
-  }
+  } */
   .banner-one__tag-line {
     font-size: 30px;
   }
@@ -1049,4 +1049,5 @@
     text-align: center;
     align-items: center;
      }
+}
 }

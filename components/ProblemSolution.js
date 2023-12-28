@@ -40,7 +40,7 @@ const ProblemSolution = () => {
             </div>
             <div className="col-6 ps-4 d-lg-block d-none"  >
               {/* <img className="qna-faq-img"  data-aos="fade-up-left" data-aos-duration="2000" data-aos-offset="900px" src="/assets/images/faq-img-new.jpg" alt="faq-img" /> */}
-              <img className="qna-faq-img"  data-aos="fade-up-left" data-aos-duration="2000" data-aos-offset="900px" src="/assets/images/Councelling.png" alt="faq-img" /> 
+              <img className="qna-faq-img"  data-aos="fade-up-left" data-aos-duration="2000" data-aos-offset="900px" src="/assets/images/Counselling.png" alt="faq-img" /> 
             </div>
           </div>
         </div>
