@@ -35,6 +35,11 @@ const BookMockData = () => {
   const handleCaptchaChange = (value) => {
     setIsCaptchaVerified(true);
   };
+  const handleApplyNewLink = () => {
+    if (apply && !isMobileExists && isOtpVerified && isCaptchaVerified) {
+      window.open("https://admissiongateway.co.in/mocktest", "_blank");
+    }
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -426,7 +431,8 @@ const BookMockData = () => {
                       <button
                         type="submit"
                         className="thm-btn become-teacher__form-btn"
-                        disabled={!isOtpVerified || !isCaptchaVerified}>
+                        disabled={!isOtpVerified || !isCaptchaVerified}
+                        onClick={handleApplyNewLink}>
                         Apply for it
                       </button>
                     ) : null}
