@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import { db } from "../firebaseConfig";
 import { collection, getDocs, addDoc } from "firebase/firestore";
 
@@ -26,6 +27,16 @@ const BookCounselling = () => {
   const [getOtp, setGetOtp] = useState(true);
   const [isOtpValid, setIsOtpValid] = useState(false);
   const [isOtpVerified, setIsOtpVerified] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [isMobileExists, setIsMobileExists] = useState(false);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [mobileVerificationStatus, setMobileVerificationStatus] = useState("");
+  const [mobileVerificationMessage, setMobileVerificationMessage] =
+    useState("");
+
+  const handleCaptchaChange = (value) => {
+    setIsCaptchaVerified(true);
+  };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -49,9 +60,13 @@ const BookCounselling = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+
+    if (!isCaptchaVerified) {
+      return;
+    }
+
     const errors = {};
 
-    // Validation logic
     if (!formData.firstName) {
       errors.firstName = "First Name is required";
     }
@@ -93,7 +108,6 @@ const BookCounselling = () => {
           fetchDataFromFirestore("consultations");
           setAppliedDateTime(appliedDateTime);
 
-          // Reset form data to empty values
           setFormData({
             firstName: "",
             lastName: "",
@@ -105,9 +119,14 @@ const BookCounselling = () => {
             CouponCode: "",
           });
           setApply(false);
-          randomOtp = "";
+          // randomOtp = "";
           setGetOtp(true);
         }
+        setShowPopup(true);
+
+        setTimeout(() => {
+          setShowPopup(false);
+        }, 3000);
       } catch (error) {
         console.error("Error submitting form:", error);
       }
@@ -118,60 +137,90 @@ const BookCounselling = () => {
     setCountdownDate(Date.now() + 5000);
     fetchDataFromFirestore("StudentInfo");
     fetchDataFromFirestore("consultations");
-  }, []);
+    checkMobileExists(formData.mobile);
+  }, [formData.mobile]);
 
   const sendOtp = async () => {
-    if (
-      (formData.mobile,
-      formData.cityLiveIn,
-      formData.consultationCity,
-      formData.courseInterest,
-      formData.email,
-      formData.firstName,
-      formData.lastName) &&
-      formData.CouponCode.length == 7
-    ) {
-      randomOtp = Math.floor(1000 + Math.random() * 9000).toString();
-      setRandomOtp(randomOtp);
-      var myHeaders = new Headers();
-      myHeaders.append("Content-Type", "application/json");
-      myHeaders.append(
-        "Authorization",
-        "Basic ajNxdU90M3dhdWU2QWJTOFA0aUE6alRRRlVzN0ZMNVBrRTc3ZW51ZXA4aVNKQmRSaDQ4clp1WVB6eWYwMg=="
-      );
+    const mobileExists = await checkMobileExists(formData.mobile);
 
-      var raw = JSON.stringify({
-        Text: "User Admin login OTP is " + randomOtp + " - SMSCNT",
-        Number: "91" + formData.mobile,
-        SenderId: "SMSCNT",
-        DRNotifyUrl: "https://www.domainname.com/notifyurl",
-        DRNotifyHttpMethod: "POST",
-        Tool: "API",
-      });
+    if (mobileExists) {
+      setApply(true);
+      setEnterOtp(false);
+      setIsOtpVerified(true);
+      setIsOtpValid(true);
+    } else {
+      if (
+        formData.mobile &&
+        formData.cityLiveIn &&
+        formData.consultationCity &&
+        formData.courseInterest &&
+        formData.email &&
+        formData.firstName &&
+        formData.lastName
+      ) {
+        randomOtp = Math.floor(100000 + Math.random() * 900000).toString();
+        setRandomOtp(randomOtp);
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append(
+          "Authorization",
+          "Basic OHJPdWpzaHgybEhPUldKeXl2WFU6bTc1U29DVXFsU2tOWndvaFhSMmZWWnFSdW41NXJZSlBCRFZscFVYMA=="
+        );
 
-      var requestOptions = {
-        method: "POST",
-        headers: myHeaders,
-        body: raw,
-        redirect: "follow",
-      };
+        var raw = JSON.stringify({
+          Text:
+            randomOtp +
+            " is the OTP to verify your mobile number at FORTUNE EDUCATION. It is valid for 10 mins. OTPs are CONFIDENTIAL. DO NOT disclose it to anyone.",
+          Number: "91" + formData.mobile,
+          SenderId: "FRTEDU",
+          DRNotifyUrl: "https://www.domainname.com/notifyurl",
+          DRNotifyHttpMethod: "POST",
+          Tool: "API",
+        });
 
-      fetch(
-        "https://restapi.smscountry.com/v0.1/Accounts/j3quOt3waue6AbS8P4iA/SMSes/",
-        requestOptions
-      )
-        .then((response) => {
-          response.text();
+        const requestOptions = {
+          method: "POST",
+          headers: myHeaders,
+          body: raw,
+          redirect: "follow",
+        };
+
+        const response = await fetch(
+          "https://restapi.smscountry.com/v0.1/Accounts/8rOujshx2lHORWJyyvXU/SMSes/",
+          requestOptions
+        );
+        console.log("Response from SMS API:", response);
+
+        if (response.ok) {
           setEnterOtp(true);
           setGetOtp(false);
-        })
-        .then((result) => console.log(result))
-        .catch((error) => console.log("error", error));
+        } else {
+          console.error("Error sending OTP:", response.statusText);
+        }
+      }
     }
   };
-
+  const checkMobileExists = async (mobile) => {
+    try {
+      const querySnapshot = await getDocs(collection(db, "StudentInfo"));
+      const mobileExists = querySnapshot.docs.some(
+        (doc) => doc.data().mobile === mobile
+      );
+      if (mobileExists) {
+        setMobileVerificationStatus("verified");
+        setMobileVerificationMessage("Mobile verified");
+      } else {
+        setMobileVerificationStatus("not-verified");
+        setMobileVerificationMessage("");
+      }
+      return mobileExists;
+    } catch (error) {
+      console.error("Error checking if mobile exists:", error);
+      return false;
+    }
+  };
   const checkOtp = async () => {
-    if (randomOtp == otp) {
+    if (randomOtp === otp) {
       setApply(true);
       setEnterOtp(false);
       setIsOtpVerified(true);
@@ -184,7 +233,7 @@ const BookCounselling = () => {
 
   const setOtpp = (element) => {
     setOtp(element.target.value);
-    if (element.target.value.length == 4) {
+    if (element.target.value.length === 6) {
       setEnableVerify(true);
     } else setEnableVerify(false);
   };
@@ -218,8 +267,7 @@ const BookCounselling = () => {
                   action="#"
                   method="POST"
                   className="become-teacher__form-content contact-form-validated"
-                  onSubmit={handleFormSubmit}
-                >
+                  onSubmit={handleFormSubmit}>
                   <input
                     className="form-field"
                     type="text"
@@ -248,20 +296,7 @@ const BookCounselling = () => {
                   {formErrors.lastName && (
                     <span className="error-message">{formErrors.lastName}</span>
                   )}
-                  <input
-                    className="form-field"
-                    type="text"
-                    placeholder="Mobile"
-                    name="mobile"
-                    id="recaptcha-container"
-                    value={formData.mobile}
-                    onChange={handleInputChange}
-                    onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                  />
-                  {formErrors.mobile && (
-                    <span className="error-message">{formErrors.mobile}</span>
-                  )}
+
                   <input
                     className="form-field"
                     type="text"
@@ -280,9 +315,8 @@ const BookCounselling = () => {
                     name="courseInterest"
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                  >
-                    <option value="" disabled selected>
+                    onBlur={handleInputBlur}>
+                    <option value="Course interested in" selected disabled>
                       Course interested in
                     </option>
                     <option value="Medical">Medical</option>
@@ -312,13 +346,13 @@ const BookCounselling = () => {
                   <select
                     className="form-field"
                     name="consultationCity"
-                    //value={formData.consultationCity}
+                    placeholder="Location for counseling"
+                    // //value={formData.consultationCity}
                     onChange={handleInputChange}
                     onFocus={handleInputFocus}
-                    onBlur={handleInputBlur}
-                  >
-                    <option value="" disabled selected>
-                      Select a city for counselling
+                    onBlur={handleInputBlur}>
+                    <option value="Location for counseling" selected disabled>
+                      Location for counseling
                     </option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>
@@ -346,6 +380,27 @@ const BookCounselling = () => {
                       {formErrors.CouponCode}
                     </span>
                   )}
+                  <input
+                    className="form-field"
+                    type="text"
+                    placeholder="Mobile"
+                    name="mobile"
+                    id="recaptcha-container"
+                    value={formData.mobile}
+                    onChange={handleInputChange}
+                    onFocus={handleInputFocus}
+                    onBlur={handleInputBlur}
+                  />
+                  {formErrors.mobile && (
+                    <span className="error-message">{formErrors.mobile}</span>
+                  )}
+                  {mobileVerificationStatus === "verified" && (
+                    <span
+                      className="success-message"
+                      style={{ color: "green" }}>
+                      {mobileVerificationMessage}
+                    </span>
+                  )}
                   {enterOtp ? (
                     <div className="d-flex flex-column">
                       <div className="d-flex flex-row">
@@ -367,8 +422,7 @@ const BookCounselling = () => {
                             alignItems: "center",
                           }}
                           onClick={checkOtp}
-                          disabled={!enableVerify}
-                        >
+                          disabled={!enableVerify}>
                           Verify
                         </button>
                       </div>
@@ -379,26 +433,42 @@ const BookCounselling = () => {
                       )}
                     </div>
                   ) : null}
+                  <ReCAPTCHA
+                    sitekey="6Lf_UjQpAAAAABjk_oc5AueXsKCZCFULM0-VF4Rl"
+                    onChange={handleCaptchaChange}
+                  />
                   <div className="d-flex flex-column">
-                    {getOtp ? (
+                    {!isMobileExists && getOtp ? (
                       <button
                         onClick={sendOtp}
                         className="thm-btn become-teacher__form-btn"
-                      >
+                        disabled={!isCaptchaVerified}>
                         Get Otp
                       </button>
                     ) : null}
-                    {apply ? (
+                    {apply && !isMobileExists ? (
                       <button
                         type="submit"
                         className="thm-btn become-teacher__form-btn"
-                        disabled={!isOtpVerified}
-                      >
+                        disabled={!isOtpVerified || !isCaptchaVerified}>
                         Apply for it
                       </button>
                     ) : null}
                   </div>
                 </form>
+                {showPopup && isOtpVerified && isMobileExists && (
+                  <div className="popup">
+                    <p>We will get back to you shortly.</p>
+
+                    <img
+                      src="../assets/images/logo/FortunePopUpLogo.png"
+                      alt="Fortune"
+                      className="trophy-image"
+                    />
+
+                    <div className="green-line"></div>
+                  </div>
+                )}
                 {appliedDateTime && (
                   <div className="applied-datetime">
                     Applied on: {appliedDateTime}
