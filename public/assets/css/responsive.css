@@ -517,7 +517,7 @@
 }
 @media (max-width: 991px) {
   .banner-one__title {
-    font-size: 100px;
+    font-size: 70px;
     line-height: 1em;
   }
   .video-two__scratch {
@@ -808,9 +808,9 @@
   .banner-one__title {
     font-size: 50px;
   }
-  .banner-one__scratch {
+  /* .banner-one__scratch {
     display: none !important;
-  }
+  } */
   .banner-one__tag-line {
     font-size: 30px;
   }

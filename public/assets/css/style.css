@@ -986,12 +986,12 @@ a:visited {
   color: #fff;
 }
 .banner-one__title {
-  font-size: 10vh;
+  font-size: 6vw;
   line-height: 120px;
   color: #ffffff;
   font-weight: 700;
   letter-spacing: -0.04em;
-  margin-top: -100px;
+  margin-top: -80px;
   margin-bottom: 20px;
   text-transform: uppercase;
   -webkit-animation-duration: 2s;
@@ -8002,82 +8002,62 @@ label input[type="checkbox"] {
 /* ------------------------------------------admin login style end-------------------------------- */
 
 /*------------------------------------------ NewsFlash start ----------------------------- */
-.topbar-one {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 0;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.topbar-one__left {
-  font-size: 14px;
-  overflow: hidden;
-}
-
-.news-flash {
-  animation: flash 1s infinite alternate;
-}
-
-@keyframes flash {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
 .newsFlash {
   display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
   background-color: #2da397;
-  padding: 8px;
+  /* padding: 8px; */
   border-radius: 4px;
-  justify-content: center;
-  /* margin-right: 16px; */
+  width: 100vw;
+ 
+  /* justify-content: flex-end; */
+  /* overflow: hidden; */
 }
-
-.bulletPoint {
-  font-size: 1rem;
-  margin-right: 8px;
-  animation: flashAnimation 5s infinite;
-}
-
-.newsText {
-  font-size: 1rem;
-  color: white;
-  animation: flashAnimation 5s infinite;
-}
-.newsText p {
-  color: white;
-  align-items: center;
-}
+ 
 .newsText1 {
-  font-size: 1rem;
-  color: Red;
-  animation: flashAnimation 5s infinite;
+  width: 30%;
 }
+ 
 .newsText1 p {
   color: red;
-  align-items: flex-start;
 }
-
-@keyframes flashAnimation {
+ 
+.newsText {
+  width: 60%;
+  font-size: 1rem;
+  color: red;
+ 
+  opacity: 0;
+  animation: slideAnimation 15s infinite;
+}
+ 
+@keyframes slideAnimation {
   0%,
-  50%,
   100% {
-    opacity: 1;
-  }
-  25%,
-  75% {
+    transform: translateX(100%);
     opacity: 0;
   }
+  14.2857%,
+  85.7143% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
-
+ 
+@media (max-width: 768px) {
+  .newsText1 {
+    width: 100%;
+  }
+ 
+  .newsText {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+ 
 /* ------------------------------------NewsFlash end------------------------------------------  */
 
 /* --------------------------------------------problem-solution styling---------------------------------------- */

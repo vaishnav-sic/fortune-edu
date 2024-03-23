@@ -10,7 +10,7 @@ const AdmissionFillingForm = () => {
             data-aos="fade-in"
             data-aos-duration="800"
           >
-            <h3>Admission Filling Form</h3>
+            <h3>Admission Form Filling</h3>
           </div>
           <div className="service-in-content-alt" id="AFF">
             <div
