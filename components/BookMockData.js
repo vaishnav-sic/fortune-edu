@@ -251,7 +251,7 @@ const BookMockData = () => {
                 <h2 className="countdown-one__title">
                   Register for your mock{" "}
                 </h2>
-                <p className="countdown-one__tag-line">easy apply</p>
+                <p className="countdown-one__tag-line">Easy Apply</p>
               </div>
               <img
                 src="/assets/images/mockRegister.jpg"

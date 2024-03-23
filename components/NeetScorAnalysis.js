@@ -15,7 +15,7 @@ const NeetScoreAnalysis = () => {
               data-aos-duration="800"
               style={{ color: "black", paddingBottom: "2rem" }}
             >
-              Realizing the Dream of MBBS Admissions 🎓
+              Realizing the Dream of Medical Admissions 🎓
             </h4>
             <p data-aos="fade-right" data-aos-duration="800">
               Embarking on an MBBS journey in a reputable medical college is a

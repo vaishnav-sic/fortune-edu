@@ -247,7 +247,7 @@ const BookCounselling = () => {
               <div className="countdown-one__content">
                 <h2 className="countdown-one__title">Book Counselling! </h2>
                 <p className="countdown-one__tag-line">
-                  Experts in hassle-free admission
+                  Experts in hassle-free admissions
                 </p>
               </div>
               <img
@@ -352,7 +352,7 @@ const BookCounselling = () => {
                     onFocus={handleInputFocus}
                     onBlur={handleInputBlur}>
                     <option value="Location for counseling" selected disabled>
-                      Location for counseling
+                      Location for counselling
                     </option>
                     <option value="Pune">Pune</option>
                     <option value="Mumbai">Mumbai</option>

@@ -14,8 +14,9 @@ import {
   query,
 } from "firebase/firestore";
 import * as XLSX from "xlsx";
-
+ 
 const AdminPage = () => {
+  const [saveButton, setSaveButton] = useState(true);
   const [dataForStudents, setDataForStudents] = useState([]);
   const [dataForNews, setDataForNews] = useState([]);
   const [user, setUser] = useState(null);
@@ -27,11 +28,11 @@ const AdminPage = () => {
     pagination: true,
     paginationPageSize: 20, // Set the number of rows per page
   };
-
+ 
   useEffect(() => {
     const checkAuthentication = () => {
       const user = auth.currentUser;
-
+ 
       if (!user) {
         router.push("/adminlogin");
       } else {
@@ -39,14 +40,14 @@ const AdminPage = () => {
         setLoading(false);
       }
     };
-
+ 
     checkAuthentication();
-
+ 
     return () => {
       // Cleanup tasks (if any)
     };
   }, [router]);
-
+ 
   const exportToExcel = () => {
     const allRowNodes = gridApiForStudents.getModel().rootNode.allLeafChildren;
     const data = [];
@@ -58,7 +59,7 @@ const AdminPage = () => {
     XLSX.utils.book_append_sheet(wb, ws, "Sheet 1");
     XLSX.writeFile(wb, "exported_data.xlsx");
   };
-
+ 
   const columnsForNews = [
     { field: "id", headerName: "Sr No", width: 150 },
     {
@@ -79,27 +80,27 @@ const AdminPage = () => {
       checkboxSelection: true,
     },
   ];
-
+ 
   useEffect(() => {
     fetchData();
   }, []);
-
+ 
   const fetchData = async () => {
     const querySnapshotForNews = await getDocs(collection(db, "NewsUpdates"));
     const querySnapshotForStudents = await getDocs(
       query(collection(db, "StudentInfo"), orderBy("appliedDateTime", "desc"))
     );
-
+ 
     const newsData = querySnapshotForNews.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
-
+ 
     const studentsData = querySnapshotForStudents.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
-
+ 
     setDataForNews(newsData);
     let count = 0;
     studentsData.forEach((element) => {
@@ -109,7 +110,7 @@ const AdminPage = () => {
     setDataForStudents(studentsData);
   };
   // console.log(dataForNews, dataForStudents);
-
+ 
   const columnsForStudents = [
     { field: "id", headerName: "Sr No", width: 70, editable: true },
     {
@@ -158,7 +159,7 @@ const AdminPage = () => {
       width: 120,
     },
   ];
-
+ 
   const updateNews = async (event) => {
     if (event.data) {
       const userRef = doc(db, "NewsUpdates", event.data.id);
@@ -168,15 +169,16 @@ const AdminPage = () => {
       await updateDoc(userRef, event);
     }
     fetchData();
+    setSaveButton(true);
   };
-
+ 
   const onGridReady = (params) => {
     setGridApi(params.api);
   };
   const onStudentsGridReady = (params) => {
     setGridApiForStudents(params.api);
   };
-
+ 
   const changeNews = () => {
     const selectedRow = gridApi.getSelectedNodes()[0].data;
     dataForNews.forEach((element) => {
@@ -187,8 +189,15 @@ const AdminPage = () => {
       }
       updateNews(element);
     });
+    setSaveButton(true);
   };
-
+  const cellEditingStarted = () => {
+    setSaveButton(true);
+  };
+  const onRowSelected = () => {
+    setSaveButton(false);
+  };
+ 
   return (
     <div
       style={{
@@ -207,12 +216,17 @@ const AdminPage = () => {
         <AgGridReact
           columnDefs={columnsForNews}
           rowData={dataForNews}
+          onRowSelected={onRowSelected}
           onCellValueChanged={updateNews}
+          onCellEditingStarted={cellEditingStarted}
           editType={"fullRow"}
           rowSelection={"single"}
           suppressRowClickSelection={true}
           onGridReady={onGridReady}></AgGridReact>
-        <button onClick={changeNews} style={{ backgroundColor: "#2da397" }}>
+        <button
+          onClick={changeNews}
+          disabled={saveButton}
+          style={{ backgroundColor: "#2da397" }}>
           Save
         </button>
       </div>

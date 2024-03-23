@@ -40,10 +40,22 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">MUMBAI</h2>
-                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> 302, 3rd floor, Shreeji
-                                Tandle Arcade, Above Waman Hari Pethe Jewellers, Shivaji Chowk, Kalyan(W) - 421301
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Office no. 1003,
+                                10th floor, Kailash Corporate Lounge, Veer Savarkar Road, Vikhroli West, Mumbai 400079
 
                             </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-lg-3">
+                        <div className="course-one__single">
+                            <div className="course-one__content_manchar">
+                                <div className="Branch_Details">
+                                </div>
+                                <h2 className="contact-info-one__title">KALYAN </h2>
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> 302, 3rd floor, Shreeji
+                                Tandle Arcade, Above Waman Hari Pethe Jewellers, Shivaji Chowk, Kalyan(W) - 421301
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -53,8 +65,8 @@ const ContactUs = () => {
                                 <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">KARAD </h2>
-                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Near Shivraj Dhaba, Warunji Phata,
-                                Below Mohite Clinic, Karad 415114
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Office no 6, Dipak Plaza,
+                                Vita-Karad road, Opposite Hotel Surya Palace, Near Krishna Canal, Saidapur, Karad - 415124
                             </p>
                             </div>
                         </div>
@@ -62,7 +74,12 @@ const ContactUs = () => {
                     <div className="col-lg-3">
                         <div className="course-one__single">
                             <div className="course-one__content_baramati">
+                            <div className="Branch_Details">
+                                </div>
                                 <h2 className="contact-info-one__title">BARAMATI </h2>
+                                <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Plot No P-33 Snehdip,
+                                Bhigwan Road Next To Bank of Maharashtra, Opposite Ladkat Science Academy, MIDC, Baramati-413133
+                                </p>
                               
                             </div>
                         </div>
