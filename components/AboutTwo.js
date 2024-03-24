@@ -4,9 +4,9 @@ function AboutTwo() {
     return (
         <>
             <div className='about2_main'>
-                <NumberAni num={20} name="Years Of Experience" />
-                <NumberAni num={15532} name="Students Counselled" />
-                <NumberAni num={11784} name="Students Admitted" />
+                <NumberAni num={12} name="Years Of Experience" />
+                <NumberAni num={9215} name="Students Counselled" />
+                <NumberAni num={6389} name="Students Admitted" />
             </div>
         </>
     )

@@ -135,8 +135,10 @@ const Footer = () => {
                 <div className="site-footer__bottom">
                     <div className="container">
                         <p className="site-footer__copy">
-                            &copy; सर्वहक्कस्वाधीन  2023&nbsp;&nbsp;{" "}
-                            <img src="/assets/images/logo/SIC_logo.svg" alt="Logo" />
+                            &copy; सर्वहक्कस्वाधीन 2024&nbsp;&nbsp;{" "}
+                            <a href="https://www.swasamvedya.com/" target="_blank">
+                                <img src="/assets/images/logo/SIC_logo.svg" alt="Logo" />
+                            </ a>
                             <a href="#">SIC द्वारे ❤ प्रेमपूर्वक विकसित</a>
                         </p>
                         <div className="site-footer__social">
@@ -149,10 +151,10 @@ const Footer = () => {
                             <a href="https://api.whatsapp.com/send?phone=7798950555">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://www.instagram.com/fortuneedu_">
                                 <i className="fab fa-instagram"></i>
                             </a>
-                            <a href="#">
+                            <a href="https://www.facebook.com/profile.php?id=61555843654278">
                                 <i className="fab fa-facebook-square"></i>
                             </a>
                             {/* <a href="#">

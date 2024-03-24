@@ -39,7 +39,7 @@ const SliderOne = () => {
               </div>
             </div>
             <div className="examButtons">
-              <button className="examButton">Hurry up! Take Mock test now</button>
+              <button className="examButton">Hurry up! Take Your Test Now</button>
               
             </div>
           </div>

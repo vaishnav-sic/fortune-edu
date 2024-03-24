@@ -14,8 +14,9 @@ import {
   query,
 } from "firebase/firestore";
 import * as XLSX from "xlsx";
-
+ 
 const AdminPage = () => {
+  const [saveButton, setSaveButton] = useState(true);
   const [dataForStudents, setDataForStudents] = useState([]);
   const [dataForNews, setDataForNews] = useState([]);
   const [user, setUser] = useState(null);
@@ -27,11 +28,11 @@ const AdminPage = () => {
     pagination: true,
     paginationPageSize: 20, // Set the number of rows per page
   };
-
+ 
   useEffect(() => {
     const checkAuthentication = () => {
       const user = auth.currentUser;
-
+ 
       if (!user) {
         router.push("/adminlogin");
       } else {
@@ -39,26 +40,26 @@ const AdminPage = () => {
         setLoading(false);
       }
     };
-
+ 
     checkAuthentication();
-
+ 
     return () => {
       // Cleanup tasks (if any)
     };
   }, [router]);
-
+ 
   const exportToExcel = () => {
     const allRowNodes = gridApiForStudents.getModel().rootNode.allLeafChildren;
     const data = [];
-    allRowNodes.forEach((element)=>{
+    allRowNodes.forEach((element) => {
       data.push(element.data);
-    })
+    });
     const ws = XLSX.utils.json_to_sheet(data);
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, "Sheet 1");
     XLSX.writeFile(wb, "exported_data.xlsx");
   };
-
+ 
   const columnsForNews = [
     { field: "id", headerName: "Sr No", width: 150 },
     {
@@ -79,27 +80,27 @@ const AdminPage = () => {
       checkboxSelection: true,
     },
   ];
-
+ 
   useEffect(() => {
     fetchData();
   }, []);
-
+ 
   const fetchData = async () => {
     const querySnapshotForNews = await getDocs(collection(db, "NewsUpdates"));
     const querySnapshotForStudents = await getDocs(
       query(collection(db, "StudentInfo"), orderBy("appliedDateTime", "desc"))
     );
-
+ 
     const newsData = querySnapshotForNews.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
-
+ 
     const studentsData = querySnapshotForStudents.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
     }));
-
+ 
     setDataForNews(newsData);
     let count = 0;
     studentsData.forEach((element) => {
@@ -108,8 +109,8 @@ const AdminPage = () => {
     count = 0;
     setDataForStudents(studentsData);
   };
-  console.log(dataForNews, dataForStudents);
-
+  // console.log(dataForNews, dataForStudents);
+ 
   const columnsForStudents = [
     { field: "id", headerName: "Sr No", width: 70, editable: true },
     {
@@ -158,7 +159,7 @@ const AdminPage = () => {
       width: 120,
     },
   ];
-
+ 
   const updateNews = async (event) => {
     if (event.data) {
       const userRef = doc(db, "NewsUpdates", event.data.id);
@@ -168,15 +169,16 @@ const AdminPage = () => {
       await updateDoc(userRef, event);
     }
     fetchData();
+    setSaveButton(true);
   };
-
+ 
   const onGridReady = (params) => {
     setGridApi(params.api);
   };
   const onStudentsGridReady = (params) => {
     setGridApiForStudents(params.api);
   };
-
+ 
   const changeNews = () => {
     const selectedRow = gridApi.getSelectedNodes()[0].data;
     dataForNews.forEach((element) => {
@@ -187,16 +189,22 @@ const AdminPage = () => {
       }
       updateNews(element);
     });
+    setSaveButton(true);
   };
-
+  const cellEditingStarted = () => {
+    setSaveButton(true);
+  };
+  const onRowSelected = () => {
+    setSaveButton(false);
+  };
+ 
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-      }}
-    >
+      }}>
       <div
         className="bulkMain ag-theme-alpine ag-style"
         style={{
@@ -204,18 +212,21 @@ const AdminPage = () => {
           width: "85%",
           marginTop: "2rem",
           marginBottom: "2rem",
-        }}
-      >
+        }}>
         <AgGridReact
           columnDefs={columnsForNews}
           rowData={dataForNews}
+          onRowSelected={onRowSelected}
           onCellValueChanged={updateNews}
+          onCellEditingStarted={cellEditingStarted}
           editType={"fullRow"}
           rowSelection={"single"}
           suppressRowClickSelection={true}
-          onGridReady={onGridReady}
-        ></AgGridReact>
-        <button onClick={changeNews} style={{ backgroundColor: "#2da397" }}>
+          onGridReady={onGridReady}></AgGridReact>
+        <button
+          onClick={changeNews}
+          disabled={saveButton}
+          style={{ backgroundColor: "#2da397" }}>
           Save
         </button>
       </div>
@@ -226,8 +237,7 @@ const AdminPage = () => {
           width: "90%",
           marginBottom: "2rem",
           marginTop: "2rem",
-        }}
-      >
+        }}>
         <button
           onClick={exportToExcel}
           style={{
@@ -235,16 +245,14 @@ const AdminPage = () => {
             width: "7rem",
             alignSelf: "end",
             marginBottom: 5,
-          }}
-        >
+          }}>
           Export to Excel
         </button>
         <AgGridReact
           columnDefs={columnsForStudents}
           rowData={dataForStudents}
           gridOptions={gridOptions}
-          onGridReady={onStudentsGridReady}
-        ></AgGridReact>
+          onGridReady={onStudentsGridReady}></AgGridReact>
       </div>
     </div>
   );
