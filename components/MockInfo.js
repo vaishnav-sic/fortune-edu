@@ -31,7 +31,7 @@ const SliderOne = () => {
             <div className="row no-gutters">
               <div className="col-xl-12">
                 <h3 className="banner-one__title banner-one__light-color">
-                  Mock Test                 
+                  Mock Test
                 </h3>                
                 <p className="banner-one__tag-line-one">
                 Master your admissions journey with our Mock Test. Our seasoned experts analyze your performance, providing personalized guidance and presenting top college options in Maharashtra and India—tailored to your budget. Simplify admissions and secure your spot effortlessly. Success begins with a click
