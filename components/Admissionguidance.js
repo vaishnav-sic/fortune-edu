@@ -1,5 +1,5 @@
 import react from "react";
-const Admissionguidance = () => {
+const AdmissionGuidance = () => {
   return (
     <>
       <div className="service-Main">
@@ -55,4 +55,4 @@ const Admissionguidance = () => {
     </>
   );
 };
-export default Admissionguidance;
+export default AdmissionGuidance;

@@ -3,15 +3,14 @@ import Layout from "../components/Layout";
 import NavOne from "../components/NavOne";
 import PageHeader from "../components/PageHeader";
 import Footer from "../components/Footer";
-import Gallery from "../components/Gallery";
 import NeetScoreAnalysis from "../components/NeetScorAnalysis"
 import Nridoc from "../components/Nridoc"
 import OneToOneCons from "../components/OneToOneCons"
 import Registration from "../components/Registration"
 import Documentation from "../components/Documentation"
 import AdmissionAlert from "../components/AdmissionAlert"
-import AdmissionFillingForm from "../components/AdmissionFillingForm"
-import Admissionguidance from "../components/Admissionguidance"
+import AdmissionFormFilling from "../components/AdmissionFormFilling"
+import AdmissionGuidance from "../components/AdmissionGuidance"
 import CollegeChoicePref from "../components/CollegeChoicePref"
 import InstituteLevelManagement from '../components/InstituteLevelManagement';
 import AdmissionInMaharashtraStateAndCenterQuota from '../components/AdmissionInMaharashtraStateAndCenterQuota';
@@ -24,10 +23,10 @@ const Service = () => {
             <AdmissionInMaharashtraStateAndCenterQuota />
             <InstituteLevelManagement />
             <SpecialAssureAdmissionGuidance />
-            <Admissionguidance />
+            <AdmissionGuidance />
             <Registration />
             <Documentation />
-            <AdmissionFillingForm />
+            <AdmissionFormFilling />
             <NeetScoreAnalysis />
             <CollegeChoicePref />
             <OneToOneCons />

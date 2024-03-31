@@ -37,7 +37,7 @@ const Footer = () => {
                                     <div className="footer-widget__link-wrap">
                                         <ul className="list-unstyled footer-widget__link-list">
                                             <li>
-                                                <a href="/service">Services</a>
+                                                <a href="/services">Services</a>
                                             </li>
                                             <li>
                                                 <a href="/medical">Medical</a>
