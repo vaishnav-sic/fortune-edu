@@ -8,7 +8,7 @@ const ContactUs = () => {
                         <div className="contact-info-one__single">
                             {/* <img className="picture1" src={IMG} alt="collage group photo" /> */}
                             <img
-                                src="/assets/images/logo/FES_LogoName.svg"
+                                src="/assets/images/logo/FES_LogoV.svg"
                                 className="main-logo"
                                 width="300px"
                                 alt="Awesome Image"
