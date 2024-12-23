@@ -7182,6 +7182,19 @@ p {
   animation-fill-mode: both;
   -webkit-backface-visibility: visible !important;
   backface-visibility: visible !important;
+  display: block;
+}
+ 
+@media only screen and (max-width: 767px) {
+  .banner-one__scratch__mock {
+    display: none;
+  }
+}
+ 
+@media only screen and (max-width: 1204px) {
+  .banner-one__scratch__mock {
+    display: none;
+  }
 }
 
 /* ////////////// MockDetails END/////////////////  */

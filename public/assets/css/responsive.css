@@ -4,16 +4,16 @@
 
 @media (max-width: 1290px) {
   .course-one__content_baramati {
+    height: 205px;
     padding-left: 36px;
     padding-right: 45px;
     position: relative;
     padding-top: 18px;
-    padding-bottom: 139px;
+    padding-bottom: 85px;
     border-radius: 1rem;
     background-color: #001253;
     border: none;
-    /* box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651); */
-    height: 205px;
+    box-shadow: 0 4px 30px rgba(12, 11, 11, 0.651);
   }
 
   .course-one__content__subbranch {
@@ -607,7 +607,7 @@
     margin-top: 30px;
   } */
   .course-one__content_baramati {
-    height: 20px;
+    height: auto;
     padding-left: 36px;
     padding-right: 45px;
     position: relative;

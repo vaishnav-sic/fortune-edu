@@ -1,5 +1,5 @@
 import React from "react";
-const AdmissionFillingForm = () => {
+const AdmissionFormFilling = () => {
   return (
     <>
       <div className="service-Main" id="alt-main">
@@ -48,4 +48,4 @@ const AdmissionFillingForm = () => {
     </>
   );
 };
-export default AdmissionFillingForm;
+export default AdmissionFormFilling;

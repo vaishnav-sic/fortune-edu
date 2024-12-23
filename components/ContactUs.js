@@ -74,13 +74,12 @@ const ContactUs = () => {
                     <div className="col-lg-3">
                         <div className="course-one__single">
                             <div className="course-one__content_baramati">
-                            <div className="Branch_Details">
+                                <div className="Branch_Details">
                                 </div>
                                 <h2 className="contact-info-one__title">BARAMATI </h2>
                                 <p className="contact-info-one__text_sub"><i className="fa fa-address-book"></i> Plot No P-33 Snehdip,
                                 Bhigwan Road Next To Bank of Maharashtra, Opposite Ladkat Science Academy, MIDC, Baramati-413133
                                 </p>
-                              
                             </div>
                         </div>
                     </div>
